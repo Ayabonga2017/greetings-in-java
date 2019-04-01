@@ -1,4 +1,4 @@
-import net.greet.Greeter;
+import net.greet.Greet;
 import org.junit.jupiter.api.Test;
 
 public class GreetTest {
@@ -6,16 +6,14 @@ public class GreetTest {
     @Test
     public void greetMe()
         {
-            Greeter greetAya = new Greeter("IsiXhosa","Ayabonga");
+            Greet greetMin = new Greet("Portuguese","Minentle");
+            System.out.println(greetMin.greetMessage());
+
+            Greet greetAya = new Greet("IsiXhosa"," Ayabonga");
             System.out.println(greetAya.greetMessage());
 
-            Greeter ayaGreeter = new Greeter("English","Aya");
-            Greeter zeeGreeter = new Greeter("Portuguese","Ziyanda");
+            System.out.println(Greet.name () + " was greeted in "+ Greet.lang () );
 
-            System.out.println(ayaGreeter.greetMessage());
-            System.out.println(zeeGreeter.greetMessage());
-
-            Greeter.greeted ();
-            Greeter.countUser ();
+            System.out.println ("Counter:\n" + Greet.count () );
         }
     }

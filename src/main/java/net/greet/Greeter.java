@@ -1,34 +1,23 @@
 package net.greet;
+import java.util.Scanner;
+import static net.greet.Greet.name;
 
 public class Greeter {
+    public static void main(String[] args) {
 
-    String  language;
-  static  String name;
-    String help;
 
-    public Greeter(String aLanguage, String aName )
-    {
-        name = aName.toUpperCase ();
-        language = aLanguage;
-    }
+        System.out.println("Welcome to the Greetings App :\n" );
+        System.out.println( "follow the instructions to greet a person : " + "\n"+" ");
 
-    public String greetMessage() {
+        name =" enter the name of the person :";
+        System.out.print( name);
+        Scanner scanner = new Scanner(System. in);
+        String name = scanner. nextLine();
 
-        help = "please select the right language '1. Portuguese ; 2. IsiXhosa ; 3. French ' ";
-
-        if (language == "Portuguese"){ return "OLÀ " + name +  " !"; }
-        if (language == "IsiXhosa"){ return "MHOLO " + name + " !"; }
-        if (language == "French"){ return "BONJOUR " + name + " !"; }
-
-        return help;
-    }
-
-    public static void greeted(){
-        System.out.println ( name );
-
-    }
-    public static void countUser(){
-
-        System.out.println ( name.length ());
+        Greet.language =" enter language :";
+        System.out.print( Greet.language);
+        Scanner scanner2 = new Scanner(System. in);
+        String lang = scanner2. nextLine();
+        System.out.println("message: \n" + lang+ name );
     }
 }
