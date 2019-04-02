@@ -1,47 +1,72 @@
 package net.greet;
-
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Greet {
 
+    static   int counter = 0;
+    static String language;
+   static  String name;
+     static String message;
 
-    public static int counter;
-    static String  language;
-    static  String name;
-    private static String message;
+    public Greet ( String language ,String name ) {
 
-
-    public Greet(String aLanguage, String aName )
-    {
-        name = aName.toUpperCase ();
-        language = aLanguage;
+        this.name = name.toUpperCase ( );
+        this.language = language;
     }
 
-    public static String greetMessage( ) {
+  static  Map < String, Integer > nameList = new HashMap <> ( );
 
-      String   error = "select the right language";
+   /* public static String greetMessage ( ) {
 
-            if ( language == "Portuguese" ) {
-                counter++;
-                return message ="OLÀ " + name + " !";
-            }
-            if ( language == "IsiXhosa" ) {
-                counter++;
-                return message= "MHOLO " + name + " !";
-            }
-            if ( language == "French" ) {
-                counter++;
-                return message = "BONJOUR " + name + " !" ;
+        if ( name.isEmpty() == true ) {
+            System.out.println ( "please enter a name " );
+        }
 
-            }
-            return message;
+        if ( language.isEmpty () ) {
+            System.out.println ( "please enter a language " );
+        }
+        if ( language == "Portuguese" ) {
+            return message = "OLÀ " + name + " !";
+        }
+        if ( language == "IsiXhosa" ) {
+            return message = "MHOLO " + name + " !";
+        }
+        if ( language == "French" ) {
+            return message = "BONJOUR " + name + " !";
+        }
+        return message;
     }
 
-    public static String name(){ return name;}
+    */
 
-    public static int count(){
-        return counter ++; }
+    public static void nameS (String names ) {
 
-    public static String lang(){ return language; }
+//        nameList.put ( name ,1 );
+
+        if (name !="") name = names;
+
+        Integer counter = nameList.containsKey (names) ? nameList.get (names) : 0;
+        nameList.put (names, counter + 1);
+
+
+        System.out.println ( nameList );
+        System.out.println ( "is nameList empty? : " + nameList.isEmpty ( ) );
+    }
+
+    public static int count ( ) {
+
+        counter = nameList.size ( );
+        return counter;
+    }
+
+    public  String getLanguage ( ) {
+        return language;
+    }
+
+    public  String getName ( ) {
+        return name;
+    }
+
 
 }
