@@ -47,11 +47,11 @@ public class Greet {
         if ( name != "" ) name = names;
         Integer counter = nameList.containsKey ( names ) ? nameList.get ( names ) : 0;
         nameList.put ( names ,counter + 1 );
-        //  System.out.println ( nameList );
+
         // System.out.println ( "is nameList empty? : " + nameList.isEmpty ( ) );
     }
 
-    public static void namesGreeted ( ) { System.out.println ( nameList.keySet () ); }
+    public static void namesGreeted ( ) { System.out.println ( nameList); }
 
     public static void removeName(){
         if(nameList.containsKey(name)){ nameList.remove(name); } }
