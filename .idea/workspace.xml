@@ -4,8 +4,10 @@
     <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/Language.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GreetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GreetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/greet/Greet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/greet/Greet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/greet/Greet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/greet/Language.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/greet/Language.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/GreetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GreetTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,20 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Language.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/GreetTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state>
+              <caret column="18" selection-start-column="18" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -48,11 +38,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="158">
+              <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#406#1016#0" />
+                <element signature="e#379#989#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/GreetTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,6 +121,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -165,23 +169,10 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="greet-in-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="greet-in-java" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="greet-in-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="greet-in-java" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,33 +202,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GreetTest.greetMe">
-    <configuration name="Greeter (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="net.greet.Greeter" />
-      <module name="greet-in-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.greet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Greeter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Greeter" />
-      <module name="greet-in-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.GreetTest.greetRemove">
     <configuration name="GreetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <option name="PACKAGE_NAME" value="" />
@@ -247,21 +212,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GreetTest.greetMe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GreetTest.greeRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GreetTest" />
-      <option name="METHOD_NAME" value="greetMe" />
+      <option name="METHOD_NAME" value="greeRemove" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GreetTest.testMe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GreetTest.greetCounter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GreetTest" />
-      <option name="METHOD_NAME" value="testMe" />
+      <option name="METHOD_NAME" value="greetCounter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GreetTest.greetRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="greet-in-java" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GreetTest" />
+      <option name="METHOD_NAME" value="greetRemove" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GreetTest.greetedNames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="greet-in-java" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GreetTest" />
+      <option name="METHOD_NAME" value="greetedNames" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -269,11 +254,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GreetTest.greetMe" />
-        <item itemvalue="Application.Greeter (1)" />
+        <item itemvalue="JUnit.GreetTest.greetRemove" />
+        <item itemvalue="JUnit.GreetTest.greetedNames" />
+        <item itemvalue="JUnit.GreetTest.greeRemove" />
         <item itemvalue="JUnit.GreetTest" />
-        <item itemvalue="Application.Greeter" />
-        <item itemvalue="JUnit.GreetTest.testMe" />
+        <item itemvalue="JUnit.GreetTest.greetCounter" />
       </list>
     </recent_temporary>
   </component>
@@ -291,35 +276,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GreetTest_greetMe - 2019.04.03 at 09h 21m 36s.xml">
-      <configuration name="GreetTest.greetMe" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetedNames - 2019.04.03 at 12h 20m 54s.xml">
+      <configuration name="GreetTest.greetedNames" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_greetMe - 2019.04.03 at 09h 22m 09s.xml">
-      <configuration name="GreetTest.greetMe" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 22m 40s.xml">
+      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_greetMe - 2019.04.03 at 09h 22m 45s.xml">
-      <configuration name="GreetTest.greetMe" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 33m 36s.xml">
+      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_greetMe - 2019.04.03 at 09h 23m 34s.xml">
-      <configuration name="GreetTest.greetMe" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 34m 15s.xml">
+      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_greetMe - 2019.04.03 at 09h 23m 57s.xml">
-      <configuration name="GreetTest.greetMe" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 37m 30s.xml">
+      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_greetMe - 2019.04.03 at 09h 32m 12s.xml">
-      <configuration name="GreetTest.greetMe" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 38m 11s.xml">
+      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_greetMe - 2019.04.03 at 09h 32m 53s.xml">
-      <configuration name="GreetTest.greetMe" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 38m 30s.xml">
+      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_greetMe - 2019.04.03 at 09h 36m 19s.xml">
-      <configuration name="GreetTest.greetMe" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 38m 47s.xml">
+      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_greetMe - 2019.04.03 at 09h 36m 48s.xml">
-      <configuration name="GreetTest.greetMe" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 40m 04s.xml">
+      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_greetMe - 2019.04.03 at 09h 38m 00s.xml">
-      <configuration name="GreetTest.greetMe" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 40m 20s.xml">
+      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -333,6 +318,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49674267" weight="0.27134877" />
       <window_info id="Image Layers" order="1" />
@@ -343,25 +329,25 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Favorites" order="2" sideWeight="0.5042017" weight="0.26547232" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.37785017" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49880287" weight="0.36970684" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49880287" visible="true" weight="0.41530946" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49880287" weight="0.19706841" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32899022" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49960095" weight="0.46416938" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5011971" side_tool="true" weight="0.56514657" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49960095" weight="0.2247557" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5011971" side_tool="true" weight="0.18729642" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32899022" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.77850163" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.29641694" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32960895" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Codota" order="5" weight="0.32960895" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.32960895" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Maven" order="9" weight="0.32960895" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49674267" visible="true" weight="0.27134877" />
@@ -373,15 +359,15 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Favorites" order="2" sideWeight="0.5042017" weight="0.26547232" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.20521173" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49880287" weight="0.36970684" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49880287" visible="true" weight="0.08306189" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49880287" weight="0.19706841" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32899022" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49960095" weight="0.048859935" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5011971" side_tool="true" weight="0.56514657" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49960095" weight="0.2247557" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5011971" side_tool="true" weight="0.18729642" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32899022" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.22638437" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.29641694" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32960895" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -476,15 +462,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Language.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GreetTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        <state relative-caret-position="157">
+          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -493,11 +479,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="158">
+          <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#406#1016#0" />
+            <element signature="e#379#989#0" />
           </folding>
         </state>
       </provider>

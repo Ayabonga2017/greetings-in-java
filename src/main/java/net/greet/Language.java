@@ -5,7 +5,7 @@ public class Language {
     public enum LangType {
         IsiXhosa , Portuguese, French,English
     }
-        public static String enumInSwitch(LangType type) {
+        public static String langInSwitch(LangType type) {
 
             switch(type) {
                 case IsiXhosa:
@@ -13,7 +13,7 @@ public class Language {
                 case Portuguese:
                     return "OLÀ " + Greet.name + " !";
                 case French:
-                    return " BONJOUR " + Greet.name + " !";
+                    return "BONJOUR " + Greet.name + " !";
                 case English:
                     return "Hey " + Greet.name + " ! ";
                 default:
