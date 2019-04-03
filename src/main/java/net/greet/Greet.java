@@ -1,8 +1,6 @@
 package net.greet;
-
 import java.util.HashMap;
 import java.util.Map;
-
 
 public class Greet {
 
@@ -13,7 +11,9 @@ public class Greet {
     public Greet ( String language ,String name ) {
 
         this.name = name.toUpperCase ( );
-        if ( language == null ) { Language.langInSwitch (Language.LangType.English); }
+        if ( language == null ) {
+            Language.langInSwitch (Language.LangType.English);
+        }
         this.language = language;
     }
 
@@ -47,26 +47,18 @@ public class Greet {
         if ( name != "" ) name = names;
         Integer counter = nameList.containsKey ( names ) ? nameList.get ( names ) : 0;
         nameList.put ( names ,counter + 1 );
-
         //  System.out.println ( nameList );
         // System.out.println ( "is nameList empty? : " + nameList.isEmpty ( ) );
     }
 
-
-    public static void namesGreeted ( ) {
-
-        System.out.println ( nameList.keySet () );
-    }
+    public static void namesGreeted ( ) { System.out.println ( nameList.keySet () ); }
 
     public static void removeName(){
+        if(nameList.containsKey(name)){ nameList.remove(name); } }
 
-        if(nameList.containsKey(name)){
-            nameList.remove(name);
-        }
-    }
-    public static int count ( ) {
-        counter = nameList.size ( );
+    public  static  void clearNames(){ nameList.clear (); }
+
+    public static int count ( ) { counter = nameList.size ( );
         return counter;
     }
-
 }

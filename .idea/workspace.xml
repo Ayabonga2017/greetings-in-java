@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/Language.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GreetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GreetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/greet/Greet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/greet/Greet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/greet/Language.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/greet/Language.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/GreetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GreetTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+            <state relative-caret-position="240">
+              <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#379#989#0" />
@@ -51,11 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/GreetTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-486">
+              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -202,21 +194,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GreetTest.greetRemove">
-    <configuration name="GreetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.GreetTest.greetMe">
+    <configuration name="GreetTest.greetClear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GreetTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GreetTest.greeRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="greet-in-java" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GreetTest" />
-      <option name="METHOD_NAME" value="greeRemove" />
+      <option name="METHOD_NAME" value="greetClear" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -227,6 +210,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GreetTest" />
       <option name="METHOD_NAME" value="greetCounter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GreetTest.greetMe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="greet-in-java" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GreetTest" />
+      <option name="METHOD_NAME" value="greetMe" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -254,11 +247,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GreetTest.greetRemove" />
+        <item itemvalue="JUnit.GreetTest.greetMe" />
+        <item itemvalue="JUnit.GreetTest.greetClear" />
         <item itemvalue="JUnit.GreetTest.greetedNames" />
-        <item itemvalue="JUnit.GreetTest.greeRemove" />
-        <item itemvalue="JUnit.GreetTest" />
         <item itemvalue="JUnit.GreetTest.greetCounter" />
+        <item itemvalue="JUnit.GreetTest.greetRemove" />
       </list>
     </recent_temporary>
   </component>
@@ -276,35 +269,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GreetTest_greetedNames - 2019.04.03 at 12h 20m 54s.xml">
+    <history-entry file="GreetTest - 2019.04.03 at 14h 33m 20s.xml">
+      <configuration name="GreetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GreetTest - 2019.04.03 at 14h 34m 08s.xml">
+      <configuration name="GreetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GreetTest_greetClear - 2019.04.03 at 14h 36m 41s.xml">
+      <configuration name="GreetTest.greetClear" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 14h 38m 40s.xml">
+      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GreetTest_greetedNames - 2019.04.03 at 14h 40m 01s.xml">
       <configuration name="GreetTest.greetedNames" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 22m 40s.xml">
-      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetCounter - 2019.04.03 at 14h 40m 27s.xml">
+      <configuration name="GreetTest.greetCounter" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 33m 36s.xml">
-      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetedNames - 2019.04.03 at 14h 43m 37s.xml">
+      <configuration name="GreetTest.greetedNames" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 34m 15s.xml">
-      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetClear - 2019.04.03 at 14h 44m 20s.xml">
+      <configuration name="GreetTest.greetClear" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 37m 30s.xml">
-      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetClear - 2019.04.03 at 14h 44m 54s.xml">
+      <configuration name="GreetTest.greetClear" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 38m 11s.xml">
-      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 38m 30s.xml">
-      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 38m 47s.xml">
-      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 40m 04s.xml">
-      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GreetTest_greetRemove - 2019.04.03 at 12h 40m 20s.xml">
-      <configuration name="GreetTest.greetRemove" configurationId="JUnit" />
+    <history-entry file="GreetTest_greetMe - 2019.04.03 at 14h 45m 19s.xml">
+      <configuration name="GreetTest.greetMe" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -329,7 +322,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Favorites" order="2" sideWeight="0.5042017" weight="0.26547232" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49880287" visible="true" weight="0.41530946" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49880287" visible="true" weight="0.048859935" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49880287" weight="0.19706841" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -388,6 +381,14 @@
           <line>4</line>
           <properties />
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/GreetTest.java</url>
+          <line>8</line>
+          <properties class="GreetTest" method="greetMe">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -469,18 +470,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/GreetTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-486">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+        <state relative-caret-position="240">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#379#989#0" />
