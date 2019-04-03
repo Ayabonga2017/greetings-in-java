@@ -2,8 +2,7 @@ package net.greet;
 
 public class Language {
 
-    public enum LangType {
-        IsiXhosa , Portuguese, French,English
+    public enum LangType {IsiXhosa , Portuguese, French,English
     }
         public static String langInSwitch(LangType type) {
 

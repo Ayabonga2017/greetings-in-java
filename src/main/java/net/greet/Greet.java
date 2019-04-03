@@ -11,23 +11,23 @@ public class Greet {
     public Greet ( String language ,String name ) {
 
         this.name = name.toUpperCase ( );
-        if ( language == null ) {
-            Language.langInSwitch (Language.LangType.English);
-        }
+
         this.language = language;
-    }
-
-    static Map < String, Integer > nameList = new HashMap <> ( );
-
-   /* public static String greetMessage ( ) {
 
         if ( name.isEmpty() == true ) {
             System.out.println ( "please enter a name " );
         }
 
         if ( language.isEmpty () ) {
-            System.out.println ( "please enter a language " );
+            Language.langInSwitch (Language.LangType.English);
         }
+    }
+
+    static Map < String, Integer > nameList = new HashMap <> ( );
+
+   /* public static String greetMessage ( ) {
+
+
         if ( language == "Portuguese" ) {
             return message = "OLÀ " + name + " !";
         }
@@ -43,11 +43,9 @@ public class Greet {
     */
 
     public static void nameS ( String names ) {
-
         if ( name != "" ) name = names;
         Integer counter = nameList.containsKey ( names ) ? nameList.get ( names ) : 0;
         nameList.put ( names ,counter + 1 );
-
         // System.out.println ( "is nameList empty? : " + nameList.isEmpty ( ) );
     }
 
