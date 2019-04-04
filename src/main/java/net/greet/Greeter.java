@@ -26,7 +26,7 @@ public class Greeter {
 
                     String userName = arr[1];
                     Greet.nameS ( userName );
-                     language = arr[0];
+                     language = arr[2];
 
                     Language.valueOf ( language.toLowerCase () );
                     System.out.println ( Language.valueOf ( language.toLowerCase () ).getGreet ( userName) );
