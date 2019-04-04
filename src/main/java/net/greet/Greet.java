@@ -53,8 +53,4 @@ public class Greet {
     public static int count ( ) { counter = nameList.size ( );
         return counter;
     }
-
-    public static void message ( ) {
-        System.out.println ( language + Greet.name + " !");
-    }
 }
