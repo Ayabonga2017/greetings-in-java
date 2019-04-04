@@ -10,12 +10,12 @@ public class Greet {
 
     public Greet ( String language ,String name ) {
 
-        this.name = name.toUpperCase ( );
+        this.name = name.toLowerCase ( );
         this.language = language;
 
         if ( name.isEmpty() == true ) { System.out.println ( "please enter a name " ); }
 
-        if ( language.isEmpty () ) { } }
+        if ( language.isEmpty () ==true ) { } }
 
     static Map < String, Integer > nameList = new HashMap <> ( );
 

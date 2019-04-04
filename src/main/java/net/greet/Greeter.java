@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Greeter {
 
-    public static void main ( String args[] ) {
+    public static void main (String args[]) {
 
         while ( true ) {
             System.out.println ( "--------Welcome to the Greetings App--------\n " );
@@ -12,32 +12,35 @@ public class Greeter {
             System.out.print ( "Enter command : " );
             String name = in.nextLine ( );
 
-            String [] arr = name.split(" ");
+            String[] arr = name.split ( " " );
 
-            if(arr[0].equals ( "greet" )){
-                System.out.println (arr.length );
+            if ( arr[0].equals ( "greet" ) ) {
+                System.out.println ( arr.length );
 
-                if(arr.length == 2) {
+                if ( arr.length == 2 ) {
                     String userName = arr[1];
 
-                    System.out.println ("Hello, " + userName );
+                    System.out.println ( "Hello, " + userName );
                     Greet.nameS ( userName );
 
-                } else if(arr.length == 3) {
+                } else if ( arr.length == 3 ) {
+                    String userName = arr[1];
                     String language = arr[2];
 
-                    System.out.println ("Username, language and greet" );
+                    Greet.nameS ( userName );
+                    Language.valueOf ( language.toLowerCase () );
+                    System.out.println ( language + userName );
 
 
-                } else {
-                    System.out.println ("Invalid comm" );
-                    break;
+                    } else {
+                        System.out.println ( "Invalid command " );
+                        break;
+                    }
                 }
+
+
+                System.out.println ( arr[0] + " | " + arr[0] );
+                Greet.namesGreeted ( );
             }
-
-
-            System.out.println (arr[0] + " | " + arr[0] );
-            Greet.namesGreeted ( );
         }
     }
-}

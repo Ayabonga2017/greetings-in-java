@@ -8,17 +8,12 @@ public class GreetTest {
     @Test
     public void greetMe ( ) {
 
-        System.out.println ( "\nShould greet Minentle in Portugues :" );
-        Greet greetMin = new Greet ( "Portuguese" , "MINENTLE" );
-        assertEquals ( Language.langInSwitch ( Language.LangType.Portuguese) , "OLÀ MINENTLE !" );
+        System.out.println ( "\nShould greet Minentle in French :" );
+        Greet greetMin = new Greet ( "French" , "MINENTLE" );
 
-        System.out.println ( "\nShould greet Aya in French :" );
-        Greet greetAya = new Greet ( "French" , "Aya" );
-        assertEquals ( Language.langInSwitch ( Language.LangType.French ) , "BONJOUR AYA !" );
+        assertEquals (Language.valueOf ( "FrEncH".toLowerCase () ).getGreet ( "MINENHLE" ), "BONJOUR MINENTLE" );
 
-        System.out.println ( "\nShould greet ZEE in default Language :" );
-        Greet greet = new Greet ( "" , "Aya" );
-        assertEquals (Language.langInSwitch (Language.LangType.English), "Hey AYA ! " );
+
     }
 
     @Test

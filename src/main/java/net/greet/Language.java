@@ -1,6 +1,6 @@
 package net.greet;
 
-public class Language {
+//public class Language {
 /*/
     public enum LangType {
         IsiXhosa(), Portuguese, French, English
@@ -24,22 +24,19 @@ public class Language {
     }
 
 */
+ public enum Language {
 
-    enum Types {
+        xhosa ( "MHOLO " ),
+        english ( "HEY " ),
+        french ( "BONJOUR " ),
+        portuguese ( "OLÀ " );
 
-        Xhosa ( "MHOLO" ),
-        English ( "Hey" ),
-        French ( "BONJOUR" ),
-        Portugues ( "OLÀ" );
+        public  String greet;
 
-        private final String greet;
+        Language (String greet) { this.greet  = greet; }
 
-        Types (String greet) {
-             this.greet = greet;
-        }
-        public String getGreet( ){
-
-            return greet + Greet.name;
-        }
+        public String getGreet( String name){
+            name = Greet.name;
+            return greet + name.toUpperCase (); }
     }
-}
+//}
