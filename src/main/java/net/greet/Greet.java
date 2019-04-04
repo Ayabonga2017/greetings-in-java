@@ -11,17 +11,11 @@ public class Greet {
     public Greet ( String language ,String name ) {
 
         this.name = name.toUpperCase ( );
-
         this.language = language;
 
-        if ( name.isEmpty() == true ) {
-            System.out.println ( "please enter a name " );
-        }
+        if ( name.isEmpty() == true ) { System.out.println ( "please enter a name " ); }
 
-        if ( language.isEmpty () ) {
-            Language.langInSwitch (Language.LangType.English);
-        }
-    }
+        if ( language.isEmpty () ) { } }
 
     static Map < String, Integer > nameList = new HashMap <> ( );
 
@@ -58,5 +52,9 @@ public class Greet {
 
     public static int count ( ) { counter = nameList.size ( );
         return counter;
+    }
+
+    public static void message ( ) {
+        System.out.println ( language + Greet.name + " !");
     }
 }

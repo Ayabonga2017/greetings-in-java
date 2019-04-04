@@ -10,7 +10,7 @@ public class GreetTest {
 
         System.out.println ( "\nShould greet Minentle in Portugues :" );
         Greet greetMin = new Greet ( "Portuguese" , "MINENTLE" );
-        assertEquals ( Language.langInSwitch ( Language.LangType.Portuguese ) , "OLÀ MINENTLE !" );
+        assertEquals ( Language.langInSwitch ( Language.LangType.Portuguese) , "OLÀ MINENTLE !" );
 
         System.out.println ( "\nShould greet Aya in French :" );
         Greet greetAya = new Greet ( "French" , "Aya" );
@@ -74,6 +74,7 @@ public class GreetTest {
         Greet.nameS ( "Asa" );
         Greet.clearNames ();
         Greet.namesGreeted();
+
         System.out.println ( "\nCounter:\n" + Greet.count () );
     }
 }

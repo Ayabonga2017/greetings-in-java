@@ -2,16 +2,42 @@ package net.greet;
 import java.util.Scanner;
 
 public class Greeter {
-    public static void main(String args[]){
 
-        System.out.println("--------Welcome to the Greetings App--------\n ");
-        Scanner in = new Scanner(System.in);
-        System.out.print("Enter name : ");
-        String name = in.next();
-        Greet.nameS(name);
+    public static void main ( String args[] ) {
 
-        //String language = in.next();
-        System.out.println(  name);
+        while ( true ) {
+            System.out.println ( "--------Welcome to the Greetings App--------\n " );
 
+            Scanner in = new Scanner ( System.in );
+            System.out.print ( "Enter command : " );
+            String name = in.nextLine ( );
+
+            String [] arr = name.split(" ");
+
+            if(arr[0].equals ( "greet" )){
+                System.out.println (arr.length );
+
+                if(arr.length == 2) {
+                    String userName = arr[1];
+
+                    System.out.println ("Hello, " + userName );
+                    Greet.nameS ( userName );
+
+                } else if(arr.length == 3) {
+                    String language = arr[2];
+
+                    System.out.println ("Username, language and greet" );
+
+
+                } else {
+                    System.out.println ("Invalid comm" );
+                    break;
+                }
+            }
+
+
+            System.out.println (arr[0] + " | " + arr[0] );
+            Greet.namesGreeted ( );
+        }
     }
 }
