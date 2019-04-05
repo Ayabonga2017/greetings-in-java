@@ -47,15 +47,16 @@ public class GreetTest {
     }
 
     @Test
-    public  void greetRemove(){
-        System.out.println ( "\nShould return a list of names and counter be 5:\n" );
+    public  void greetRemoveUserName(){
+        System.out.println ( "\nShould remove a name  and decrement the counter:\n" );
         Greet.nameS ( "Min" );
         Greet.nameS ( "Minen" );
         Greet.nameS ( "Ayanda" );
         Greet.nameS ( "Ama" );
         Greet.nameS ( "lllll" );
         Greet.nameS ( "Asa" );
-        Greet.removeName ();
+        Greet.namesGreeted();
+        Greet.removeName ("Asa");
         Greet.namesGreeted();
         System.out.println ( "\nCounter:\n" + Greet.count () );
     }

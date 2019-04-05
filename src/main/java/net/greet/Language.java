@@ -31,12 +31,14 @@ package net.greet;
         french ( "BONJOUR " ),
         portuguese ( "OLÀ " );
 
-        public static String greet;
+        public  String greet;
 
-        Language ( String greet) { greet.toLowerCase (); }
+        Language ( String greet) {
 
-        public static String getGreet( String name){
+            this.greet = greet.toLowerCase (); }
+
+        public  String getGreet( String name){
 
             name = Greet.name;
-            return greet + name.toUpperCase (); }
+            return greet.toUpperCase () + name.toUpperCase (); }
     }

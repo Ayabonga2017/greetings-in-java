@@ -1,4 +1,5 @@
 package net.greet;
+import javax.naming.Name;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,7 +16,8 @@ public class Greet {
 
         if ( name.isEmpty() == true ) { System.out.println ( "please enter a name " ); }
 
-        if ( language.isEmpty () ==true ) { } }
+        if ( language.isEmpty () ==true ) { Language.valueOf ( "english" ); }
+    }
 
     static Map < String, Integer > nameList = new HashMap <> ( );
 
@@ -40,17 +42,23 @@ public class Greet {
         if ( name != "" ) name = names;
         Integer counter = nameList.containsKey ( names ) ? nameList.get ( names ) : 0;
         nameList.put ( names ,counter + 1 );
-        // System.out.println ( "is nameList empty? : " + nameList.isEmpty ( ) );
     }
 
     public static void namesGreeted ( ) { System.out.println ( nameList); }
 
-    public static void removeName(){
-        if(nameList.containsKey(name)){ nameList.remove(name); } }
+    public static void greetedName(String name ){
+        for (Map.Entry entry : nameList.entrySet()) {
+            System.out.println("\n"+name + " was greeted " + entry.getValue()+ " time(s)\n");
+        } }
+    public static void removeName(String name ){
+        if(nameList.containsKey(name)){ nameList.remove(name); System.out.println ("\n"+name + " was removed from the list !\n" ); } }
 
-    public  static  void clearNames(){ nameList.clear (); }
+    public  static  void clearNames(){ nameList.clear (); System.out.println ( "Deleted all users !" ); }
 
-    public static int count ( ) { counter = nameList.size ( );
+    public static int count ( ) { System.out.println ( counter = nameList.size ( ) );
         return counter;
     }
+    public static void help ( ) { System.out.println (" List of commands\n"); }
+    public static void exit ( ) {System.out.println (" Good-Bye\n"); System.exit ( 0 ); }
+
 }
