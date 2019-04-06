@@ -53,12 +53,24 @@ public class Greet {
     public static void removeName(String name ){
         if(nameList.containsKey(name)){ nameList.remove(name); System.out.println ("\n"+name + " was removed from the list !\n" ); } }
 
-    public  static  void clearNames(){ nameList.clear (); System.out.println ( "Deleted all users !" ); }
+    public  static  void clearNames(){ nameList.clear (); System.out.println ( "\nDeleted all users !" ); }
 
     public static int count ( ) { System.out.println ( counter = nameList.size ( ) );
         return counter;
     }
-    public static void help ( ) { System.out.println (" List of commands\n"); }
-    public static void exit ( ) {System.out.println (" Good-Bye\n"); System.exit ( 0 ); }
+    public static Language diffLang (Language lang){
+          lang = Language.english;
+          return  lang;
+    }
+    public static void invalid ( ) {System.out.println ("\nInvalid command." + "\ntype 'help' to get the list of valid commands."); }
+
+    public static void help ( ) { System.out.println ("\nValid Commands are as follow :\n" + "\n- greet + name + language : will greet a person with a language of your choice.");
+        System.out.println ("- greet + name : will greet a person with the default language.\n" + "- greeted : will display a list of greeted names. ");
+         System.out.println ("- greetedcount + name : will display how many times a person has been greeted.\n" + "- counter : will display the number of greeted names. ");
+          System.out.println ("- clear + name : will remove a persons name from the list and decrement the counter.\n" + "- clearall : will delete all the names on the list set the counter to 0.");
+        System.out.println ("- exit : will exit the greeting application.\n" + "- help : will display all the possible commands to use when using this application.");}
+
+    public static void exit ( ) {System.out.println ("\nGood-Bye\n"); System.exit ( 0 ); }
 
 }
+

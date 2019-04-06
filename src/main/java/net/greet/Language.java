@@ -34,7 +34,6 @@ package net.greet;
         public  String greet;
 
         Language ( String greet) {
-
             this.greet = greet.toLowerCase (); }
 
         public  String getGreet( String name){
