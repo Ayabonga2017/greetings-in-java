@@ -10,11 +10,11 @@ public class GreetTest {
 
         System.out.println ( "\nShould greet Minentle in French :" );
         Greet greetMin = new Greet ( "French" , "MINENTLE" );
-        assertEquals (Language.valueOf ( "French".toLowerCase () ).getGreet ( "MINENHLE" ), "nullMINENTLE" );
+        assertEquals (Language.valueOf ( "French".toLowerCase () ).getGreet ( "MINENHLE" ), "BONJOUR MINENTLE" );
 
         System.out.println ( "\nShould greet AYA in English :" );
         Greet gree = new Greet ( "French" , "Aya" );
-        assertEquals (Language.valueOf ( "enGlisH".toLowerCase () ).getGreet ( "aya" ), "nullAYA" );
+        assertEquals (Language.valueOf ( "enGlisH".toLowerCase () ).getGreet ( "aya" ), "HEY AYA" );
 
     }
 
