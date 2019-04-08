@@ -1,5 +1,4 @@
 package net.greet;
-import javax.naming.Name;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,7 +38,8 @@ public class Greet {
     */
 
     public static void nameS ( String names ) {
-        if ( name != "" ) name = names;
+        names = names.substring ( 0,1 ).toUpperCase ()+ names.substring ( 1 ).toUpperCase ();
+    if ( name != "" ) name = names;
         Integer counter = nameList.containsKey ( names ) ? nameList.get ( names ) : 0;
         nameList.put ( names ,counter + 1 );
     }
@@ -47,13 +47,23 @@ public class Greet {
     public static void namesGreeted ( ) { System.out.println ( nameList); }
 
     public static void greetedName(String name ){
+
         for (Map.Entry entry : nameList.entrySet()) {
             System.out.println("\n"+name + " was greeted " + entry.getValue()+ " time(s)\n");
         } }
     public static void removeName(String name ){
-        if(nameList.containsKey(name)){ nameList.remove(name); System.out.println ("\n"+name + " was removed from the list !\n" ); } }
+        if(nameList.containsKey(name)){ nameList.remove(name); System.out.println ("\n"+name + " was removed from the list !\n" ); }
+        else{
+            System.out.println ("\nuser not found" );
+        }
+    };
 
-    public  static  void clearNames(){ nameList.clear (); System.out.println ( "\nDeleted all users !" ); }
+    public  static  void clearNames(){
+        if (nameList.isEmpty ()==true){
+            System.out.println ("\nlist is empty" );
+        }else if (nameList.isEmpty () == false){
+            nameList.clear ();
+        System.out.println ( "\nDeleted all users !" );}}
 
     public static int count ( ) { System.out.println ( counter = nameList.size ( ) );
         return counter;

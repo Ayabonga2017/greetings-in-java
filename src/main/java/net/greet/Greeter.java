@@ -1,8 +1,6 @@
 package net.greet;
 
 import java.util.Scanner;
-
-import static net.greet.Greet.diffLang;
 import static net.greet.Greet.language;
 
 public class Greeter {
@@ -18,7 +16,7 @@ public class Greeter {
             String name = in.nextLine ( );
             String[] arr = name.split ( " " );
 
-            if (arr[ 0 ].equals ( "greet".toLowerCase () ) && arr.length == 2) {
+            if (arr[ 0 ].equalsIgnoreCase ( "greet".toLowerCase () ) && arr.length == 2) {
                 String userName = arr[ 1 ];
                 Greet.nameS ( userName );
                  language = "xhosa";
@@ -31,27 +29,27 @@ public class Greeter {
                 Language.valueOf ( language.toLowerCase ( ) );
                 System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getGreet ( userName ) );
             }
-            else if (arr[ 0 ].equals ( "clear".toLowerCase ()) && arr.length == 2) {
+            else if (arr[ 0 ].equalsIgnoreCase ( "clear".toLowerCase ()) && arr.length == 2) {
                 String userName = arr[ 1 ];
                 Greet.removeName ( userName );
             }
-           else if (arr[ 0 ].equals ( "clearall".toLowerCase ()) && arr.length == 1) {
+           else if (arr[ 0 ].equalsIgnoreCase ( "clearall".toLowerCase ()) && arr.length == 1) {
                 Greet.clearNames ();
             }
-           else if (arr[ 0 ].equals ( "greeted".toLowerCase () ) && arr.length==1) {
+           else if (arr[ 0 ].equalsIgnoreCase ( "greeted".toLowerCase () ) && arr.length==1) {
                 Greet.namesGreeted ();
             }
-            else if (arr[ 0 ].equals ( "greetcount".toLowerCase ()) && arr.length == 2) {
+            else if (arr[ 0 ].equalsIgnoreCase ( "greetcount".toLowerCase ()) && arr.length == 2) {
                 String userName = arr[ 1 ];
                 Greet.greetedName ( userName );
             }
-            else if (arr[ 0 ].equals ( "counter".toLowerCase () ) && arr.length==1) {
+            else if (arr[ 0 ].equalsIgnoreCase ( "counter".toLowerCase () ) && arr.length==1) {
                 Greet.count ();
             }
-            else if (arr[ 0 ].equals ( "help".toLowerCase () ) && arr.length==1) {
+            else if (arr[ 0 ].equalsIgnoreCase ( "help".toLowerCase () ) && arr.length==1) {
                 Greet.help ();
             }
-            else if (arr[ 0 ].equals ( "exit".toLowerCase () ) && arr.length==1) {
+            else if (arr[ 0 ].equalsIgnoreCase ( "exit".toLowerCase () ) && arr.length==1) {
                 Greet.exit ();
 
             }else{
@@ -59,6 +57,6 @@ public class Greeter {
             }
         }
     }
-}
+};
 
 
