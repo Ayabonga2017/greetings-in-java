@@ -50,7 +50,12 @@ public class Greet {
     }
 
     public static void namesGreeted ( ) {
-        System.out.println ( nameList );
+
+        if (nameList.isEmpty ( ) == true) {
+            System.out.println ( "\nno users have been greeted yet" );
+        } else {
+            System.out.println ( nameList );
+        }
     }
 
     public static void greetedName ( String name ) {
@@ -85,7 +90,11 @@ public class Greet {
     }
 
     public static int count ( ) {
-        System.out.println ( counter = nameList.size ( ) );
+        if (nameList.size ( ) == 0) {
+            System.out.println ( "\nNo users have been greeted yet" );
+        } else {
+            System.out.println ( counter = nameList.size ( ) );
+        }
         return counter;
     }
 
