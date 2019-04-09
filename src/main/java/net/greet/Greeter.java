@@ -31,7 +31,7 @@ public class Greeter {
             }
             else if (arr[ 0 ].equalsIgnoreCase ( "clear".toLowerCase ()) && arr.length == 2) {
                 String userName = arr[ 1 ];
-                Greet.removeName ( userName.toLowerCase () );
+                Greet.removeName ( userName.toUpperCase () );
             }
            else if (arr[ 0 ].equalsIgnoreCase ( "clearall".toLowerCase ()) && arr.length == 1) {
                 Greet.clearNames ();
