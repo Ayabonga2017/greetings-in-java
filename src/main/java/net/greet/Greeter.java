@@ -11,9 +11,9 @@ public class Greeter {
 
         while ( true ) {
 
-            Scanner in = new Scanner ( System.in );
+            Scanner input = new Scanner ( System.in );
             System.out.print ( "\nType command : ".toLowerCase ());
-            String name = in.nextLine ( );
+            String name = input.nextLine ( );
             String[] arr = name.split ( " " );
 
             if (arr[ 0 ].equalsIgnoreCase ( "greet".toLowerCase () ) && arr.length == 2) {

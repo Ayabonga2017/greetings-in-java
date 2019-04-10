@@ -1,5 +1,6 @@
 package net.greet;
 
+import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,7 +10,7 @@ public class Greet {
     static String language;
     static String name;
 
-    public Greet ( String language , String name ) {
+    public Greet ( String language , String name ) throws SQLException {
 
         this.name = name.toLowerCase ( );
         this.language = language;
@@ -19,28 +20,11 @@ public class Greet {
         }
 
         if (language.isEmpty ( ) == true) {
-            Language.valueOf ( "english" );
+            Language.valueOf ( "xhosa" );
         }
     }
 
     static Map < String,Integer > nameList = new HashMap <> ( );
-
-   /* public static String greetMessage ( ) {
-
-
-        if ( language == "Portuguese" ) {
-            return message = "OLÀ " + name + " !";
-        }
-        if ( language == "IsiXhosa" ) {
-            return message = "MHOLO " + name + " !";
-        }
-        if ( language == "French" ) {
-            return message = "BONJOUR " + name + " !";
-        }
-        return message;
-    }
-
-    */
 
     public static void nameS ( String names ) {
         names = names.substring ( 0 , 1 ).toUpperCase ( ) + names.substring ( 1 ).toUpperCase ( );
@@ -78,8 +62,6 @@ public class Greet {
         }
     }
 
-    ;
-
     public static void clearNames ( ) {
         if (nameList.isEmpty ( ) == true) {
             System.out.println ( "\nlist is empty" );
@@ -114,5 +96,6 @@ public class Greet {
         System.out.println ( "\nGood-Bye\n" );
         System.exit ( 0 );
     }
+
 }
 

@@ -1,20 +1,22 @@
 import net.greet.Greet;
 import net.greet.Language;
 import org.junit.jupiter.api.Test;
+import java.sql.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class GreetTest {
 
     @Test
-    public void greetMe ( ) {
+    public void greetMe ( ) throws SQLException {
 
         System.out.println ( "\nShould greet Minentle in French :" );
         Greet greetMin = new Greet ( "French" , "MINENTLE" );
         assertEquals (Language.valueOf ( "French".toLowerCase () ).getGreet ( "MINENHLE" ), "BONJOUR MINENTLE" );
 
         System.out.println ( "\nShould greet AYA in English :" );
-        Greet gree = new Greet ( "French" , "Aya" );
-        assertEquals (Language.valueOf ( "enGlisH".toLowerCase () ).getGreet ( "aya" ), "HEY AYA" );
+        Greet gree = new Greet ( "english" , "Aya" );
+        assertEquals (Language.valueOf ( "english".toLowerCase () ).getGreet ( "aya" ), "HEY AYA" );
 
     }
 
@@ -56,7 +58,7 @@ public class GreetTest {
         Greet.nameS ( "lllll" );
         Greet.nameS ( "Asa" );
         Greet.namesGreeted();
-        Greet.removeName ("Asa");
+        Greet.removeName ("ASA");
         Greet.namesGreeted();
         System.out.println ( "\nCounter:\n" + Greet.count () );
     }
@@ -75,4 +77,5 @@ public class GreetTest {
 
         System.out.println ( "\nCounter:\n" + Greet.count () );
     }
+
 }
