@@ -1,10 +1,15 @@
 import net.greet.Greet;
 import net.greet.Language;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GreetTest {
 
+    @BeforeEach
+    public  void cleanMap(){
+        Greet.clearNames ();
+    }
     @Test
     public void greetMe ( ){
 
