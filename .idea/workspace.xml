@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/Greeter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/Greeter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/Language.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_people.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_people.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Create_Add_people.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Create_Add_people.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DataBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DataBaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GreetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GreetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1__Create_people.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/migration/V1__Create_people.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V2__Create_Add_people.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/migration/V2__Create_Add_people.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/greet/Greeter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/greet/Greeter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/greet/Language.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/greet/Language.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/greet_java.mv.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/greet_java.trace.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/DataBaseTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/GreetTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-DataBaseTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-GreetTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DataBaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DataBaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/GreetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GreetTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,17 +23,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/DataBaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="138" column="44" lean-forward="true" selection-start-line="138" selection-start-column="44" selection-end-line="138" selection-end-column="44" />
+            <state relative-caret-position="245">
+              <caret line="228" column="13" lean-forward="true" selection-start-line="228" selection-start-column="13" selection-end-line="228" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#cleanUpTables#0;class#DataBaseTest#0" />
                 <element signature="method#loadJdbcDriver#0;class#DataBaseTest#0" />
                 <element signature="method#connectToDatabase#0;class#DataBaseTest#0" />
                 <element signature="method#executeSQLStatement#0;class#DataBaseTest#0" />
+                <element signature="method#addDataToFruitTableViaMigration#0;class#DataBaseTest#0" />
                 <element signature="method#clearNames#0;class#DataBaseTest#0" />
                 <element signature="method#clearNamesFromDB#1;class#DataBaseTest#0" />
-                <element signature="method#greetedNames#0;class#DataBaseTest#0" />
               </folding>
             </state>
           </provider>
@@ -251,7 +229,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DataBaseTest">
+  <component name="RunManager" selected="JUnit.DataBaseTest.greetedNames">
     <configuration name="DataBaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <option name="PACKAGE_NAME" value="" />
@@ -271,11 +249,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataBaseTest.countNamesFromDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DataBaseTest.countFromDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DataBaseTest" />
-      <option name="METHOD_NAME" value="countNamesFromDB" />
+      <option name="METHOD_NAME" value="countFromDB" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -302,11 +280,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DataBaseTest.greetedNames" />
+        <item itemvalue="JUnit.DataBaseTest.countFromDB" />
         <item itemvalue="JUnit.DataBaseTest" />
         <item itemvalue="JUnit.DataBaseTest.clearNamesFromDB" />
-        <item itemvalue="JUnit.DataBaseTest.greetedNames" />
         <item itemvalue="JUnit.GreetTest" />
-        <item itemvalue="JUnit.DataBaseTest.countNamesFromDB" />
       </list>
     </recent_temporary>
   </component>
@@ -324,35 +302,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DataBaseTest_greetedNames - 2019.04.11 at 16h 23m 40s.xml">
+    <history-entry file="DataBaseTest_countFromDB - 2019.04.11 at 17h 54m 14s.xml">
+      <configuration name="DataBaseTest.countFromDB" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataBaseTest_countFromDB - 2019.04.11 at 17h 54m 31s.xml">
+      <configuration name="DataBaseTest.countFromDB" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataBaseTest_countFromDB - 2019.04.11 at 17h 55m 00s.xml">
+      <configuration name="DataBaseTest.countFromDB" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataBaseTest_countFromDB - 2019.04.11 at 17h 55m 37s.xml">
+      <configuration name="DataBaseTest.countFromDB" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataBaseTest_greetedNames - 2019.04.11 at 17h 56m 30s.xml">
       <configuration name="DataBaseTest.greetedNames" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataBaseTest_greetedNames - 2019.04.11 at 16h 24m 00s.xml">
+    <history-entry file="DataBaseTest_greetedNames - 2019.04.11 at 17h 57m 43s.xml">
       <configuration name="DataBaseTest.greetedNames" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataBaseTest_greetedNames - 2019.04.11 at 16h 24m 18s.xml">
+    <history-entry file="DataBaseTest_greetedNames - 2019.04.11 at 17h 58m 01s.xml">
       <configuration name="DataBaseTest.greetedNames" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest - 2019.04.11 at 17h 21m 53s.xml">
-      <configuration name="GreetTest" configurationId="JUnit" />
+    <history-entry file="DataBaseTest_greetedNames - 2019.04.11 at 17h 58m 32s.xml">
+      <configuration name="DataBaseTest.greetedNames" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataBaseTest_clearNamesFromDB - 2019.04.11 at 17h 27m 15s.xml">
-      <configuration name="DataBaseTest.clearNamesFromDB" configurationId="JUnit" />
+    <history-entry file="DataBaseTest_greetedNames - 2019.04.11 at 17h 59m 12s.xml">
+      <configuration name="DataBaseTest.greetedNames" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataBaseTest_clearNamesFromDB - 2019.04.11 at 17h 27m 35s.xml">
-      <configuration name="DataBaseTest.clearNamesFromDB" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataBaseTest - 2019.04.11 at 17h 27m 47s.xml">
-      <configuration name="DataBaseTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataBaseTest - 2019.04.11 at 17h 30m 18s.xml">
-      <configuration name="DataBaseTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataBaseTest - 2019.04.11 at 17h 30m 59s.xml">
-      <configuration name="DataBaseTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataBaseTest - 2019.04.11 at 17h 31m 26s.xml">
-      <configuration name="DataBaseTest" configurationId="JUnit" />
+    <history-entry file="DataBaseTest_greetedNames - 2019.04.11 at 18h 02m 57s.xml">
+      <configuration name="DataBaseTest.greetedNames" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -380,12 +358,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Favorites" order="2" sideWeight="0.5042017" weight="0.26547232" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49720672" visible="true" weight="0.33876222" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49720672" visible="true" weight="0.14006515" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49720672" weight="0.3061889" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32899022" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4980048" weight="0.26384366" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4980048" weight="0.45114008" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5027933" side_tool="true" weight="0.95114005" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32899022" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49960095" weight="0.43811074" />
@@ -464,6 +442,18 @@
           <line>62</line>
           <properties />
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/DataBaseTest.java</url>
+          <line>164</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/DataBaseTest.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java</url>
@@ -634,17 +624,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/DataBaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="138" column="44" lean-forward="true" selection-start-line="138" selection-start-column="44" selection-end-line="138" selection-end-column="44" />
+        <state relative-caret-position="245">
+          <caret line="228" column="13" lean-forward="true" selection-start-line="228" selection-start-column="13" selection-end-line="228" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#cleanUpTables#0;class#DataBaseTest#0" />
             <element signature="method#loadJdbcDriver#0;class#DataBaseTest#0" />
             <element signature="method#connectToDatabase#0;class#DataBaseTest#0" />
             <element signature="method#executeSQLStatement#0;class#DataBaseTest#0" />
+            <element signature="method#addDataToFruitTableViaMigration#0;class#DataBaseTest#0" />
             <element signature="method#clearNames#0;class#DataBaseTest#0" />
             <element signature="method#clearNamesFromDB#1;class#DataBaseTest#0" />
-            <element signature="method#greetedNames#0;class#DataBaseTest#0" />
           </folding>
         </state>
       </provider>
