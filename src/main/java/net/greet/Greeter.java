@@ -20,14 +20,14 @@ public class Greeter {
                 String userName = arr[ 1 ];
                 Greet.nameS ( userName );
                  language = "xhosa";
-                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getGreet ( userName ) );
+                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue () + userName.toUpperCase () );
 
             } else if (arr.length == 3) {
                 String userName = arr[ 1 ];
                 Greet.nameS ( userName );
                 language = arr[ 2 ];
                 Language.valueOf ( language.toLowerCase ( ) );
-                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getGreet ( userName ) );
+                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue () + userName.toUpperCase () );
             }
             else if (arr[ 0 ].equalsIgnoreCase ( "clear".toLowerCase ()) && arr.length == 2) {
                 String userName = arr[ 1 ];

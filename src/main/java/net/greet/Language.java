@@ -1,43 +1,16 @@
 package net.greet;
 
-//public class Language {
-/*/
-    public enum LangType {
-        IsiXhosa(), Portuguese, French, English
-    }
+public enum Language {
 
+    xhosa ("MHOLO "),
+    english ("HEY "),
+    french ("BONJOUR "),
+    portuguese ("OLÀ ");
 
-    public static String langInSwitch ( LangType type ) {
+    public String value;
 
-        switch (type) {
-            case IsiXhosa:
-                return "MHOLO " + Greet.name + " !";
-            case Portuguese:
-                return "OLÀ " + Greet.name + " !";
-            case French:
-                return "BONJOUR " + Greet.name + " !";
-            case English:
-                return "Hey " + Greet.name + " ! ";
-            default:
-                return "Hey " + Greet.name + " !";
-        }
-    }
+    Language ( String value ) { this.value = value.toLowerCase ( ); }
 
-*/
- public enum Language {
+    public String getValue ( ) { return value.toUpperCase ( ); }
+}
 
-        xhosa ( "MHOLO " ),
-        english ( "HEY " ),
-        french ( "BONJOUR " ),
-        portuguese ( "OLÀ " );
-
-        public  String greet;
-
-        Language ( String greet) {
-            this.greet = greet.toLowerCase (); }
-
-        public  String getGreet( String name){
-
-            name = Greet.name;
-            return greet.toUpperCase () + name.toUpperCase (); }
-    }

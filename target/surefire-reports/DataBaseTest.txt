@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: DataBaseTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.514 s <<< FAILURE! - in DataBaseTest
+greetFromDB  Time elapsed: 0.498 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <BONJOUR yegan > but was: <french yegan>
+	at DataBaseTest.greetFromDB(DataBaseTest.java:99)
+

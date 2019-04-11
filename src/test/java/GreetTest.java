@@ -1,22 +1,27 @@
 import net.greet.Greet;
 import net.greet.Language;
 import org.junit.jupiter.api.Test;
-import java.sql.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 
 public class GreetTest {
 
     @Test
-    public void greetMe ( ) throws SQLException {
+    public void greetMe ( ){
 
         System.out.println ( "\nShould greet Minentle in French :" );
-        Greet greetMin = new Greet ( "French" , "MINENTLE" );
-        assertEquals (Language.valueOf ( "French".toLowerCase () ).getGreet ( "MINENHLE" ), "BONJOUR MINENTLE" );
+
+        String userName = "MINENHLE";
+        Greet.nameS ( userName );
+        String language =Language.valueOf ( "french".toLowerCase () ).getValue ();
+        assertEquals (language + userName, "BONJOUR MINENHLE" );
 
         System.out.println ( "\nShould greet AYA in English :" );
-        Greet gree = new Greet ( "english" , "Aya" );
-        assertEquals (Language.valueOf ( "english".toLowerCase () ).getGreet ( "aya" ), "HEY AYA" );
+
+        String name = "AYA";
+        Greet.nameS ( name );
+        String languageType =Language.valueOf ( "english".toLowerCase () ).getValue ();
+
+        assertEquals ( languageType + name , "HEY AYA" );
 
     }
 
@@ -30,8 +35,8 @@ public class GreetTest {
         Greet.nameS ( "lllll" );
         Greet.nameS ( "Asa" );
         Greet.nameS ( "Asa" );
-        System.out.println ( "\nShould return 6 for the Counter:\n" + Greet.count ( ) );
 
+        assertEquals (6,Greet.count ( ));
     }
 
     @Test
@@ -60,7 +65,7 @@ public class GreetTest {
         Greet.namesGreeted();
         Greet.removeName ("ASA");
         Greet.namesGreeted();
-        System.out.println ( "\nCounter:\n" + Greet.count () );
+        assertEquals ( 5,Greet.count ());
     }
 
     @Test
@@ -73,9 +78,8 @@ public class GreetTest {
         Greet.nameS ( "lllll" );
         Greet.nameS ( "Asa" );
         Greet.clearNames ();
-        Greet.namesGreeted();
 
-        System.out.println ( "\nCounter:\n" + Greet.count () );
+        assertEquals ( 0,Greet.count () );
     }
 
 }

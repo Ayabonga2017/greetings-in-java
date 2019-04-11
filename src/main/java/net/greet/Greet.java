@@ -75,6 +75,7 @@ public class Greet {
         if (nameList.size ( ) == 0) {
             System.out.println ( "\nNo users have been greeted yet" );
         } else {
+            System.out.println ( "\nShould return the Counter:\n") ;
             System.out.println ( counter = nameList.size ( ) );
         }
         return counter;
