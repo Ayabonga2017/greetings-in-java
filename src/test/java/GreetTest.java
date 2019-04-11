@@ -8,8 +8,8 @@ public class GreetTest {
 
     @BeforeEach
     public  void cleanMap(){
-        Greet.clearNames ();
-    }
+        Greet.clearNames (); }
+
     @Test
     public void greetMe ( ){
 

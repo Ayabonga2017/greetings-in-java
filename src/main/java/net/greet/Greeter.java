@@ -45,7 +45,6 @@ public class Greeter {
                 Greet.help ( );
             } else if ( arr[ 0 ].equalsIgnoreCase ( "exit".toLowerCase ( ) ) && arr.length == 1 ) {
                 Greet.exit ( );
-
             } else {
                 Greet.invalid ( );
             }
