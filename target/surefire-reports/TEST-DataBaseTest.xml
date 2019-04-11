@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DataBaseTest" time="0.514" tests="4" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DataBaseTest" time="0.56" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="file.encoding.pkg" value="sun.io"/>
@@ -16,7 +16,7 @@
     <property name="user.country" value="ZA"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
-    <property name="sun.java.command" value="/home/coder/IdeaProjects/greet-in-java/target/surefire/surefirebooter720731186984909851.jar /home/coder/IdeaProjects/greet-in-java/target/surefire 2019-04-11T11-13-09_758-jvmRun1 surefire500392516797443577tmp surefire_04770714027123007281tmp"/>
+    <property name="sun.java.command" value="/home/coder/IdeaProjects/greet-in-java/target/surefire/surefirebooter826555347324223138.jar /home/coder/IdeaProjects/greet-in-java/target/surefire 2019-04-11T14-45-55_634-jvmRun1 surefire1256321936847749209tmp surefire_08489508425867817713tmp"/>
     <property name="surefire.test.class.path" value="/home/coder/IdeaProjects/greet-in-java/target/test-classes:/home/coder/IdeaProjects/greet-in-java/target/classes:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.4.0/junit-jupiter-api-5.4.0.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.4.0/junit-platform-commons-1.4.0.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.4.0/junit-jupiter-engine-5.4.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.4.0/junit-platform-engine-1.4.0.jar:/root/.m2/repository/com/h2database/h2/1.4.197/h2-1.4.197.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/root"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/coder/IdeaProjects/greet-in-java/target/surefire/surefirebooter720731186984909851.jar"/>
+    <property name="surefire.real.class.path" value="/home/coder/IdeaProjects/greet-in-java/target/surefire/surefirebooter826555347324223138.jar"/>
     <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="1.8.0_201-b09"/>
@@ -57,12 +57,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="greetFromDB" classname="DataBaseTest" time="0.498">
-    <failure message="expected: &lt;BONJOUR yegan &gt; but was: &lt;french yegan&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <BONJOUR yegan > but was: <french yegan>
-	at DataBaseTest.greetFromDB(DataBaseTest.java:99)
-]]></failure>
-  </testcase>
-  <testcase name="executeSQLStatement" classname="DataBaseTest" time="0.003"/>
+  <testcase name="greetFromDB" classname="DataBaseTest" time="0.53"/>
+  <testcase name="countNamesFromDB" classname="DataBaseTest" time="0.005"/>
+  <testcase name="clearName" classname="DataBaseTest" time="0.003"/>
+  <testcase name="executeSQLStatement" classname="DataBaseTest" time="0.005"/>
   <testcase name="loadJdbcDriver" classname="DataBaseTest" time="0.002"/>
-  <testcase name="connectToDatabase" classname="DataBaseTest" time="0.004"/>
+  <testcase name="connectToDatabase" classname="DataBaseTest" time="0.003"/>
+  <testcase name="clearNamesFromDB" classname="DataBaseTest" time="0.002"/>
 </testsuite>
