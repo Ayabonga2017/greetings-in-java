@@ -3,8 +3,6 @@ package net.greet;
 import java.sql.*;
 import java.util.Scanner;
 
-import static net.greet.Greet.language;
-
 public class GreeterWIthDB {
 
     public static void main ( String args[] ) throws SQLException, ClassNotFoundException {
@@ -16,6 +14,10 @@ public class GreeterWIthDB {
         Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
         final String INSERT_PEOPLE_SQL = "insert into people (name, language) values (?, ?)";
         PreparedStatement addToDB = conn.prepareStatement ( INSERT_PEOPLE_SQL );
+        String language;
+
+        GreetWithHashMap greetMap = new GreetWithHashMap ();
+        GreeterWIthDB greetDB = new GreeterWIthDB ();
 
         while ( true ) {
 
@@ -26,7 +28,7 @@ public class GreeterWIthDB {
 
             if ( arr[ 0 ].equalsIgnoreCase ( "greet".toLowerCase ( ) ) && arr.length == 2 ) {
                 String userName = arr[ 1 ];
-                Greet.nameS ( userName );
+                greetMap.names ( userName );
                 addToDB.setString ( 1 , userName );
                 language = "xhosa";
                 addToDB.setString ( 2 , Language.valueOf ( language ).getValue ( ) );
@@ -43,7 +45,7 @@ public class GreeterWIthDB {
             }else if ( arr.length == 3 ) {
 
                 String userName = arr[ 1 ];
-                Greet.nameS ( userName );
+                greetMap.names ( userName );
                 addToDB.setString ( 1 , userName );
                 language = arr[ 2 ];
                 addToDB.setString ( 2 , Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) );
@@ -55,7 +57,6 @@ public class GreeterWIthDB {
                 ResultSet s = ps.executeQuery ( );
                 s.next ( );
 
-                //   System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ) );
                 System.out.println ( "\n" + s.getString ( "language" ) + " " + s.getString ( "name" ) );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "clear".toLowerCase ( ) ) && arr.length == 2 ) {
@@ -63,47 +64,43 @@ public class GreeterWIthDB {
                 Statement statement = conn.createStatement ( );
                 statement.addBatch ( "delete from people where name = (arr[ 1 ])" );
                 statement.executeBatch ( );
-                Greet.removeName ( userName.toUpperCase ( ) );
+                greetMap.removeName ( userName.toUpperCase ( ) );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "clearall" ) && arr.length == 1 ) {
                 Statement statement = conn.createStatement ( );
                 statement.addBatch ( "delete from people" );
                 statement.executeBatch ( );
-                Greet.clearNames ( );
+                greetMap.clearNames ( );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "greeted".toLowerCase ( ) ) && arr.length == 1 ) {
-                Greet.namesGreeted ( );
+                greetMap.namesGreeted ( );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "greetcount".toLowerCase ( ) ) && arr.length == 2 ) {
                 String userName = arr[ 1 ];
-                Greet.greetedName ( userName.toUpperCase ( ) );
+                greetMap.greetedName ( userName.toUpperCase ( ) );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "counter".toLowerCase ( ) ) && arr.length == 1 ) {
-                Greet.count ( );
+                greetMap.count ( );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "countDB".toLowerCase ( ) ) && arr.length == 1 ) {
-                Statement statement = conn.createStatement ( );
-
-                ResultSet rs = statement.executeQuery ( "select count(*) from people" );
-
-                System.out.println ( "Should return the counter for names inserted in the table:\n" + rs.getInt ( "countNames" ) );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "help".toLowerCase ( ) ) && arr.length == 1 ) {
-                Greet.help ( );
+                greetMap.help ( );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "exit".toLowerCase ( ) ) && arr.length == 1 ) {
-                Greet.exit ( );
+                greetMap.exit ( );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "display".toLowerCase ( ) ) && arr.length == 1 ) {
 
                 PreparedStatement ps = conn.prepareStatement ( "select name from people " );
                 ResultSet rs = ps.executeQuery ( );
+
                 while ( rs.next ( ) ) {
-                    //   System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ) );
-                    System.out.println ( "\n" + rs.getString ( "name".toUpperCase ( ) ) );
+                    System.out.println ( "\n" + rs.getString ( "name" ) );
                 }
+
             }else {
-                Greet.invalid ( );
+                greetMap.invalid ( );
             }
         }
     }

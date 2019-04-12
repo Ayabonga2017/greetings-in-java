@@ -1,3 +1,93 @@
 2019-04-12 16:28:35 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Table "PEOPLE" not found; SQL statement:
 insert into people (name, language) values (?, ?) [42102-197]
+2019-04-12 16:32:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "countNames" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:346)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:116)
+2019-04-12 16:35:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2019-04-12 16:54:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ARR" not found; SQL statement:
+delete from people where name = (arr[ 1 ]) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Function.optimize(Function.java:2131)
+	at org.h2.expression.Comparison.optimize(Comparison.java:179)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:777)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:64)
+2019-04-12 16:54:15 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Column "ARR" not found; SQL statement:
+delete from people where name = (arr[ 1 ]) [42122-197]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:792)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:64)
+org.h2.jdbc.JdbcSQLException: Column "ARR" not found; SQL statement:
+delete from people where name = (arr[ 1 ]) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Function.optimize(Function.java:2131)
+	at org.h2.expression.Comparison.optimize(Comparison.java:179)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:777)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:64)
+2019-04-12 16:58:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "ARR" not found; SQL statement:
+delete from people where name = (arr[ 1 ]) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Function.optimize(Function.java:2131)
+	at org.h2.expression.Comparison.optimize(Comparison.java:179)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:777)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:64)
+2019-04-12 16:58:36 jdbc[3]: exception
+org.h2.jdbc.JdbcBatchUpdateException: Column "ARR" not found; SQL statement:
+delete from people where name = (arr[ 1 ]) [42122-197]
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:792)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:64)
+org.h2.jdbc.JdbcSQLException: Column "ARR" not found; SQL statement:
+delete from people where name = (arr[ 1 ]) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Function.optimize(Function.java:2131)
+	at org.h2.expression.Comparison.optimize(Comparison.java:179)
+	at org.h2.command.dml.Delete.prepare(Delete.java:141)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.executeBatch(JdbcStatement.java:777)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:64)
+2019-04-12 17:19:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT COUNT(*) AS rowcount FROM people[*]"" "; SQL statement:
+SELECT COUNT(*) AS rowcount FROM people"  [42000-197]
