@@ -17,4 +17,3 @@ public enum Language {
         return value.toUpperCase ( );
     }
 }
-

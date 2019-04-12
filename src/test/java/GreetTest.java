@@ -18,6 +18,7 @@ public class GreetTest {
         String userName = "MINENHLE";
         Greet.nameS ( userName );
         String language =Language.valueOf ( "french".toLowerCase () ).getValue ();
+
         assertEquals (language + userName, "BONJOUR MINENHLE" );
 
         System.out.println ( "\nShould greet AYA in English :" );

@@ -1,9 +1,7 @@
 import net.greet.Language;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.sql.*;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
@@ -27,7 +25,6 @@ public class DataBaseTest {
             System.out.println ( "These test will fail until the fruit table is created: " + ex );
         }
     }
-
     @Test
     public void loadJdbcDriver () {
 
@@ -38,7 +35,6 @@ public class DataBaseTest {
             fail ( e );
         }
     }
-
     @Test
     public void connectToDatabase () {
 
@@ -51,28 +47,26 @@ public class DataBaseTest {
             fail ( e );
         }
     }
-
     @Test
     public void executeSQLStatement () {
 
         try {
             Class.forName ( "org.h2.Driver" );
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
-            Statement statement = conn.createStatement ( );
+            Statement statement = conn.createStatement ();
             ResultSet rs = statement.executeQuery ( "select * from people" );
 
         } catch ( Exception e ) {
             fail ( e );
         }
     }
-
     @Test
     public void greetFromDB () {
 
         try {
             Class.forName ( "org.h2.Driver" );
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
-            final String INSERT_PEOPLE_SQL = "insert into people (name, language,count) values (?, ?, ?)";
+            final String INSERT_PEOPLE_SQL = "insert into people (name, language) values (?, ?)";
             //  final String FIND_NAME_SQL = "select name, language from people where name = ?";
 
             // PreparedStatement are SQL statements that can be called
@@ -81,22 +75,22 @@ public class DataBaseTest {
 
             addNameWithLang.setString ( 1 , "THABANG" );
             addNameWithLang.setString ( 2 , Language.valueOf ( "french" ).getValue ( ) );
-            addNameWithLang.setInt ( 3 , 1 );
+           // addNameWithLang.setInt ( 3 , 1 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "AYABONGA" );
             addNameWithLang.setString ( 2 , Language.valueOf ( "xhosa" ).getValue ( ) );
-            addNameWithLang.setInt ( 3 , 2 );
+           // addNameWithLang.setInt ( 3 , 2 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "UNALO" );
             addNameWithLang.setString ( 2 , Language.valueOf ( "english" ).getValue ( ) );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "YEGAN" );
             addNameWithLang.setString ( 2 , Language.valueOf ( "portuguese" ).getValue ( ) );
-            addNameWithLang.setInt ( 3 , 3 );
+          //  addNameWithLang.setInt ( 3 , 3 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "NTANDO" );
             addNameWithLang.setString ( 2 , Language.valueOf ( "portuguese" ).getValue ( ) );
-            addNameWithLang.setInt ( 3 , 4 );
+        //    addNameWithLang.setInt ( 3 , 4 );
             addNameWithLang.execute ( );
             PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
 
@@ -112,7 +106,6 @@ public class DataBaseTest {
             fail ( e );
         }
     }
-
     @Test
     public void countNamesFromDB () {
 
@@ -120,7 +113,7 @@ public class DataBaseTest {
 
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
             Statement statement = conn.createStatement ( );
-            final String INSERT_PEOPLE_SQL = "insert into people (name, language ,count) values (?, ?, ?)";
+            final String INSERT_PEOPLE_SQL = "insert into people (name, language) values (?, ?)";
             //  final String FIND_NAME_SQL = "select name, language from people where name = ?";
 
             // PreparedStatement are SQL statements that can be called
@@ -129,23 +122,23 @@ public class DataBaseTest {
 
             addNameWithLang.setString ( 1 , "THABANG" );
             addNameWithLang.setString ( 2 , Language.valueOf ( "french" ).getValue ( ) );
-            addNameWithLang.setInt ( 3 , 1 );
+          //  addNameWithLang.setInt ( 3 , 1 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "AYABONGA" );
             addNameWithLang.setString ( 2 , Language.valueOf ( "xhosa" ).getValue ( ) );
-            addNameWithLang.setInt ( 3 , 2 );
+          //  addNameWithLang.setInt ( 3 , 2 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "UNALO" );
             addNameWithLang.setString ( 2 , Language.valueOf ( "english" ).getValue ( ) );
-            addNameWithLang.setInt ( 3 , 3 );
+        //    addNameWithLang.setInt ( 3 , 3 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "YEGAN" );
             addNameWithLang.setString ( 2 , Language.valueOf ( "portuguese" ).getValue ( ) );
-            addNameWithLang.setInt ( 3 , 4 );
+           // addNameWithLang.setInt ( 3 , 4 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "NTANDO" );
             addNameWithLang.setString ( 2 , Language.valueOf ( "portuguese" ).getValue ( ) );
-            addNameWithLang.setInt ( 3 , 5 );
+          //  addNameWithLang.setInt ( 3 , 5 );
             addNameWithLang.execute ( );
 
             ResultSet rs = statement.executeQuery ( "select count(*) as countNames from people" );
@@ -158,7 +151,6 @@ public class DataBaseTest {
             fail ( e );
         }
     }
-
     @Test
     public void clearNamesInserted () {
 

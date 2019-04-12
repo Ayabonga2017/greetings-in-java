@@ -10,6 +10,7 @@ public class Greeter {
 
         System.out.println ( "--------Welcome to the Greetings App--------\n " );
 
+
         while ( true ) {
 
             Scanner input = new Scanner ( System.in );
