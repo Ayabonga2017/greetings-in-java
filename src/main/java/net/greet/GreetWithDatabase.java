@@ -14,7 +14,7 @@ public class GreetWithDatabase implements Greet {
         } catch ( ClassNotFoundException e ) {
            // fail ( e );
         }
-    }    Connection conn;
+    } Connection conn;
 
     {
         try {
@@ -24,56 +24,88 @@ public class GreetWithDatabase implements Greet {
         }
     }
 
-    final String INSERT_PEOPLE_SQL = "insert into people (name, language) values (?, ?)";
-    PreparedStatement addToDB;
+    final String INSERT_PEOPLE_SQL = "insert into people (name) values (?)";
+    PreparedStatement insertDB;
+
+    final String FIND_COUNTER_SQL = "select counter from people where name = ?";
+    PreparedStatement foundCount;
+
+    final String UPDATE_NAME_COUNT_SQL = "update people set counter = ? where name = ?";
+    PreparedStatement updateCounter;
 
     {
         try {
-            addToDB = conn.prepareStatement ( INSERT_PEOPLE_SQL );
+            insertDB = conn.prepareStatement ( INSERT_PEOPLE_SQL );
+            foundCount =conn.prepareStatement ( FIND_COUNTER_SQL );
+            updateCounter = conn.prepareStatement ( UPDATE_NAME_COUNT_SQL );
+
         } catch ( SQLException e ) {
             e.printStackTrace ( );
         }
     }
 
     @Override
-    public void namesWithDefault ( String name ) throws SQLException{
+    public void greetedName ( String name ){
+        try {
+            foundCount.setString(1, name);
+        } catch ( SQLException e ) {
+            e.printStackTrace ( );
+        }
+        try {
+            ResultSet rs = foundCount.executeQuery();
 
-        addToDB.setString ( 1 , name );
-        String language = "xhosa";
+            if (!rs.next()) {
+                // insert
+                insertDB.setString(1, name);
+                insertDB.setInt(3, 1);
+                System.out.println(insertDB.execute());
 
-        addToDB.setString ( 2 , Language.valueOf ( language ).getValue ( ) );
-        addToDB.execute ( );
+            } else {
+                int count = rs.getInt("counter");
+                updateCounter.setInt(3, ++count);
+                updateCounter.setString(1, name);
+                updateCounter.execute();
+            }
 
-        PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
-        ps.setString ( 1 , name );
-        ResultSet rs = ps.executeQuery ( );
-        while ( rs.next ( ) ) {
-            //   System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ) );
-            System.out.println ( "\n" + rs.getString ( "language" ) + " " + rs.getString ( "name".toUpperCase ( ) ) );
+        } catch(SQLException ex) {
+            ex.printStackTrace();
         }
     }
 
     @Override
-    public void namesWithLang( String name, String language) throws SQLException{
+    public void namesWithDefault ( String name ) throws SQLException{
 
-        addToDB.setString ( 1 , name );
-        addToDB.setString ( 2 , Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) );
-        Language.valueOf ( language.toLowerCase ( ) );
-        addToDB.execute ( );
+        insertDB.setString ( 1 , name );
+        String language = "xhosa";
+        insertDB.execute ( );
 
         PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
         ps.setString ( 1 , name );
-        ResultSet s = ps.executeQuery ( );
-        s.next ( );
-
-        //   System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ) );
-        System.out.println ( "\n" + s.getString ( "language" ) + " " + s.getString ( "name" ) );
+        ResultSet rs = ps.executeQuery ( );
+        if ( rs.next ( ) ) {
+            //   System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ) );
+            System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue () + " " + rs.getString ( "name".toUpperCase ( ) ) );
+        }
     }
 
     @Override
-    public void names ( String name ){
+    public void namesWithLang( String language, String name) throws SQLException{
 
+        insertDB.setString ( 1 , name );
+        insertDB.execute ( );
+
+        language =Language.valueOf ( language.toLowerCase ( ) ).getValue ();
+
+        PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
+
+        ps.setString ( 1 , name );
+        ResultSet s = ps.executeQuery ( );
+        if ( s.next ( ) ) {
+
+            System.out.println ( "\n" + language+ " " + s.getString ( "name" ) );
+        }
     }
+
 
     @Override
     public void namesGreeted () throws SQLException{
@@ -83,12 +115,6 @@ public class GreetWithDatabase implements Greet {
         while ( rs.next ( ) ) {
             System.out.println ( "\n" + rs.getString ( "name" ) );
         }
-
-    }
-
-    @Override
-    public void greetedName ( String name ){
-
     }
 
     @Override
@@ -110,11 +136,11 @@ public class GreetWithDatabase implements Greet {
             e.printStackTrace ( );
         }
         statement.executeBatch ( );
+        System.out.println ("deleted all users from the Database" );
     }
 
     @Override
     public int count (){
-
 
         return 0;
     }
@@ -131,6 +157,10 @@ public class GreetWithDatabase implements Greet {
 
     @Override
     public void exit (){
+
+    }
+    @Override
+    public void names ( String name ){
 
     }
 }

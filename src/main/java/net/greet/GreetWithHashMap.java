@@ -49,6 +49,7 @@ public class GreetWithHashMap implements Greet{
     }
     @Override
     public  void clearNames ( ) {
+
         if (nameList.isEmpty ( ) == true) {
             System.out.println ( "\nlist is empty" );
         } else if (nameList.isEmpty ( ) == false) {

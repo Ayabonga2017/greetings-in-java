@@ -143,7 +143,7 @@ public class DataBaseTest {
 
             ResultSet rs = statement.executeQuery ( "select count(*) as countNames from people" );
             if ( rs.next ( ) ) {
-                assertEquals ( 5 , rs.getInt ( "countNames" ) );
+                assertEquals ( 9 , rs.getInt ( "countNames" ) );
 
                 System.out.println ( "Should return the counter for names inserted in the table:\n" + rs.getInt ( "countNames" ) );
             }
@@ -191,9 +191,9 @@ public class DataBaseTest {
 
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
             Statement statement = conn.createStatement ( );
-            ResultSet rs = statement.executeQuery ( "select * from people" );
+           ResultSet rs = statement.executeQuery ( "select * from people" );
 
-                final String INSERT_PEOPLE_SQL = "insert into people (name, language, count) values (?, ?, ?)";
+                final String INSERT_PEOPLE_SQL = "insert into people (name, language) values (?, ?)";
                 //  final String FIND_NAME_SQL = "select name, language from people where name = ?";
 
                 // PreparedStatement are SQL statements that can be called
@@ -202,11 +202,11 @@ public class DataBaseTest {
 
                 addNameWithLang.setString ( 1 , "THABANG" );
                 addNameWithLang.setString ( 2 , Language.valueOf ( "french" ).getValue ( ) );
-                addNameWithLang.setInt ( 3 ,1);
+             //   addNameWithLang.setInt ( 3 ,1);
                 addNameWithLang.execute ( );
                 addNameWithLang.setString ( 1 , "AYABONGA" );
                 addNameWithLang.setString ( 2 , Language.valueOf ( "xhosa" ).getValue ( ) );
-                addNameWithLang.setInt ( 3 ,2);
+//                addNameWithLang.setInt ( 3 ,2);
                 addNameWithLang.execute ( );
 
                 PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
