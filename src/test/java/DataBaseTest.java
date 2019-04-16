@@ -167,7 +167,6 @@ public class DataBaseTest {
             System.out.println ( "These test will fail until the fruit table is created: " + ex );
         }
     }
-
     @Test
     public void clearName () {
 
@@ -184,7 +183,6 @@ public class DataBaseTest {
             System.out.println ( "These test will fail until the fruit table is created: " + ex );
         }
     }
-
     @Test
     public void greetedNames () {
         try {
@@ -224,7 +222,6 @@ public class DataBaseTest {
         }
 
     }
-
     @Test
     public void countFromDB () {
         try {

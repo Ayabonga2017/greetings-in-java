@@ -5,11 +5,9 @@ import java.util.Scanner;
 
 public class GreeterWIthDB {
 
-    public static void main ( String args[] ) throws SQLException, ClassNotFoundException {
+    public static void main ( String args[] ) throws SQLException {
 
         System.out.println ( "--------Greetings App With DB--------\n " );
-
-        String language;
 
         //GreetWithHashMap greetMap = new GreetWithHashMap ();
         GreetWithDatabase greetMap = new GreetWithDatabase ();
@@ -22,13 +20,10 @@ public class GreeterWIthDB {
             String[] arr = name.split ( " " );
 
             if ( arr[ 0 ].equalsIgnoreCase ( "greet".toLowerCase ( ) ) && arr.length == 2 ) {
-
                 greetMap.namesWithDefault ( arr[ 1 ] );
 
             }else if ( arr.length == 3 ) {
-
-                greetMap.namesWithLang (arr[ 2 ] ,arr[ 1 ]);
-
+                greetMap.namesWithLang (arr[ 1 ], arr[ 2 ]);
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "clear".toLowerCase ( ) ) && arr.length == 2 ) {
                 String userName = arr[ 1 ];
@@ -47,8 +42,10 @@ public class GreeterWIthDB {
             }else if ( arr[ 0 ].equalsIgnoreCase ( "counter".toLowerCase ( ) ) && arr.length == 1 ) {
                 greetMap.count ( );
 
-            }else if ( arr[ 0 ].equalsIgnoreCase ( "countDB".toLowerCase ( ) ) && arr.length == 1 ) {
+            }else if ( arr[ 0 ].equalsIgnoreCase ( "countname".toLowerCase ( ) ) && arr.length == 2 ) {
+                String userName = arr[ 1 ];
 
+                greetMap.countName(userName);
             }else if ( arr[ 0 ].equalsIgnoreCase ( "help".toLowerCase ( ) ) && arr.length == 1 ) {
                 greetMap.help ( );
 

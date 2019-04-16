@@ -24,19 +24,20 @@ public class GreetWithDatabase implements Greet {
         }
     }
 
-    final String INSERT_PEOPLE_SQL = "insert into people (name) values (?)";
+    final String INSERT_PEOPLE_SQL = "insert into people (name,counter) values (?, ?)";
     PreparedStatement insertDB;
 
     final String FIND_COUNTER_SQL = "select counter from people where name = ?";
-    PreparedStatement foundCount;
+    PreparedStatement findCount;
 
     final String UPDATE_NAME_COUNT_SQL = "update people set counter = ? where name = ?";
     PreparedStatement updateCounter;
 
-    {
+    public GreetWithDatabase(){
+
         try {
             insertDB = conn.prepareStatement ( INSERT_PEOPLE_SQL );
-            foundCount =conn.prepareStatement ( FIND_COUNTER_SQL );
+            findCount =conn.prepareStatement ( FIND_COUNTER_SQL );
             updateCounter = conn.prepareStatement ( UPDATE_NAME_COUNT_SQL );
 
         } catch ( SQLException e ) {
@@ -46,23 +47,22 @@ public class GreetWithDatabase implements Greet {
 
     @Override
     public void greetedName ( String name ){
+
+
         try {
-            foundCount.setString(1, name);
-        } catch ( SQLException e ) {
-            e.printStackTrace ( );
-        }
-        try {
-            ResultSet rs = foundCount.executeQuery();
+            findCount.setString(1, name);
+            ResultSet rs = findCount.executeQuery();
 
             if (!rs.next()) {
                 // insert
                 insertDB.setString(1, name);
-                insertDB.setInt(3, 1);
+                insertDB.setInt(2, 1);
                 System.out.println(insertDB.execute());
 
             } else {
+                //if already exists
                 int count = rs.getInt("counter");
-                updateCounter.setInt(3, ++count);
+                updateCounter.setInt(2, ++count);
                 updateCounter.setString(1, name);
                 updateCounter.execute();
             }
@@ -71,11 +71,11 @@ public class GreetWithDatabase implements Greet {
             ex.printStackTrace();
         }
     }
-
     @Override
     public void namesWithDefault ( String name ) throws SQLException{
 
         insertDB.setString ( 1 , name );
+        insertDB.setInt ( 2 , 1 );
         String language = "xhosa";
         insertDB.execute ( );
 
@@ -83,45 +83,53 @@ public class GreetWithDatabase implements Greet {
         ps.setString ( 1 , name );
         ResultSet rs = ps.executeQuery ( );
         if ( rs.next ( ) ) {
-            //   System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ) );
-            System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue () + " " + rs.getString ( "name".toUpperCase ( ) ) );
+            System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue () + " " + rs.getString ( "name" ) );
         }
     }
-
     @Override
-    public void namesWithLang( String language, String name) throws SQLException{
+    public void namesWithLang(String name,  String language) throws SQLException{
 
-        insertDB.setString ( 1 , name );
-        insertDB.execute ( );
+   PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
 
-        language =Language.valueOf ( language.toLowerCase ( ) ).getValue ();
+        try {
+            findCount.setString(1, name);
+            ResultSet rs = findCount.executeQuery();
 
-        PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
+            if (!rs.next()) {
+                // insert
+                insertDB.setString(1, name);
+                insertDB.setInt(2, 1);
+                insertDB.execute();
+                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ()+ " " + rs.getString ( "name" ) );
 
-        ps.setString ( 1 , name );
-        ResultSet s = ps.executeQuery ( );
-        if ( s.next ( ) ) {
+            } else {
+                //if already exists
+                int count = rs.getInt("counter");
+                updateCounter.setInt(2, ++count);
+                updateCounter.setString(1, name);
+                updateCounter.execute();
+                System.out.println ( "\n" +  "Updated " );
 
-            System.out.println ( "\n" + language+ " " + s.getString ( "name" ) );
+            }
+
+        } catch(SQLException ex) {
+            ex.printStackTrace ( );
         }
-    }
 
-
+        }
     @Override
     public void namesGreeted () throws SQLException{
         PreparedStatement ps = conn.prepareStatement ( "select name from people " );
         ResultSet rs = ps.executeQuery ( );
 
-        while ( rs.next ( ) ) {
-            System.out.println ( "\n" + rs.getString ( "name" ) );
+            while ( rs.next ( ) ) {
+                System.out.println ( "\n" + rs.getString ( "name" ) );
+            }
         }
-    }
-
     @Override
     public void removeName ( String name ){
 
     }
-
     @Override
     public void clearNames () throws SQLException{
         Statement statement = null;
@@ -138,26 +146,52 @@ public class GreetWithDatabase implements Greet {
         statement.executeBatch ( );
         System.out.println ("deleted all users from the Database" );
     }
-
     @Override
     public int count (){
 
+        try {
+            findCount.setString(1, "name");
+            ResultSet rs = findCount.executeQuery();
+            if (rs.next()) {
+                return rs.getInt("counter");
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        // if this pet wasn't greeted yet
         return 0;
     }
-
     @Override
-    public void invalid (){
+    public int countName ( String name){
 
+        try {
+            findCount.setString(1, name);
+            ResultSet rs = findCount.executeQuery();
+            if (rs.next()) {
+                System.out.println (rs.getInt("counter"));
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        // if this pet wasn't greeted yet
+        return 0;
     }
-
     @Override
-    public void help (){
-
+    public void invalid ( ) {
+        System.out.println ( "\nInvalid command." + "\ntype 'help' to get the list of valid commands." );
     }
-
     @Override
-    public void exit (){
-
+    public void help ( ) {
+        System.out.println ( "\nValid Commands are as follow :\n" + "\n- greet + name + language : will greet a person with a language of your choice." );
+        System.out.println ( "- greet + name : will greet a person with the default language.\n" + "- greeted : will display a list of greeted names. " );
+        System.out.println ( "- greetedcount + name : will display how many times a person has been greeted.\n" + "- counter : will display the number of greeted names. " );
+        System.out.println ( "- clear + name : will remove a persons name from the list and decrement the counter.\n" + "- clearall : will delete all the names on the list set the counter to 0." );
+        System.out.println ( "- exit : will exit the greeting application.\n" + "- help : will display all the possible commands to use when using this application." );
+    }
+    @Override
+    public void exit ( ) {
+        System.out.println ( "\nGood-Bye\n" );
+        System.exit ( 0 );
     }
     @Override
     public void names ( String name ){

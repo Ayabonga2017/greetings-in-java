@@ -1,10 +1,11 @@
 package net.greet;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Greeter {
 
-    public static void main ( String args[] ) {
+    public static void main ( String args[] ) throws SQLException{
 
         System.out.println ( "--------Welcome to the Greetings App--------\n " );
 
@@ -20,14 +21,15 @@ public class Greeter {
 
             if ( arr[ 0 ].equalsIgnoreCase ( "greet".toLowerCase ( ) ) && arr.length == 2 ) {
                 String userName = arr[ 1 ];
-                greetMap.names ( userName );
+                greetMap.namesWithDefault ( userName );
                 language = "xhosa";
                 System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ) );
 
             } else if ( arr.length == 3 ) {
                 String userName = arr[ 1 ];
-                greetMap.names ( userName );
                 language = arr[ 2 ];
+                greetMap.namesWithLang ( language, userName );
+
                 Language.valueOf ( language.toLowerCase ( ) );
                 System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ) );
             } else if ( arr[ 0 ].equalsIgnoreCase ( "clear".toLowerCase ( ) ) && arr.length == 2 ) {

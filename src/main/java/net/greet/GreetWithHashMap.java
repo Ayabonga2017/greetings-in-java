@@ -10,6 +10,7 @@ public class GreetWithHashMap implements Greet{
     String name;
 
     static Map < String,Integer > nameList = new HashMap <> ( );
+
     @Override
     public void names ( String names ) {
         names = names.substring ( 0 , 1 ).toUpperCase ( ) + names.substring ( 1 ).toUpperCase ( );
@@ -17,7 +18,6 @@ public class GreetWithHashMap implements Greet{
         Integer counter = nameList.containsKey ( names ) ?nameList.get ( names ) : 0;
         nameList.put ( names , counter + 1 );
     }
-
     @Override
     public void namesGreeted ( ) {
 
@@ -89,4 +89,8 @@ public class GreetWithHashMap implements Greet{
     @Override
     public void namesWithLang ( String name , String language ) throws SQLException{ }
 
+    @Override
+    public int countName ( String name ){
+        return 0;
+    }
 }

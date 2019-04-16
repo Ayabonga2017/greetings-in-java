@@ -15,5 +15,6 @@ interface Greet {
     void exit();
     void namesWithDefault(String name)throws SQLException;
     void namesWithLang(String name, String language) throws SQLException;
+    int countName(String name);
 }
 
