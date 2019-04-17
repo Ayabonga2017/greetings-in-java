@@ -13,6 +13,7 @@ public class GreeterWIthDB {
         GreetWithDatabase greetMap = new GreetWithDatabase ();
 
         String userName;
+        String language;
 
         while ( true ) {
 
@@ -26,12 +27,16 @@ public class GreeterWIthDB {
                  userName =arr[1];
                 greetMap.namesWithDefault ( userName );
                 greetMap.names ( userName );
-              String  language = "xhosa";
+                language = "xhosa";
 
                 System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ));
 
             }else if ( arr.length == 3 ) {
-                greetMap.namesWithLang (arr[ 1 ], arr[ 2 ]);
+
+                userName =arr[ 1 ];
+                language =arr[ 2 ];
+                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ));
+                greetMap.namesWithLang (userName,language );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "clear".toLowerCase ( ) ) && arr.length == 2 ) {
                  userName = arr[ 1 ];

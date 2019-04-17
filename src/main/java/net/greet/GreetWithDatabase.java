@@ -73,22 +73,28 @@ public class GreetWithDatabase implements Greet {
     @Override
     public void namesWithDefault ( String name ) throws SQLException{
 
-        findCount.setString ( 1 , name );
-        ResultSet rs = findCount.executeQuery ( );
-
-        if ( ! rs.next ( ) ) {
-            insertDB.setString ( 1 , name );
-            insertDB.setInt ( 2 , 1 );
-            String language = "xhosa";
-            insertDB.execute ( );
+        try {
 
             findCount.setString ( 1 , name );
-            ResultSet s = findCount.executeQuery ( );
+            ResultSet rs = findCount.executeQuery ( );
 
-                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + " " + s.getString ( "name" ) );
+            if ( ! rs.next ( ) ) {
+                // insert
+                insertDB.setString ( 1 , name );
+                insertDB.setInt ( 2 , 1 );
+                insertDB.execute ( );
 
-            System.out.println ( "\n" +  language+ rs.getString ( "name" ) );
+            }else {
+                //if already exists
+                int count = rs.getInt ( "counter" );
+                updateCounter.setInt ( 1 , ++ count );
+                updateCounter.setString ( 2 , name );
+                updateCounter.execute ( );
+                System.out.println ( "\n" + "Updated Counter" );
 
+            }
+        } catch ( SQLException e ) {
+            e.printStackTrace ( );
         }
     }
     @Override
@@ -111,7 +117,7 @@ public class GreetWithDatabase implements Greet {
                 updateCounter.setInt(1, ++count);
                 updateCounter.setString(2, name);
                 updateCounter.execute();
-                System.out.println ( "\n" +  "Updated " );
+                System.out.println ( "\n" +  "Updated Counter" );
 
             }
 
@@ -122,11 +128,15 @@ public class GreetWithDatabase implements Greet {
         }
     @Override
     public void namesGreeted () throws SQLException{
+
         PreparedStatement ps = conn.prepareStatement ( "select name from people " );
         ResultSet rs = ps.executeQuery ( );
 
-            while ( rs.next ( ) ) {
+
+            if ( rs.next ( ) ) {
                 System.out.println ( "\n" + rs.getString ( "name" ) );
+            }else{
+                System.out.println ("\nNo names greeted yet"  );
             }
         }
     @Override
