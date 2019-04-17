@@ -25,12 +25,11 @@ public class GreeterWIthDB {
             if ( arr[ 0 ].equalsIgnoreCase ( "greet".toLowerCase ( ) ) && arr.length == 2 ) {
 
                  userName =arr[1];
-                greetMap.namesWithDefault ( userName );
                 greetMap.names ( userName );
                 language = "xhosa";
 
                 System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ));
-
+                greetMap.namesWithDefault ( userName );
             }else if ( arr.length == 3 ) {
 
                 userName =arr[ 1 ];
@@ -48,17 +47,13 @@ public class GreeterWIthDB {
             }else if ( arr[ 0 ].equalsIgnoreCase ( "greeted".toLowerCase ( ) ) && arr.length == 1 ) {
                 greetMap.namesGreeted ( );
 
-            }else if ( arr[ 0 ].equalsIgnoreCase ( "greetcount".toLowerCase ( ) ) && arr.length == 2 ) {
+            }else if ( arr[ 0 ].equalsIgnoreCase ( "count".toLowerCase ( ) ) && arr.length == 2 ) {
                  userName = arr[ 1 ];
-                greetMap.greetedName ( userName.toUpperCase ( ) );
+                greetMap.countName(userName);
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "counter".toLowerCase ( ) ) && arr.length == 1 ) {
                 System.out.println (  "\n"+greetMap.count ( ));
 
-            }else if ( arr[ 0 ].equalsIgnoreCase ( "countname".toLowerCase ( ) ) && arr.length == 2 ) {
-                 userName = arr[ 1 ];
-
-                greetMap.countName(userName);
             }else if ( arr[ 0 ].equalsIgnoreCase ( "help".toLowerCase ( ) ) && arr.length == 1 ) {
                 greetMap.help ( );
 

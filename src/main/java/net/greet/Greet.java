@@ -5,16 +5,15 @@ import java.sql.SQLException;
 interface Greet {
 
     void names( String name);
-    void namesGreeted() throws SQLException;
-    void greetedName(String name);
+    void namesGreeted() throws SQLException ;
     void removeName(String name);
-    void clearNames() throws SQLException;
+    void clearNames();
     int count() throws SQLException;
     void invalid();
     void help();
     void exit();
-    void namesWithDefault(String name)throws SQLException;
-    void namesWithLang(String name, String language) throws SQLException;
+    void namesWithDefault(String name);
+    void namesWithLang(String name, String language);
     int countName(String name);
 }
 

@@ -718,3 +718,19 @@ org.h2.jdbc.JdbcSQLException: Column "name" not found [42122-197]
 	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:34)
 2019-04-17 13:00:20 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2019-04-17 15:25:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1526)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:1201)
+	at org.h2.jdbc.JdbcPreparedStatement.checkClosed(JdbcPreparedStatement.java:1798)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:1175)
+	at org.h2.jdbc.JdbcResultSet.checkClosed(JdbcResultSet.java:3205)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3115)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at net.greet.GreetWithDatabase.namesGreeted(GreetWithDatabase.java:147)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:49)

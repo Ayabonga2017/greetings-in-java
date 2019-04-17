@@ -1,6 +1,5 @@
 package net.greet;
 
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,17 +25,6 @@ public class GreetWithHashMap implements Greet{
             System.out.println ( "\nno users have been greeted yet" );
         } else {
             System.out.println ( nameList );
-        }
-    }
-    @Override
-    public void greetedName ( String name ) {
-
-        if (name.isEmpty ( ) == false) {
-            for ( Map.Entry entry : nameList.entrySet ( ) ) {
-                System.out.println ( "\n" + name + " was greeted " + entry.getValue ( ) + " time(s)\n" );
-            }
-        } else {
-            System.out.println ( "\nuser not found" );
         }
     }
     @Override
@@ -86,16 +74,21 @@ public class GreetWithHashMap implements Greet{
         System.exit ( 0 );
     }
     @Override
-    public void namesWithDefault ( String name ) throws SQLException{
+    public void namesWithDefault ( String name ){
         language = "xhosa";
 
         System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + name.toUpperCase ( ) );
     }
     @Override
-    public void namesWithLang ( String name , String language ) throws SQLException{ }
-
+    public void namesWithLang ( String name , String language ) { }
     @Override
-    public int countName ( String name ){
+    public int countName ( String name ){ if (name.isEmpty ( ) == false) {
+        for ( Map.Entry entry : nameList.entrySet ( ) ) {
+            System.out.println ( "\n" + name + " was greeted " + entry.getValue ( ) + " time(s)\n" );
+        }
+    } else {
+        System.out.println ( "\nuser not found" );
+    }
         return 0;
     }
 }

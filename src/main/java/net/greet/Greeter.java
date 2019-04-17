@@ -39,9 +39,9 @@ public class Greeter {
                 greetMap.clearNames ( );
             } else if ( arr[ 0 ].equalsIgnoreCase ( "greeted".toLowerCase ( ) ) && arr.length == 1 ) {
                 greetMap.namesGreeted ( );
-            } else if ( arr[ 0 ].equalsIgnoreCase ( "greetcount".toLowerCase ( ) ) && arr.length == 2 ) {
+            } else if ( arr[ 0 ].equalsIgnoreCase ( "count".toLowerCase ( ) ) && arr.length == 2 ) {
                 String userName = arr[ 1 ];
-                greetMap.greetedName ( userName.toUpperCase ( ) );
+                greetMap.countName ( userName.toUpperCase ( ) );
             } else if ( arr[ 0 ].equalsIgnoreCase ( "counter".toLowerCase ( ) ) && arr.length == 1 ) {
                 greetMap.count ( );
             } else if ( arr[ 0 ].equalsIgnoreCase ( "help".toLowerCase ( ) ) && arr.length == 1 ) {
