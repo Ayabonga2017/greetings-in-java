@@ -66,7 +66,7 @@ public class DataBaseTest {
         try {
             Class.forName ( "org.h2.Driver" );
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
-            final String INSERT_PEOPLE_SQL = "insert into people (name, language) values (?, ?)";
+            final String INSERT_PEOPLE_SQL = "insert into people (name, counter) values (?, ?)";
             //  final String FIND_NAME_SQL = "select name, language from people where name = ?";
 
             // PreparedStatement are SQL statements that can be called
@@ -74,22 +74,22 @@ public class DataBaseTest {
             PreparedStatement addNameWithLang = conn.prepareStatement ( INSERT_PEOPLE_SQL );
 
             addNameWithLang.setString ( 1 , "THABANG" );
-            addNameWithLang.setString ( 2 , Language.valueOf ( "french" ).getValue ( ) );
+            addNameWithLang.setInt ( 2 , 1);
            // addNameWithLang.setInt ( 3 , 1 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "AYABONGA" );
-            addNameWithLang.setString ( 2 , Language.valueOf ( "xhosa" ).getValue ( ) );
+            addNameWithLang.setInt ( 2 , 1 );
            // addNameWithLang.setInt ( 3 , 2 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "UNALO" );
-            addNameWithLang.setString ( 2 , Language.valueOf ( "english" ).getValue ( ) );
+            addNameWithLang.setInt ( 2 , 1 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "YEGAN" );
-            addNameWithLang.setString ( 2 , Language.valueOf ( "portuguese" ).getValue ( ) );
+            addNameWithLang.setInt ( 2 , 1 );
           //  addNameWithLang.setInt ( 3 , 3 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "NTANDO" );
-            addNameWithLang.setString ( 2 , Language.valueOf ( "portuguese" ).getValue ( ) );
+            addNameWithLang.setInt ( 2 , 1 );
         //    addNameWithLang.setInt ( 3 , 4 );
             addNameWithLang.execute ( );
             PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
@@ -98,9 +98,9 @@ public class DataBaseTest {
             ResultSet rs = ps.executeQuery ( );
 
             while ( rs.next ( ) ) {
-                assertEquals ( "OLÀ NTANDO" , rs.getString ( "language" ) + rs.getString ( "name" ) );
+                assertEquals ( "OLÀ NTANDO" , Language.valueOf ( "portuguese" ).getValue ( ) + rs.getString ( "name" ) );
 
-                System.out.println ( "\n" + rs.getString ( "language" ) + " " + rs.getString ( "name" ) );
+                System.out.println ( "\n" + Language.valueOf ( "portuguese" ).getValue ( ) + " " + rs.getString ( "name" ) );
             }
         } catch ( Exception e ) {
             fail ( e );
@@ -189,9 +189,9 @@ public class DataBaseTest {
 
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
             Statement statement = conn.createStatement ( );
-           ResultSet rs = statement.executeQuery ( "select * from people" );
+           ResultSet rs;
 
-                final String INSERT_PEOPLE_SQL = "insert into people (name, language) values (?, ?)";
+                final String INSERT_PEOPLE_SQL = "insert into people (name, counter) values (?, ?)";
                 //  final String FIND_NAME_SQL = "select name, language from people where name = ?";
 
                 // PreparedStatement are SQL statements that can be called
@@ -199,11 +199,11 @@ public class DataBaseTest {
                 PreparedStatement addNameWithLang = conn.prepareStatement ( INSERT_PEOPLE_SQL );
 
                 addNameWithLang.setString ( 1 , "THABANG" );
-                addNameWithLang.setString ( 2 , Language.valueOf ( "french" ).getValue ( ) );
+                addNameWithLang.setInt ( 2 , 1 );
              //   addNameWithLang.setInt ( 3 ,1);
                 addNameWithLang.execute ( );
                 addNameWithLang.setString ( 1 , "AYABONGA" );
-                addNameWithLang.setString ( 2 , Language.valueOf ( "xhosa" ).getValue ( ) );
+                addNameWithLang.setInt ( 2 , 1 );
 //                addNameWithLang.setInt ( 3 ,2);
                 addNameWithLang.execute ( );
 

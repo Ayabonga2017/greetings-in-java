@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/GreeterWIthDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/GreeterWIthDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DataBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DataBaseTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,18 +23,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/DataBaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="145" column="32" selection-start-line="145" selection-start-column="32" selection-end-line="145" selection-end-column="32" />
+            <state relative-caret-position="69">
+              <caret line="68" column="79" selection-start-line="68" selection-start-column="79" selection-end-line="68" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#cleanUpTables#0;class#DataBaseTest#0" />
                 <element signature="method#loadJdbcDriver#0;class#DataBaseTest#0" />
                 <element signature="method#connectToDatabase#0;class#DataBaseTest#0" />
                 <element signature="method#executeSQLStatement#0;class#DataBaseTest#0" />
-                <element signature="method#greetFromDB#0;class#DataBaseTest#0" />
+                <element signature="method#countNamesFromDB#0;class#DataBaseTest#0" />
                 <element signature="method#clearNamesInserted#0;class#DataBaseTest#0" />
                 <element signature="method#clearName#0;class#DataBaseTest#0" />
-                <element signature="method#greetedNames#0;class#DataBaseTest#0" />
                 <element signature="method#countFromDB#0;class#DataBaseTest#0" />
               </folding>
             </state>
@@ -319,7 +316,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DataBaseTest.countNamesFromDB">
+  <component name="RunManager" selected="JUnit.DataBaseTest">
     <configuration name="GreeterWIthDB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.greet.GreeterWIthDB" />
       <module name="greet-in-java" />
@@ -333,12 +330,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataBaseTest.clearNamesInserted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DataBaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DataBaseTest" />
-      <option name="METHOD_NAME" value="clearNamesInserted" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -375,11 +371,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DataBaseTest" />
         <item itemvalue="JUnit.DataBaseTest.countNamesFromDB" />
         <item itemvalue="JUnit.GreetTest.greetMe" />
         <item itemvalue="Application.GreeterWIthDB" />
         <item itemvalue="JUnit.DataBaseTest.greetedNames" />
-        <item itemvalue="JUnit.DataBaseTest.clearNamesInserted" />
       </list>
     </recent_temporary>
   </component>
@@ -397,18 +393,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DataBaseTest_countNamesFromDB - 2019.04.15 at 15h 50m 48s.xml">
-      <configuration name="DataBaseTest.countNamesFromDB" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataBaseTest_clearNamesInserted - 2019.04.15 at 15h 51m 10s.xml">
-      <configuration name="DataBaseTest.clearNamesInserted" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataBaseTest_clearNamesInserted - 2019.04.15 at 15h 51m 23s.xml">
-      <configuration name="DataBaseTest.clearNamesInserted" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataBaseTest_greetedNames - 2019.04.15 at 15h 51m 29s.xml">
-      <configuration name="DataBaseTest.greetedNames" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DataBaseTest_greetedNames - 2019.04.15 at 15h 53m 34s.xml">
       <configuration name="DataBaseTest.greetedNames" configurationId="JUnit" />
     </history-entry>
@@ -427,6 +411,18 @@
     <history-entry file="DataBaseTest_countNamesFromDB - 2019.04.17 at 10h 45m 47s.xml">
       <configuration name="DataBaseTest.countNamesFromDB" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DataBaseTest_countNamesFromDB - 2019.04.17 at 10h 46m 02s.xml">
+      <configuration name="DataBaseTest.countNamesFromDB" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataBaseTest - 2019.04.17 at 10h 56m 15s.xml">
+      <configuration name="DataBaseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataBaseTest - 2019.04.17 at 10h 57m 13s.xml">
+      <configuration name="DataBaseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataBaseTest - 2019.04.17 at 10h 59m 12s.xml">
+      <configuration name="DataBaseTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -439,6 +435,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-2" width="1366" height="770" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.27121213" />
       <window_info id="Image Layers" order="1" />
@@ -457,7 +454,7 @@
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32899022" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4980048" weight="0.6319218" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4980048" weight="0.28081122" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50359136" side_tool="true" weight="0.5635179" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32899022" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49960095" weight="0.23088923" />
@@ -750,18 +747,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/DataBaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="145" column="32" selection-start-line="145" selection-start-column="32" selection-end-line="145" selection-end-column="32" />
+        <state relative-caret-position="69">
+          <caret line="68" column="79" selection-start-line="68" selection-start-column="79" selection-end-line="68" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#cleanUpTables#0;class#DataBaseTest#0" />
             <element signature="method#loadJdbcDriver#0;class#DataBaseTest#0" />
             <element signature="method#connectToDatabase#0;class#DataBaseTest#0" />
             <element signature="method#executeSQLStatement#0;class#DataBaseTest#0" />
-            <element signature="method#greetFromDB#0;class#DataBaseTest#0" />
+            <element signature="method#countNamesFromDB#0;class#DataBaseTest#0" />
             <element signature="method#clearNamesInserted#0;class#DataBaseTest#0" />
             <element signature="method#clearName#0;class#DataBaseTest#0" />
-            <element signature="method#greetedNames#0;class#DataBaseTest#0" />
             <element signature="method#countFromDB#0;class#DataBaseTest#0" />
           </folding>
         </state>
