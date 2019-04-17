@@ -9,10 +9,9 @@ public class GreetWithDatabase implements Greet {
     public void loadJdbcDriver () {
 
         try {
-
             Class.forName ( "org.h2.Driver" );
         } catch ( ClassNotFoundException e ) {
-            // fail ( e );
+            e.printStackTrace ( );
         }
     }
 
@@ -44,14 +43,15 @@ public class GreetWithDatabase implements Greet {
             insertDB = conn.prepareStatement ( INSERT_PEOPLE_SQL );
             findCount = conn.prepareStatement ( FIND_COUNTER_SQL );
             updateCounter = conn.prepareStatement ( UPDATE_NAME_COUNT_SQL );
-            remove = conn.prepareStatement(REMOVE_USER);
+            remove = conn.prepareStatement ( REMOVE_USER );
 
         } catch ( SQLException e ) {
             e.printStackTrace ( );
         }
     }
+
     @Override
-    public void namesWithDefault ( String name ){
+    public void namesWithDefault ( String name ) {
 
         try {
 
@@ -77,8 +77,9 @@ public class GreetWithDatabase implements Greet {
             e.printStackTrace ( );
         }
     }
+
     @Override
-    public void namesWithLang ( String name , String language  ){
+    public void namesWithLang ( String name , String language ) {
 
         try {
 
@@ -106,6 +107,7 @@ public class GreetWithDatabase implements Greet {
         }
 
     }
+
     @Override
     public void namesGreeted () throws SQLException {
 
@@ -115,24 +117,26 @@ public class GreetWithDatabase implements Greet {
         while ( rs.next ( ) ) {
             System.out.println ( "\n" + rs.getString ( "name" ) );
         }
-        if ( ! rs.next ( ) ){
+        if ( ! rs.next ( ) ) {
             //System.out.println ( "no users have been greeted yet" );
         }
     }
+
     @Override
     public void removeName ( String name ) {
 
         try {
             // set the corresponding param
-            remove.setString (1, name);
+            remove.setString ( 1 , name );
             // execute the delete statement
-            remove.executeUpdate();
-            System.out.println ( "\n" +name+ " was deleted from the Database" );
+            remove.executeUpdate ( );
+            System.out.println ( "\n" + name + " was deleted from the Database" );
 
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
+        } catch ( SQLException e ) {
+            System.out.println ( e.getMessage ( ) );
         }
-        }
+    }
+
     @Override
     public void clearNames () {
 
@@ -155,6 +159,7 @@ public class GreetWithDatabase implements Greet {
 
 
     }
+
     @Override
     public int count () throws SQLException {
 
@@ -166,6 +171,7 @@ public class GreetWithDatabase implements Greet {
         }
         return rs.getInt ( "name_count" );
     }
+
     @Override
     public int countName ( String name ) {
 
@@ -181,10 +187,12 @@ public class GreetWithDatabase implements Greet {
         // if this name wasn't greeted yet
         return 0;
     }
+
     @Override
     public void invalid () {
         System.out.println ( "\nInvalid command." + "\ntype 'help' to get the list of valid commands." );
     }
+
     @Override
     public void help () {
         System.out.println ( "\nValid Commands are as follow :\n" + "\n- greet + name + language : will greet a person with a language of your choice." );
@@ -193,11 +201,13 @@ public class GreetWithDatabase implements Greet {
         System.out.println ( "- clear + name : will remove a persons name from the list and decrement the counter.\n" + "- clearall : will delete all the names on the list set the counter to 0." );
         System.out.println ( "- exit : will exit the greeting application.\n" + "- help : will display all the possible commands to use when using this application." );
     }
+
     @Override
     public void exit () {
         System.out.println ( "\nGood-Bye\n" );
         System.exit ( 0 );
     }
+
     @Override
     public void names ( String name ) {
 

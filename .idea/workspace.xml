@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/GreetWithHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/GreetWithHashMap.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,20 +44,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+            <state relative-caret-position="225">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
-                <element signature="method#GreetWithDatabase#0;class#GreetWithDatabase#0" />
-                <element signature="method#namesWithDefault#0;class#GreetWithDatabase#0" />
-                <element signature="method#namesWithLang#0;class#GreetWithDatabase#0" />
-                <element signature="method#namesGreeted#0;class#GreetWithDatabase#0" />
-                <element signature="method#removeName#0;class#GreetWithDatabase#0" />
-                <element signature="method#clearNames#0;class#GreetWithDatabase#0" />
-                <element signature="method#count#0;class#GreetWithDatabase#0" />
-                <element signature="method#countName#0;class#GreetWithDatabase#0" />
-                <element signature="method#invalid#0;class#GreetWithDatabase#0" />
-                <element signature="method#help#0;class#GreetWithDatabase#0" />
-                <element signature="method#exit#0;class#GreetWithDatabase#0" />
                 <element signature="method#names#0;class#GreetWithDatabase#0" />
               </folding>
             </state>
@@ -427,7 +415,7 @@
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4980048" visible="true" weight="0.046801873" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4980048" visible="true" weight="0.062402494" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50359136" side_tool="true" weight="0.5635179" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32899022" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49960095" weight="0.23088923" />
@@ -728,20 +716,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        <state relative-caret-position="225">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
-            <element signature="method#GreetWithDatabase#0;class#GreetWithDatabase#0" />
-            <element signature="method#namesWithDefault#0;class#GreetWithDatabase#0" />
-            <element signature="method#namesWithLang#0;class#GreetWithDatabase#0" />
-            <element signature="method#namesGreeted#0;class#GreetWithDatabase#0" />
-            <element signature="method#removeName#0;class#GreetWithDatabase#0" />
-            <element signature="method#clearNames#0;class#GreetWithDatabase#0" />
-            <element signature="method#count#0;class#GreetWithDatabase#0" />
-            <element signature="method#countName#0;class#GreetWithDatabase#0" />
-            <element signature="method#invalid#0;class#GreetWithDatabase#0" />
-            <element signature="method#help#0;class#GreetWithDatabase#0" />
-            <element signature="method#exit#0;class#GreetWithDatabase#0" />
             <element signature="method#names#0;class#GreetWithDatabase#0" />
           </folding>
         </state>
