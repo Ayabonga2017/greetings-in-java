@@ -48,7 +48,6 @@ public class GreetWithDatabase implements Greet {
     @Override
     public void greetedName ( String name ){
 
-
         try {
             findCount.setString(1, name);
             ResultSet rs = findCount.executeQuery();
@@ -73,17 +72,23 @@ public class GreetWithDatabase implements Greet {
     }
     @Override
     public void namesWithDefault ( String name ) throws SQLException{
-
-        insertDB.setString ( 1 , name );
-        insertDB.setInt ( 2 , 1 );
-        String language = "xhosa";
-        insertDB.execute ( );
-
         PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
-        ps.setString ( 1 , name );
-        ResultSet rs = ps.executeQuery ( );
-        if ( rs.next ( ) ) {
-            System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue () + " " + rs.getString ( "name" ) );
+
+        findCount.setString ( 1 , name );
+        ResultSet rs = findCount.executeQuery ( );
+
+        if ( ! rs.next ( ) ) {
+            insertDB.setString ( 1 , name );
+            insertDB.setInt ( 2 , 1 );
+            String language = "xhosa";
+            insertDB.execute ( );
+            System.out.println ( "\n" +  language+ rs.getString ( "name" ) );
+
+            ps.setString ( 1 , name );
+            ResultSet s = ps.executeQuery ( );
+            if ( rs.next ( ) ) {
+                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + " " + s.getString ( "name" ) );
+            }
         }
     }
     @Override
@@ -92,6 +97,8 @@ public class GreetWithDatabase implements Greet {
    PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
 
         try {
+
+
             findCount.setString(1, name);
             ResultSet rs = findCount.executeQuery();
 
@@ -100,15 +107,14 @@ public class GreetWithDatabase implements Greet {
                 insertDB.setString(1, name);
                 insertDB.setInt(2, 1);
                 insertDB.execute();
-                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ()+ " " + rs.getString ( "name" ) );
 
             } else {
                 //if already exists
                 int count = rs.getInt("counter");
-                updateCounter.setInt(2, ++count);
-                updateCounter.setString(1, name);
+                updateCounter.setInt(1, ++count);
+                updateCounter.setString(2, name);
                 updateCounter.execute();
-                System.out.println ( "\n" +  "Updated " );
+                System.out.println ( "\n" +  "Updated "+ rs.getString ( "name" ) );
 
             }
 
@@ -153,6 +159,7 @@ public class GreetWithDatabase implements Greet {
             findCount.setString(1, "name");
             ResultSet rs = findCount.executeQuery();
             if (rs.next()) {
+                System.out.println (  rs.getInt("counter"));
                 return rs.getInt("counter");
             }
         } catch (SQLException ex) {

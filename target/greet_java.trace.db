@@ -590,3 +590,77 @@ insert into people (name, language) values (?, ?) [42122-197]
 	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
 	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+2019-04-17 11:12:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "name" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at net.greet.GreetWithDatabase.namesWithLang(GreetWithDatabase.java:103)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:34)
+2019-04-17 11:26:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "name" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at net.greet.GreetWithDatabase.namesWithLang(GreetWithDatabase.java:103)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:33)
+2019-04-17 11:28:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "name" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at net.greet.GreetWithDatabase.namesWithLang(GreetWithDatabase.java:103)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:31)
+2019-04-17 11:40:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "aya"; SQL statement:
+update people set counter = ? where name = ? [22018-197]
+2019-04-17 11:41:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "aya"; SQL statement:
+update people set counter = ? where name = ? [22018-197]
+2019-04-17 11:46:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "aya"; SQL statement:
+update people set counter = ? where name = ? [22018-197]
+2019-04-17 11:46:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "name" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at net.greet.GreetWithDatabase.namesWithLang(GreetWithDatabase.java:102)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:31)
+2019-04-17 11:49:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2019-04-17 11:50:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "name" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at net.greet.GreetWithDatabase.namesWithLang(GreetWithDatabase.java:104)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:31)
+2019-04-17 11:54:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#1" is not set; SQL statement:
+insert into people (name,counter) values (?, ?) [90012-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:170)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:101)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:249)
+	at net.greet.GreetWithDatabase.namesWithLang(GreetWithDatabase.java:103)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:31)

@@ -9,10 +9,9 @@ public class GreeterWIthDB {
 
         System.out.println ( "--------Greetings App With DB--------\n " );
 
-        GreetWithHashMap greetMap = new GreetWithHashMap ();
-        //GreetWithDatabase greetMap = new GreetWithDatabase ();
+       // GreetWithHashMap greetMap = new GreetWithHashMap ();
+        GreetWithDatabase greetMap = new GreetWithDatabase ();
 
-       String language;
         String userName;
 
         while ( true ) {
@@ -27,8 +26,6 @@ public class GreeterWIthDB {
                  userName =arr[1];
                 greetMap.namesWithDefault ( userName );
                 greetMap.names ( userName );
-                language = "xhosa";
-                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ) );
 
             }else if ( arr.length == 3 ) {
                 greetMap.namesWithLang (arr[ 1 ], arr[ 2 ]);
@@ -48,7 +45,7 @@ public class GreeterWIthDB {
                 greetMap.greetedName ( userName.toUpperCase ( ) );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "counter".toLowerCase ( ) ) && arr.length == 1 ) {
-                greetMap.count ( );
+                System.out.println (  greetMap.count ( ));
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "countname".toLowerCase ( ) ) && arr.length == 2 ) {
                  userName = arr[ 1 ];

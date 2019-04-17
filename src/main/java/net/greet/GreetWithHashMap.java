@@ -8,6 +8,7 @@ public class GreetWithHashMap implements Greet{
 
     int counter = 0;
     String name;
+    String language;
 
     static Map < String,Integer > nameList = new HashMap <> ( );
 
@@ -85,7 +86,11 @@ public class GreetWithHashMap implements Greet{
         System.exit ( 0 );
     }
     @Override
-    public void namesWithDefault ( String name ) throws SQLException{ }
+    public void namesWithDefault ( String name ) throws SQLException{
+        language = "xhosa";
+
+        System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + name.toUpperCase ( ) );
+    }
     @Override
     public void namesWithLang ( String name , String language ) throws SQLException{ }
 
