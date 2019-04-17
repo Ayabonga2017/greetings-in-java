@@ -9,8 +9,11 @@ public class GreeterWIthDB {
 
         System.out.println ( "--------Greetings App With DB--------\n " );
 
-        //GreetWithHashMap greetMap = new GreetWithHashMap ();
-        GreetWithDatabase greetMap = new GreetWithDatabase ();
+        GreetWithHashMap greetMap = new GreetWithHashMap ();
+        //GreetWithDatabase greetMap = new GreetWithDatabase ();
+
+       String language;
+        String userName;
 
         while ( true ) {
 
@@ -20,13 +23,18 @@ public class GreeterWIthDB {
             String[] arr = name.split ( " " );
 
             if ( arr[ 0 ].equalsIgnoreCase ( "greet".toLowerCase ( ) ) && arr.length == 2 ) {
-                greetMap.namesWithDefault ( arr[ 1 ] );
+
+                 userName =arr[1];
+                greetMap.namesWithDefault ( userName );
+                greetMap.names ( userName );
+                language = "xhosa";
+                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ) );
 
             }else if ( arr.length == 3 ) {
                 greetMap.namesWithLang (arr[ 1 ], arr[ 2 ]);
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "clear".toLowerCase ( ) ) && arr.length == 2 ) {
-                String userName = arr[ 1 ];
+                 userName = arr[ 1 ];
                 greetMap.removeName ( userName.toUpperCase ( ) );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "clearall" ) && arr.length == 1 ) {
@@ -36,14 +44,14 @@ public class GreeterWIthDB {
                 greetMap.namesGreeted ( );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "greetcount".toLowerCase ( ) ) && arr.length == 2 ) {
-                String userName = arr[ 1 ];
+                 userName = arr[ 1 ];
                 greetMap.greetedName ( userName.toUpperCase ( ) );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "counter".toLowerCase ( ) ) && arr.length == 1 ) {
                 greetMap.count ( );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "countname".toLowerCase ( ) ) && arr.length == 2 ) {
-                String userName = arr[ 1 ];
+                 userName = arr[ 1 ];
 
                 greetMap.countName(userName);
             }else if ( arr[ 0 ].equalsIgnoreCase ( "help".toLowerCase ( ) ) && arr.length == 1 ) {

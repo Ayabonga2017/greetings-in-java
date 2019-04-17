@@ -113,7 +113,7 @@ public class DataBaseTest {
 
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
             Statement statement = conn.createStatement ( );
-            final String INSERT_PEOPLE_SQL = "insert into people (name, language) values (?, ?)";
+            final String INSERT_PEOPLE_SQL = "insert into people (name, counter) values (?, ?)";
             //  final String FIND_NAME_SQL = "select name, language from people where name = ?";
 
             // PreparedStatement are SQL statements that can be called
@@ -121,29 +121,29 @@ public class DataBaseTest {
             PreparedStatement addNameWithLang = conn.prepareStatement ( INSERT_PEOPLE_SQL );
 
             addNameWithLang.setString ( 1 , "THABANG" );
-            addNameWithLang.setString ( 2 , Language.valueOf ( "french" ).getValue ( ) );
+            addNameWithLang.setInt ( 2 , 1 );
           //  addNameWithLang.setInt ( 3 , 1 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "AYABONGA" );
-            addNameWithLang.setString ( 2 , Language.valueOf ( "xhosa" ).getValue ( ) );
+            addNameWithLang.setInt ( 2 ,1 );
           //  addNameWithLang.setInt ( 3 , 2 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "UNALO" );
-            addNameWithLang.setString ( 2 , Language.valueOf ( "english" ).getValue ( ) );
+            addNameWithLang.setInt ( 2 , 1 );
         //    addNameWithLang.setInt ( 3 , 3 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "YEGAN" );
-            addNameWithLang.setString ( 2 , Language.valueOf ( "portuguese" ).getValue ( ) );
+            addNameWithLang.setInt ( 2 , 1 );
            // addNameWithLang.setInt ( 3 , 4 );
             addNameWithLang.execute ( );
             addNameWithLang.setString ( 1 , "NTANDO" );
-            addNameWithLang.setString ( 2 , Language.valueOf ( "portuguese" ).getValue ( ) );
+            addNameWithLang.setInt ( 2 , 1 );
           //  addNameWithLang.setInt ( 3 , 5 );
             addNameWithLang.execute ( );
 
             ResultSet rs = statement.executeQuery ( "select count(*) as countNames from people" );
             if ( rs.next ( ) ) {
-                assertEquals ( 9 , rs.getInt ( "countNames" ) );
+                assertEquals ( 5 , rs.getInt ( "countNames" ) );
 
                 System.out.println ( "Should return the counter for names inserted in the table:\n" + rs.getInt ( "countNames" ) );
             }
