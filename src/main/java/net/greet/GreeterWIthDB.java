@@ -7,10 +7,10 @@ public class GreeterWIthDB {
 
     public static void main ( String args[] ) throws SQLException {
 
-        System.out.println ( "--------GREETINGS APP--------\n " );
+        System.out.println ( "-----------------------------GREETINGS APP-----------------------------\n " );
 
-        GreetWithHashMap greetMap = new GreetWithHashMap ();
-      //  GreetWithDatabase greetMap = new GreetWithDatabase ();
+       // GreetWithHashMap greetMap = new GreetWithHashMap ();
+        GreetWithDatabase greetMap = new GreetWithDatabase ();
 
         String userName;
         String language;
@@ -18,7 +18,7 @@ public class GreeterWIthDB {
         while ( true ) {
 
             Scanner input = new Scanner ( System.in );
-            System.out.print ( "\nType command : ".toLowerCase ( ) );
+            System.out.print ( "\nType in a command : ".toLowerCase () );
             String name = input.nextLine ( );
             String[] arr = name.split ( " " );
 
@@ -34,8 +34,8 @@ public class GreeterWIthDB {
 
                 userName =arr[ 1 ];
                 language =arr[ 2 ];
-                Language.valueOf ( language.toLowerCase ( ) ).getValue ( );
-                System.out.println ( "\n" + language + userName.toUpperCase ( ));
+                ;
+                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ));
                 greetMap.namesWithLang (userName,language );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "clear".toLowerCase ( ) ) && arr.length == 2 ) {

@@ -7,12 +7,11 @@ public class GreetWithHashMap implements Greet{
 
     int counter = 0;
     String name;
-    String language;
 
     static Map < String,Integer > nameList = new HashMap <> ( );
 
     public GreetWithHashMap(){
-        System.out.println ("USING IN-MEMORY" );
+        System.out.println ("USING IN-MEMORY " );
 
     }
 
