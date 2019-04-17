@@ -82,7 +82,9 @@ public class GreetWithHashMap implements Greet{
     @Override
     public void namesWithLang ( String name , String language ) { }
     @Override
-    public int countName ( String name ){ if (name.isEmpty ( ) == false) {
+    public int countName ( String name ) {
+
+        if (name.isEmpty ( ) == false) {
         for ( Map.Entry entry : nameList.entrySet ( ) ) {
             System.out.println ( "\n" + name + " was greeted " + entry.getValue ( ) + " time(s)\n" );
         }

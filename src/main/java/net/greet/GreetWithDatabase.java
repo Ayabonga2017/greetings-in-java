@@ -50,31 +50,6 @@ public class GreetWithDatabase implements Greet {
             e.printStackTrace ( );
         }
     }
-//    @Override
-//    public void greetedName ( String name ) {
-//
-//        try {
-//            findCount.setString ( 1 , name );
-//            ResultSet rs = findCount.executeQuery ( );
-//
-//            if ( ! rs.next ( ) ) {
-//                // insert
-//                insertDB.setString ( 1 , name );
-//                insertDB.setInt ( 2 , 1 );
-//                System.out.println ( insertDB.execute ( ) );
-//
-//            } else {
-//                //if already exists
-//                int count = rs.getInt ( "counter" );
-//                updateCounter.setInt ( 2 , ++ count );
-//                updateCounter.setString ( 1 , name );
-//                updateCounter.execute ( );
-//            }
-//
-//        } catch ( SQLException ex ) {
-//            ex.printStackTrace ( );
-//        }
-//    }
     @Override
     public void namesWithDefault ( String name ){
 
