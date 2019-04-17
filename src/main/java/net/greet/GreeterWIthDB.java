@@ -53,7 +53,7 @@ public class GreeterWIthDB {
                 greetMap.greetedName ( userName.toUpperCase ( ) );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "counter".toLowerCase ( ) ) && arr.length == 1 ) {
-                System.out.println (  greetMap.count ( ));
+                System.out.println (  "\n"+greetMap.count ( ));
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "countname".toLowerCase ( ) ) && arr.length == 2 ) {
                  userName = arr[ 1 ];
