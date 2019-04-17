@@ -26,6 +26,9 @@ public class GreeterWIthDB {
                  userName =arr[1];
                 greetMap.namesWithDefault ( userName );
                 greetMap.names ( userName );
+              String  language = "xhosa";
+
+                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ));
 
             }else if ( arr.length == 3 ) {
                 greetMap.namesWithLang (arr[ 1 ], arr[ 2 ]);

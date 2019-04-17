@@ -664,3 +664,55 @@ insert into people (name,counter) values (?, ?) [90012-197]
 	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:249)
 	at net.greet.GreetWithDatabase.namesWithLang(GreetWithDatabase.java:103)
 	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:31)
+2019-04-17 12:08:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "name" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at net.greet.GreetWithDatabase.namesWithDefault(GreetWithDatabase.java:84)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:27)
+2019-04-17 12:11:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: The object is already closed [90007-197]
+2019-04-17 12:13:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "name" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at net.greet.GreetWithDatabase.namesWithDefault(GreetWithDatabase.java:88)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:27)
+2019-04-17 12:14:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "name" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at net.greet.GreetWithDatabase.namesWithLang(GreetWithDatabase.java:114)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:31)
+2019-04-17 12:14:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "name" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at net.greet.GreetWithDatabase.namesWithLang(GreetWithDatabase.java:114)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:31)
+2019-04-17 12:19:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "name" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at net.greet.GreetWithDatabase.namesWithLang(GreetWithDatabase.java:114)
+	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:34)

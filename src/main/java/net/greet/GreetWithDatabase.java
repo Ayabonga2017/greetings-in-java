@@ -72,7 +72,6 @@ public class GreetWithDatabase implements Greet {
     }
     @Override
     public void namesWithDefault ( String name ) throws SQLException{
-        PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
 
         findCount.setString ( 1 , name );
         ResultSet rs = findCount.executeQuery ( );
@@ -82,22 +81,20 @@ public class GreetWithDatabase implements Greet {
             insertDB.setInt ( 2 , 1 );
             String language = "xhosa";
             insertDB.execute ( );
+
+            findCount.setString ( 1 , name );
+            ResultSet s = findCount.executeQuery ( );
+
+                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + " " + s.getString ( "name" ) );
+
             System.out.println ( "\n" +  language+ rs.getString ( "name" ) );
 
-            ps.setString ( 1 , name );
-            ResultSet s = ps.executeQuery ( );
-            if ( rs.next ( ) ) {
-                System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + " " + s.getString ( "name" ) );
-            }
         }
     }
     @Override
     public void namesWithLang(String name,  String language) throws SQLException{
 
-   PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
-
         try {
-
 
             findCount.setString(1, name);
             ResultSet rs = findCount.executeQuery();
@@ -114,7 +111,7 @@ public class GreetWithDatabase implements Greet {
                 updateCounter.setInt(1, ++count);
                 updateCounter.setString(2, name);
                 updateCounter.execute();
-                System.out.println ( "\n" +  "Updated "+ rs.getString ( "name" ) );
+                System.out.println ( "\n" +  "Updated " );
 
             }
 
