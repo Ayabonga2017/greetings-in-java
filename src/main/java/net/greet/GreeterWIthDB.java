@@ -39,7 +39,7 @@ public class GreeterWIthDB {
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "clear".toLowerCase ( ) ) && arr.length == 2 ) {
                  userName = arr[ 1 ];
-                greetMap.removeName ( userName.toUpperCase ( ) );
+                greetMap.removeName ( userName );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "clearall" ) && arr.length == 1 ) {
                 greetMap.clearNames ( );
