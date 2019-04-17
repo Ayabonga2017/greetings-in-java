@@ -37,6 +37,9 @@ public class GreetWithDatabase implements Greet {
     final String REMOVE_USER = "DELETE FROM people WHERE name = ?";
     PreparedStatement remove;
 
+    final String DELETE_USERS_SQL ="delete from people";
+    PreparedStatement deleteAll;
+
     public GreetWithDatabase () {
 
         try {
@@ -44,6 +47,7 @@ public class GreetWithDatabase implements Greet {
             findCount = conn.prepareStatement ( FIND_COUNTER_SQL );
             updateCounter = conn.prepareStatement ( UPDATE_NAME_COUNT_SQL );
             remove = conn.prepareStatement ( REMOVE_USER );
+            deleteAll = conn.prepareStatement ( DELETE_USERS_SQL );
 
         } catch ( SQLException e ) {
             e.printStackTrace ( );
@@ -70,14 +74,13 @@ public class GreetWithDatabase implements Greet {
                 updateCounter.setInt ( 1 , ++ count );
                 updateCounter.setString ( 2 , name );
                 updateCounter.execute ( );
-                System.out.println ( "\n" + "Updated Counter" );
+                System.out.println ( "\n" + "Updated "+name.toUpperCase () +"'s counter" );
 
             }
         } catch ( SQLException e ) {
             e.printStackTrace ( );
         }
     }
-
     @Override
     public void namesWithLang ( String name , String language ) {
 
@@ -98,7 +101,7 @@ public class GreetWithDatabase implements Greet {
                 updateCounter.setInt ( 1 , ++ count );
                 updateCounter.setString ( 2 , name );
                 updateCounter.execute ( );
-                System.out.println ( "\n" + "Updated Counter" );
+                System.out.println ( "\n" + "Updated "+name.toUpperCase () +"'s counter" );
 
             }
 
@@ -107,7 +110,6 @@ public class GreetWithDatabase implements Greet {
         }
 
     }
-
     @Override
     public void namesGreeted () throws SQLException {
 
@@ -121,7 +123,6 @@ public class GreetWithDatabase implements Greet {
             //System.out.println ( "no users have been greeted yet" );
         }
     }
-
     @Override
     public void removeName ( String name ) {
 
@@ -136,28 +137,15 @@ public class GreetWithDatabase implements Greet {
             System.out.println ( e.getMessage ( ) );
         }
     }
-
     @Override
     public void clearNames () {
-
-        Statement statement = null;
         try {
-
-            statement = conn.createStatement ( );
+          deleteAll.execute ( );
+          System.out.println ( "\n" + "deleted all users from the Database" );
 
         } catch ( SQLException e ) {
             e.printStackTrace ( );
         }
-        try {
-            statement.addBatch ( "delete from people" );
-            statement.executeBatch ( );
-            System.out.println ( "\n" + "deleted all users from the Database" );
-
-        } catch ( SQLException e ) {
-            e.printStackTrace ( );
-        }
-
-
     }
     @Override
     public int count () throws SQLException {
@@ -177,7 +165,9 @@ public class GreetWithDatabase implements Greet {
             findCount.setString ( 1 , name );
             ResultSet rs = findCount.executeQuery ( );
             if ( rs.next ( ) ) {
-                System.out.println ( "\n" + rs.getInt ( "counter" ) );
+                System.out.println ("\n"+ name+" was greeted " + rs.getInt ( "counter" ) + " time(s)" );
+            }else{
+                System.out.println ("\nuser is not on the database" );
             }
         } catch ( SQLException ex ) {
             ex.printStackTrace ( );

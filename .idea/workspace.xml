@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/GreeterWIthDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/GreeterWIthDB.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,12 +44,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="134" column="36" lean-forward="true" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
+            <state relative-caret-position="142">
+              <caret line="76" column="74" selection-start-line="76" selection-start-column="74" selection-end-line="76" selection-end-column="74" />
               <folding>
-                <element signature="method#namesWithLang#0;class#GreetWithDatabase#0" />
+                <element signature="method#loadJdbcDriver#0;class#GreetWithDatabase#0" />
+                <element signature="e#377#557#1" />
+                <element signature="method#GreetWithDatabase#0;class#GreetWithDatabase#0" />
                 <element signature="method#namesGreeted#0;class#GreetWithDatabase#0" />
+                <element signature="method#removeName#0;class#GreetWithDatabase#0" />
                 <element signature="method#clearNames#0;class#GreetWithDatabase#0" />
+                <element signature="e#4133#4416#0" />
                 <element signature="method#count#0;class#GreetWithDatabase#0" />
                 <element signature="method#countName#0;class#GreetWithDatabase#0" />
                 <element signature="method#invalid#0;class#GreetWithDatabase#0" />
@@ -407,12 +410,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Favorites" order="2" sideWeight="0.5042017" weight="0.26547232" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.4964086" visible="true" weight="0.3447738" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.4964086" visible="true" weight="0.31669268" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49720672" weight="0.85179406" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32899022" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4980048" weight="0.64430577" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4980048" weight="0.25429016" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50359136" side_tool="true" weight="0.5635179" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32899022" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49960095" weight="0.23088923" />
@@ -713,12 +716,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="134" column="36" lean-forward="true" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
+        <state relative-caret-position="142">
+          <caret line="76" column="74" selection-start-line="76" selection-start-column="74" selection-end-line="76" selection-end-column="74" />
           <folding>
-            <element signature="method#namesWithLang#0;class#GreetWithDatabase#0" />
+            <element signature="method#loadJdbcDriver#0;class#GreetWithDatabase#0" />
+            <element signature="e#377#557#1" />
+            <element signature="method#GreetWithDatabase#0;class#GreetWithDatabase#0" />
             <element signature="method#namesGreeted#0;class#GreetWithDatabase#0" />
+            <element signature="method#removeName#0;class#GreetWithDatabase#0" />
             <element signature="method#clearNames#0;class#GreetWithDatabase#0" />
+            <element signature="e#4133#4416#0" />
             <element signature="method#count#0;class#GreetWithDatabase#0" />
             <element signature="method#countName#0;class#GreetWithDatabase#0" />
             <element signature="method#invalid#0;class#GreetWithDatabase#0" />
