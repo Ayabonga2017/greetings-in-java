@@ -48,7 +48,7 @@ public class GreetWithDatabase implements Greet {
             updateCounter = conn.prepareStatement ( UPDATE_NAME_COUNT_SQL );
             remove = conn.prepareStatement ( REMOVE_USER );
             deleteAll = conn.prepareStatement ( DELETE_USERS_SQL );
-
+            System.out.println ("USING THE DATABASE" );
         } catch ( SQLException e ) {
             e.printStackTrace ( );
         }

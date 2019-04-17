@@ -11,6 +11,11 @@ public class GreetWithHashMap implements Greet{
 
     static Map < String,Integer > nameList = new HashMap <> ( );
 
+    public GreetWithHashMap(){
+        System.out.println ("USING IN-MEMORY" );
+
+    }
+
     @Override
     public void names ( String names ) {
         names = names.substring ( 0 , 1 ).toUpperCase ( ) + names.substring ( 1 ).toUpperCase ( );
@@ -52,7 +57,7 @@ public class GreetWithHashMap implements Greet{
             System.out.println ( "\nNo users have been greeted yet" );
         } else {
             System.out.println ( "\nShould return the Counter:\n") ;
-            System.out.println ( counter = nameList.size ( ) );
+           counter = nameList.size ( );
         }
         return counter;
     }
@@ -74,11 +79,7 @@ public class GreetWithHashMap implements Greet{
         System.exit ( 0 );
     }
     @Override
-    public void namesWithDefault ( String name ){
-        language = "xhosa";
-
-        System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + name.toUpperCase ( ) );
-    }
+    public void namesWithDefault ( String name ){ }
     @Override
     public void namesWithLang ( String name , String language ) { }
     @Override

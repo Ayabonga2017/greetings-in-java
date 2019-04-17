@@ -114,7 +114,6 @@ public class DataBaseTest {
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
             Statement statement = conn.createStatement ( );
             final String INSERT_PEOPLE_SQL = "insert into people (name, counter) values (?, ?)";
-            //  final String FIND_NAME_SQL = "select name, language from people where name = ?";
 
             // PreparedStatement are SQL statements that can be called
             // over and over with different parameters
@@ -122,28 +121,27 @@ public class DataBaseTest {
 
             addNameWithLang.setString ( 1 , "THABANG" );
             addNameWithLang.setInt ( 2 , 1 );
-          //  addNameWithLang.setInt ( 3 , 1 );
             addNameWithLang.execute ( );
+
             addNameWithLang.setString ( 1 , "AYABONGA" );
             addNameWithLang.setInt ( 2 ,1 );
-          //  addNameWithLang.setInt ( 3 , 2 );
             addNameWithLang.execute ( );
+
             addNameWithLang.setString ( 1 , "UNALO" );
             addNameWithLang.setInt ( 2 , 1 );
-        //    addNameWithLang.setInt ( 3 , 3 );
             addNameWithLang.execute ( );
+
             addNameWithLang.setString ( 1 , "YEGAN" );
             addNameWithLang.setInt ( 2 , 1 );
-           // addNameWithLang.setInt ( 3 , 4 );
             addNameWithLang.execute ( );
+
             addNameWithLang.setString ( 1 , "NTANDO" );
             addNameWithLang.setInt ( 2 , 1 );
-          //  addNameWithLang.setInt ( 3 , 5 );
             addNameWithLang.execute ( );
 
             ResultSet rs = statement.executeQuery ( "select count(*) as countNames from people" );
             if ( rs.next ( ) ) {
-                assertEquals ( 5 , rs.getInt ( "countNames" ) );
+                assertEquals ( 6 , rs.getInt ( "countNames" ) );
 
                 System.out.println ( "Should return the counter for names inserted in the table:\n" + rs.getInt ( "countNames" ) );
             }
@@ -188,11 +186,9 @@ public class DataBaseTest {
         try {
 
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
-            Statement statement = conn.createStatement ( );
-           ResultSet rs;
+            ResultSet rs;
 
                 final String INSERT_PEOPLE_SQL = "insert into people (name, counter) values (?, ?)";
-                //  final String FIND_NAME_SQL = "select name, language from people where name = ?";
 
                 // PreparedStatement are SQL statements that can be called
                 // over and over with different parameters
@@ -200,11 +196,10 @@ public class DataBaseTest {
 
                 addNameWithLang.setString ( 1 , "THABANG" );
                 addNameWithLang.setInt ( 2 , 1 );
-             //   addNameWithLang.setInt ( 3 ,1);
                 addNameWithLang.execute ( );
+
                 addNameWithLang.setString ( 1 , "AYABONGA" );
                 addNameWithLang.setInt ( 2 , 1 );
-//                addNameWithLang.setInt ( 3 ,2);
                 addNameWithLang.execute ( );
 
                 PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );

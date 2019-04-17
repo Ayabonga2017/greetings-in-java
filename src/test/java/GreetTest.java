@@ -6,11 +6,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GreetTest {
+
     GreetWithHashMap greetMap = new GreetWithHashMap ();
+
     @BeforeEach
     public  void cleanMap(){
         greetMap.clearNames (); }
-
     @Test
     public void greetMe ( ){
 
@@ -31,7 +32,6 @@ public class GreetTest {
         assertEquals ( languageType + name , "HEY AYA" );
 
     }
-
     @Test
     public  void greetCounter(){
 
@@ -45,7 +45,6 @@ public class GreetTest {
 
         assertEquals (6,greetMap.count ( ));
     }
-
     @Test
     public  void greetedNames(){
 
@@ -59,7 +58,6 @@ public class GreetTest {
         System.out.println ( "\nShould return the list of names on the map :\n" );
         greetMap.namesGreeted();
     }
-
     @Test
     public  void greetRemoveUserName(){
         System.out.println ( "\nShould remove a name  and decrement the counter:\n" );
@@ -74,7 +72,6 @@ public class GreetTest {
         greetMap.namesGreeted();
         assertEquals ( 5,greetMap.count ());
     }
-
     @Test
     public  void greetClear(){
         System.out.println ( "\nList should be empty and counter be 0:\n" );
