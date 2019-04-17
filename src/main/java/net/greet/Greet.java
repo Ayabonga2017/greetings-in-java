@@ -9,7 +9,7 @@ interface Greet {
     void greetedName(String name);
     void removeName(String name);
     void clearNames() throws SQLException;
-    int count();
+    int count() throws SQLException;
     void invalid();
     void help();
     void exit();

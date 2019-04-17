@@ -160,22 +160,17 @@ public class GreetWithDatabase implements Greet {
         System.out.println ("deleted all users from the Database" );
     }
     @Override
-    public int count (){
+    public int count () throws SQLException{
 
-        try {
-            findCount.setString(1, "name");
-            ResultSet rs = findCount.executeQuery();
-            if (rs.next()) {
-                System.out.println (  rs.getInt("counter"));
-                return rs.getInt("counter");
-            }
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+        PreparedStatement ps = conn.prepareStatement ( "select count(*) as name_count from people" );
+        ResultSet rs = ps.executeQuery ( );
+
+        if ( rs.next ( ) ) {
+           rs.getInt ( "name_count" ) ;
         }
-        // if this pet wasn't greeted yet
-        return 0;
+        return rs.getInt ( "name_count" );
     }
-    @Override
+        @Override
     public int countName ( String name){
 
         try {

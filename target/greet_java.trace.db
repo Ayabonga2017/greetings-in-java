@@ -716,3 +716,5 @@ org.h2.jdbc.JdbcSQLException: Column "name" not found [42122-197]
 	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
 	at net.greet.GreetWithDatabase.namesWithLang(GreetWithDatabase.java:114)
 	at net.greet.GreeterWIthDB.main(GreeterWIthDB.java:34)
+2019-04-17 13:00:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
