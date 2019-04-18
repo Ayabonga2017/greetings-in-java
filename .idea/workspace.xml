@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/GreetWithHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/GreetWithHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/GreeterWIthDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/GreeterWIthDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/greet-in-java.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/greet/GreetWithHashMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/greet/GreetWithHashMap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/greet/GreeterWIthDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/greet/GreeterWIthDB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/greet_java.mv.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/greet_java.trace.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/greet_java.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/target/greet_java.mv.db" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,7 +27,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/DataBaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="381">
               <caret line="220" column="31" selection-start-line="220" selection-start-column="31" selection-end-line="220" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -49,21 +46,29 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+            <state relative-caret-position="157">
+              <caret line="178" column="16" selection-start-line="178" selection-start-column="16" selection-end-line="178" selection-end-column="16" />
               <folding>
                 <element signature="method#loadJdbcDriver#0;class#GreetWithDatabase#0" />
+                <element signature="method#GreetWithDatabase#0;class#GreetWithDatabase#0" />
                 <element signature="method#namesWithDefault#0;class#GreetWithDatabase#0" />
                 <element signature="method#namesWithLang#0;class#GreetWithDatabase#0" />
                 <element signature="method#namesGreeted#0;class#GreetWithDatabase#0" />
                 <element signature="method#removeName#0;class#GreetWithDatabase#0" />
                 <element signature="method#clearNames#0;class#GreetWithDatabase#0" />
-                <element signature="method#count#0;class#GreetWithDatabase#0" />
                 <element signature="method#countName#0;class#GreetWithDatabase#0" />
-                <element signature="method#invalid#0;class#GreetWithDatabase#0" />
                 <element signature="method#help#0;class#GreetWithDatabase#0" />
                 <element signature="method#exit#0;class#GreetWithDatabase#0" />
               </folding>
@@ -92,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithHashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="13" column="49" selection-start-line="13" selection-end-line="14" />
+            <state relative-caret-position="63">
+              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#names#0;class#GreetWithHashMap#0" />
@@ -110,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreeterWIthDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="37" column="102" selection-start-line="37" selection-start-column="102" selection-end-line="37" selection-end-column="102" />
+            <state relative-caret-position="14">
+              <caret line="9" column="72" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,7 +130,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
+            <state relative-caret-position="570">
               <caret line="38" column="24" selection-start-line="38" selection-end-line="39" />
             </state>
           </provider>
@@ -152,7 +157,6 @@
         <option value="$PROJECT_DIR$/src/main/java/net/greet/radio.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/Names.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/Name.java" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/resources/db/migration/V1__Create_people.sql" />
         <option value="$PROJECT_DIR$/src/resources/db/migration/V2_Create_Add_people.sql" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -171,6 +175,7 @@
         <option value="$PROJECT_DIR$/src/main/java/net/greet/GreetWithHashMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/GreeterWIthDB.java" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -207,7 +212,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -224,42 +228,6 @@
               <item name="greet-in-java" type="b2602c69:ProjectViewProjectNode" />
               <item name="greet-in-java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="greet-in-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="greet-in-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="greet-in-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="greet-in-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="greet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="greet-in-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="greet-in-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="greet-in-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="greet-in-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="migration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="greet-in-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="greet-in-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -268,15 +236,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="greet-in-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,7 +276,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GreeterWIthDB">
+  <component name="RunManager" selected="JUnit.DataBaseTest">
     <configuration name="GreeterWIthDB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.greet.GreeterWIthDB" />
       <module name="greet-in-java" />
@@ -366,8 +331,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GreeterWIthDB" />
         <item itemvalue="JUnit.DataBaseTest" />
+        <item itemvalue="Application.GreeterWIthDB" />
         <item itemvalue="JUnit.GreetTest.greetCounter" />
         <item itemvalue="JUnit.DataBaseTest.countNamesFromDB" />
         <item itemvalue="JUnit.GreetTest.greetMe" />
@@ -432,24 +397,24 @@
     <frame x="1366" y="-2" width="1366" height="770" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.27121213" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.27121213" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
-      <window_info id="Structure" order="5" sideWeight="0.5052192" side_tool="true" weight="0.24924242" />
-      <window_info id="DB Browser" order="6" weight="0.32954547" />
-      <window_info id="Project Explorer" order="7" weight="0.06515151" />
-      <window_info id="Job Explorer" order="8" weight="0.32954547" />
+      <window_info id="Project Explorer" order="5" sideWeight="0.49460045" weight="0.06515151" />
+      <window_info id="DB Browser" order="6" weight="0.3348485" />
+      <window_info id="Job Explorer" order="7" weight="0.32954547" />
+      <window_info id="Structure" order="8" sideWeight="0.5053996" weight="0.06515151" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Favorites" order="2" sideWeight="0.5042017" weight="0.26547232" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49545455" visible="true" weight="0.115444615" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49720672" weight="0.85179406" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49545455" weight="0.5023401" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49720672" visible="true" weight="0.2776911" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32899022" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49621212" weight="0.7347894" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49621212" weight="0.27925116" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50454545" side_tool="true" weight="0.22620904" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32899022" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49960095" weight="0.23088923" />
@@ -602,13 +567,6 @@
     <entry file="file://$PROJECT_DIR$/greet-in-java.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
     <entry file="file://$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     <entry file="file://$PROJECT_DIR$/target/greet_java.trace.db" />
@@ -659,20 +617,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greeter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greeter.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="25" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="24" selection-start-line="38" selection-end-line="39" />
         </state>
       </provider>
     </entry>
@@ -692,9 +648,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreeterWIthDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="9" column="72" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#names#0;class#GreetWithHashMap#0" />
+            <element signature="method#namesGreeted#0;class#GreetWithHashMap#0" />
+            <element signature="method#removeName#0;class#GreetWithHashMap#0" />
+            <element signature="method#clearNames#0;class#GreetWithHashMap#0" />
+            <element signature="method#count#0;class#GreetWithHashMap#0" />
+            <element signature="method#invalid#0;class#GreetWithHashMap#0" />
+            <element signature="method#help#0;class#GreetWithHashMap#0" />
+            <element signature="method#exit#0;class#GreetWithHashMap#0" />
+            <element signature="method#countName#0;class#GreetWithHashMap#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="178" column="16" selection-start-line="178" selection-start-column="16" selection-end-line="178" selection-end-column="16" />
+          <folding>
+            <element signature="method#loadJdbcDriver#0;class#GreetWithDatabase#0" />
+            <element signature="method#GreetWithDatabase#0;class#GreetWithDatabase#0" />
+            <element signature="method#namesWithDefault#0;class#GreetWithDatabase#0" />
+            <element signature="method#namesWithLang#0;class#GreetWithDatabase#0" />
+            <element signature="method#namesGreeted#0;class#GreetWithDatabase#0" />
+            <element signature="method#removeName#0;class#GreetWithDatabase#0" />
+            <element signature="method#clearNames#0;class#GreetWithDatabase#0" />
+            <element signature="method#countName#0;class#GreetWithDatabase#0" />
+            <element signature="method#help#0;class#GreetWithDatabase#0" />
+            <element signature="method#exit#0;class#GreetWithDatabase#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/DataBaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="381">
           <caret line="220" column="31" selection-start-line="220" selection-start-column="31" selection-end-line="220" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -712,59 +716,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
-          <folding>
-            <element signature="method#loadJdbcDriver#0;class#GreetWithDatabase#0" />
-            <element signature="method#namesWithDefault#0;class#GreetWithDatabase#0" />
-            <element signature="method#namesWithLang#0;class#GreetWithDatabase#0" />
-            <element signature="method#namesGreeted#0;class#GreetWithDatabase#0" />
-            <element signature="method#removeName#0;class#GreetWithDatabase#0" />
-            <element signature="method#clearNames#0;class#GreetWithDatabase#0" />
-            <element signature="method#count#0;class#GreetWithDatabase#0" />
-            <element signature="method#countName#0;class#GreetWithDatabase#0" />
-            <element signature="method#invalid#0;class#GreetWithDatabase#0" />
-            <element signature="method#help#0;class#GreetWithDatabase#0" />
-            <element signature="method#exit#0;class#GreetWithDatabase#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="13" column="49" selection-start-line="13" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#names#0;class#GreetWithHashMap#0" />
-            <element signature="method#namesGreeted#0;class#GreetWithHashMap#0" />
-            <element signature="method#removeName#0;class#GreetWithHashMap#0" />
-            <element signature="method#clearNames#0;class#GreetWithHashMap#0" />
-            <element signature="method#count#0;class#GreetWithHashMap#0" />
-            <element signature="method#invalid#0;class#GreetWithHashMap#0" />
-            <element signature="method#help#0;class#GreetWithHashMap#0" />
-            <element signature="method#exit#0;class#GreetWithHashMap#0" />
-            <element signature="method#countName#0;class#GreetWithHashMap#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="38" column="24" selection-start-line="38" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreeterWIthDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="37" column="102" selection-start-line="37" selection-start-column="102" selection-end-line="37" selection-end-column="102" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
         </state>
       </provider>
     </entry>

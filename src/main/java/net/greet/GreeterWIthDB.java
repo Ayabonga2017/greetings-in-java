@@ -7,7 +7,7 @@ public class GreeterWIthDB {
 
     public static void main ( String args[] ) throws SQLException {
 
-        System.out.println ( "-----------------------------GREETINGS APP-----------------------------\n " );
+        System.out.println ( "-----------------------------GREETINGS APP -----------------------------\n " );
 
        // GreetWithHashMap greetMap = new GreetWithHashMap ();
         GreetWithDatabase greetMap = new GreetWithDatabase ();
