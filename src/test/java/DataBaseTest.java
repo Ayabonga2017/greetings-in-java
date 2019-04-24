@@ -178,7 +178,7 @@ public class DataBaseTest {
 
             }
         } catch ( Exception ex ) {
-            System.out.println ( "These test will fail until the fruit table is created: " + ex );
+            System.out.println ( "These test will fail until the people table is created: " + ex );
         }
     }
     @Test

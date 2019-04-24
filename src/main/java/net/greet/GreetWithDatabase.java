@@ -64,13 +64,13 @@ public class GreetWithDatabase implements Greet {
             ResultSet rs = findCount.executeQuery ( );
 
             if ( ! rs.next ( ) ) {
-                // insert
+                // name doesn't ---- insert
                 insertDB.setString ( 1 , name );
                 insertDB.setInt ( 2 , 1 );
                 insertDB.execute ( );
 
             } else {
-                //if already exists
+                //if already exists ---- update counter
                 int count = rs.getInt ( "counter" );
                 updateCounter.setInt ( 1 , ++ count );
                 updateCounter.setString ( 2 , name );
@@ -91,13 +91,13 @@ public class GreetWithDatabase implements Greet {
             ResultSet rs = findCount.executeQuery ( );
 
             if ( ! rs.next ( ) ) {
-                // insert
+                // name doesn't ---- insert
                 insertDB.setString ( 1 , name );
                 insertDB.setInt ( 2 , 1 );
                 insertDB.execute ( );
 
             } else {
-                //if already exists
+                //if already exists ---- update counter
                 int count = rs.getInt ( "counter" );
                 updateCounter.setInt ( 1 , ++ count );
                 updateCounter.setString ( 2 , name );
@@ -121,7 +121,7 @@ public class GreetWithDatabase implements Greet {
             System.out.println ( "\n" + rs.getString ( "name" ) );
         }
         if ( ! rs.next ( ) ) {
-            //System.out.println ( "no users have been greeted yet" );
+            System.out.println ( "no users have been greeted yet" );
         }
     }
     @Override
