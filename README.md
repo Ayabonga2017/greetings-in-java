@@ -2,4 +2,4 @@
 
 # to run the app run this command:
 
-java -cp .:target/*: net.greet.Greeter
+java -cp .:target/*: net.greet.GreeterWithDB
