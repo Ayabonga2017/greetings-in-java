@@ -9,8 +9,8 @@ public class GreeterWithDB {
 
         System.out.println ( "-----------------------------GREETINGS APP -----------------------------\n " );
 
-      //GreetWithHashMap greetMap = new GreetWithHashMap ();
-        GreetWithDatabase greetMap = new GreetWithDatabase ();
+      GreetWithHashMap greetMap = new GreetWithHashMap ();
+      //  GreetWithDatabase greetMap = new GreetWithDatabase ();
 
         String userName;
         String language;

@@ -141,7 +141,7 @@ public class DataBaseTest {
 
             ResultSet rs = statement.executeQuery ( "select count(*) as countNames from people" );
             if ( rs.next ( ) ) {
-                assertEquals ( 6 , rs.getInt ( "countNames" ) );
+                assertEquals ( 7 , rs.getInt ( "countNames" ) );
 
                 System.out.println ( "Should return the counter for names inserted in the table:\n" + rs.getInt ( "countNames" ) );
             }
