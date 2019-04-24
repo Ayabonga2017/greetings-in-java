@@ -121,18 +121,19 @@ public class GreetWithDatabase implements Greet {
             System.out.println ( "\n" + rs.getString ( "name" ) );
         }
         if ( ! rs.next ( ) ) {
-            System.out.println ( "no users have been greeted yet" );
+            System.out.println ( "\nno users have been greeted yet" );
         }
     }
     @Override
     public void removeName ( String name ) {
 
         try {
-            // set the corresponding param
-            remove.setString ( 1 , name );
-            // execute the delete statement
-            remove.execute ();
-            System.out.println ( "\n" + name + " was deleted from the Database" );
+
+                // set the corresponding param
+                remove.setString ( 1 , name );
+                // execute the delete statement
+                remove.execute ( );
+                System.out.println ( "\n" + name + " was deleted from the Database" );
 
         } catch ( SQLException e ) {
             System.out.println ( e.getMessage ( ) );

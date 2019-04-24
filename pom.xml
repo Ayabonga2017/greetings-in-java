@@ -31,6 +31,16 @@
                 <configuration>
                     <url>jdbc:h2:./target/greet_java</url>
                     <user>sa</user>
+
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>5.2.4</version>
+                <configuration>
+                    <url>jdbc:h2:./target/greet_java_test</url>
+                    <user>sa</user>
                 </configuration>
             </plugin>
             <plugin>
