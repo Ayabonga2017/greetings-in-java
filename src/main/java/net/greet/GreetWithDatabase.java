@@ -59,6 +59,7 @@ public class GreetWithDatabase implements Greet {
     public void namesWithDefault ( String name ) {
         name = name.substring ( 0,1).toLowerCase () + name.substring ( 1 ).toLowerCase ();
         name.equalsIgnoreCase ( name );
+
         try {
 
             findCount.setString ( 1 , name );
@@ -87,6 +88,7 @@ public class GreetWithDatabase implements Greet {
     public void namesWithLang ( String name , String language ) {
         name = name.substring ( 0,1).toUpperCase () + name.substring ( 1 ).toLowerCase ();
         name.equalsIgnoreCase ( name );
+
         try {
 
             findCount.setString ( 1 , name );
@@ -118,12 +120,11 @@ public class GreetWithDatabase implements Greet {
 
         PreparedStatement ps = conn.prepareStatement ( "select name from people " );
         ResultSet rs = ps.executeQuery ( );
-        while ( rs.next ( ) ) {
 
+
+        while ( rs.next ( ) ) {
             System.out.println ( "\n" + rs.getString ( "name" ) );
 
-//        }else{
-//            System.out.println ("\nno users have been  greeted yet " );
         }
     }
 
