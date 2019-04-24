@@ -3,7 +3,7 @@ package net.greet;
 import java.sql.*;
 import java.util.Scanner;
 
-public class GreeterWithDB {
+public class Greeter {
 
     public static void main ( String args[] ) throws SQLException {
 

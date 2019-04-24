@@ -1,7 +1,9 @@
+
 import net.greet.Language;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.sql.*;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
@@ -17,7 +19,7 @@ public class DataBaseTest {
                 // delete NAMES that the tests are adding
 
                 Statement statement = conn.createStatement ( );
-                statement.addBatch ( "delete from peopleTest where name in ('THABANG','AYABONGA','UNALO','YEGAN','NTANDO')" );
+                statement.addBatch ( "delete from people where name in ('THABANG','AYABONGA','UNALO','YEGAN','NTANDO')" );
                 statement.executeBatch ( );
 
             }
@@ -40,7 +42,7 @@ public class DataBaseTest {
 
         try {
             Class.forName ( "org.h2.Driver" );
-            final String JDBC_URL = "jdbc:h2:./target/greet_java";
+            final String JDBC_URL = "jdbc:h2:./target/greet_java_test";
             Connection conn = DriverManager.getConnection ( JDBC_URL , "sa" , "" );
 
         } catch ( Exception e ) {
@@ -54,7 +56,7 @@ public class DataBaseTest {
             Class.forName ( "org.h2.Driver" );
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
             Statement statement = conn.createStatement ();
-            ResultSet rs = statement.executeQuery ( "select * from peopleTest" );
+            ResultSet rs = statement.executeQuery ( "select * from people" );
 
         } catch ( Exception e ) {
             fail ( e );
@@ -66,7 +68,7 @@ public class DataBaseTest {
         try {
             Class.forName ( "org.h2.Driver" );
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
-            final String INSERT_PEOPLE_SQL = "insert into peopleTest (name, counter) values (?, ?)";
+            final String INSERT_PEOPLE_SQL = "insert into people (name, counter) values (?, ?)";
             //  final String FIND_NAME_SQL = "select name, language from people where name = ?";
 
             // PreparedStatement are SQL statements that can be called
@@ -92,7 +94,7 @@ public class DataBaseTest {
             addNameWithLang.setInt ( 2 , 1 );
         //    addNameWithLang.setInt ( 3 , 4 );
             addNameWithLang.execute ( );
-            PreparedStatement ps = conn.prepareStatement ( "select * from peopleTest where name = ?" );
+            PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
 
             ps.setString ( 1 , "NTANDO" );
             ResultSet rs = ps.executeQuery ( );
@@ -113,7 +115,7 @@ public class DataBaseTest {
 
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
             Statement statement = conn.createStatement ( );
-            final String INSERT_PEOPLE_SQL = "insert into peopleTest (name, counter) values (?, ?)";
+            final String INSERT_PEOPLE_SQL = "insert into people (name, counter) values (?, ?)";
 
             // PreparedStatement are SQL statements that can be called
             // over and over with different parameters
@@ -139,9 +141,9 @@ public class DataBaseTest {
             addNameWithLang.setInt ( 2 , 1 );
             addNameWithLang.execute ( );
 
-            ResultSet rs = statement.executeQuery ( "select count(*) as countNames from peopleTest" );
+            ResultSet rs = statement.executeQuery ( "select count(*) as countNames from people" );
             if ( rs.next ( ) ) {
-                assertEquals ( 5 , rs.getInt ( "countNames" ) );
+                assertEquals ( 6 , rs.getInt ( "countNames" ) );
 
                 System.out.println ( "Should return the counter for names inserted in the table:\n" + rs.getInt ( "countNames" ) );
             }
@@ -157,7 +159,7 @@ public class DataBaseTest {
                 // delete NAMES that the tests are adding
 
                 Statement statement = conn.createStatement ( );
-                statement.addBatch ( "delete from peopleTest where name in ('AYA','MZWA','AYANDA','BRIAN')" );
+                statement.addBatch ( "delete from people where name in ('AYA','MZWA','AYANDA','BRIAN')" );
                 statement.executeBatch ( );
 
             }
@@ -173,7 +175,7 @@ public class DataBaseTest {
                 // delete NAMES that the tests are adding
 
                 Statement statement = conn.createStatement ( );
-                statement.addBatch ( "delete from peopleTest where name in ('AYA')" );
+                statement.addBatch ( "delete from people where name in ('AYA')" );
                 statement.executeBatch ( );
 
             }
@@ -188,21 +190,21 @@ public class DataBaseTest {
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
             ResultSet rs;
 
-                final String INSERT_PEOPLE_SQL = "insert into peopleTest (name, counter) values (?, ?)";
+            //    final String INSERT_PEOPLE_SQL = "insert into test (name, counter) values (?, ?)";
 
                 // PreparedStatement are SQL statements that can be called
                 // over and over with different parameters
-                PreparedStatement addNameWithLang = conn.prepareStatement ( INSERT_PEOPLE_SQL );
+//                PreparedStatement addNameWithLang = conn.prepareStatement ( INSERT_PEOPLE_SQL );
+//
+//                addNameWithLang.setString ( 1 , "THABANG" );
+//                addNameWithLang.setInt ( 2 , 1 );
+//                addNameWithLang.execute ( );
+//
+//                addNameWithLang.setString ( 1 , "AYABONGA" );
+//                addNameWithLang.setInt ( 2 , 1 );
+//                addNameWithLang.execute ( );
 
-                addNameWithLang.setString ( 1 , "THABANG" );
-                addNameWithLang.setInt ( 2 , 1 );
-                addNameWithLang.execute ( );
-
-                addNameWithLang.setString ( 1 , "AYABONGA" );
-                addNameWithLang.setInt ( 2 , 1 );
-                addNameWithLang.execute ( );
-
-                PreparedStatement ps = conn.prepareStatement ( "select * from peopleTest where name = ?" );
+                PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
 
                 ps.setString ( 1 , "NTANDO" );
                 rs = ps.executeQuery ( );
@@ -223,7 +225,7 @@ public class DataBaseTest {
 
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
             Statement statement = conn.createStatement ( );
-            ResultSet rs = statement.executeQuery ( "SELECT COUNT(*) AS rowcount FROM peopleTest" );
+            ResultSet rs = statement.executeQuery ( "SELECT COUNT(*) AS rowcount FROM people" );
 
             if ( rs.next ( ) ) {
                 int count = rs.getInt ( "rowcount" );

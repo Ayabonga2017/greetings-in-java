@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class GreetWithDatabase implements Greet {
 
-    final String DATABASE_URL = "jdbc:h2:./target/greet_java";
+    final String DATABASE_URL = "jdbc:h2:./target/greet_java_test";
 
     public void loadJdbcDriver () {
 
@@ -119,9 +119,6 @@ public class GreetWithDatabase implements Greet {
 
         while ( rs.next ( ) ) {
             System.out.println ( "\n" + rs.getString ( "name" ) );
-        }
-        if ( ! rs.next ( ) ) {
-            System.out.println ( "\nno users have been greeted yet" );
         }
     }
     @Override
