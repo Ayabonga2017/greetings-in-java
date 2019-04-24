@@ -117,8 +117,12 @@ public class GreetWithDatabase implements Greet {
         PreparedStatement ps = conn.prepareStatement ( "select name from people " );
         ResultSet rs = ps.executeQuery ( );
 
-        while ( rs.next ( ) ) {
+        if ( rs.next ( ) ) {
+
             System.out.println ( "\n" + rs.getString ( "name" ) );
+
+        }else{
+            System.out.println ("\nno users have been  greeted yet " );
         }
     }
     @Override
@@ -126,7 +130,7 @@ public class GreetWithDatabase implements Greet {
 
         try {
 
-                // set the corresponding param
+            // set the corresponding param
                 remove.setString ( 1 , name );
                 // execute the delete statement
                 remove.execute ( );
@@ -163,6 +167,7 @@ public class GreetWithDatabase implements Greet {
         try {
             findCount.setString ( 1 , name );
             ResultSet rs = findCount.executeQuery ( );
+
             if ( rs.next ( ) ) {
                 System.out.println ("\n"+ name+" was greeted " + rs.getInt ( "counter" ) + " time(s)" );
             }else{
@@ -182,7 +187,7 @@ public class GreetWithDatabase implements Greet {
     public void help () {
         System.out.println ( "\nValid Commands are as follow :\n" + "\n- greet + name + language : will greet a person with a language of your choice." );
         System.out.println ( "- greet + name : will greet a person with the default language.\n" + "- greeted : will display a list of greeted names. " );
-        System.out.println ( "- greetedcount + name : will display how many times a person has been greeted.\n" + "- counter : will display the number of greeted names. " );
+        System.out.println ( "- count + name : will display how many times a person has been greeted.\n" + "- counter : will display the number of greeted names. " );
         System.out.println ( "- clear + name : will remove a persons name from the list and decrement the counter.\n" + "- clearall : will delete all the names on the list set the counter to 0." );
         System.out.println ( "- exit : will exit the greeting application.\n" + "- help : will display all the possible commands to use when using this application." );
     }
