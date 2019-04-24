@@ -3,13 +3,13 @@ package net.greet;
 import java.sql.*;
 import java.util.Scanner;
 
-public class GreeterWIthDB {
+public class GreeterWithDB {
 
     public static void main ( String args[] ) throws SQLException {
 
         System.out.println ( "-----------------------------GREETINGS APP -----------------------------\n " );
 
-       // GreetWithHashMap greetMap = new GreetWithHashMap ();
+      //GreetWithHashMap greetMap = new GreetWithHashMap ();
         GreetWithDatabase greetMap = new GreetWithDatabase ();
 
         String userName;
@@ -24,9 +24,10 @@ public class GreeterWIthDB {
 
             if ( arr[ 0 ].equalsIgnoreCase ( "greet".toLowerCase ( ) ) && arr.length == 2 ) {
 
-                 userName =arr[1];
+                userName =arr[1];
                 greetMap.names ( userName );
                 language = "xhosa";
+
                 System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ));
                 greetMap.namesWithDefault ( userName );
 
@@ -34,13 +35,13 @@ public class GreeterWIthDB {
 
                 userName =arr[ 1 ];
                 language =arr[ 2 ];
-                ;
+
                 System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ));
                 greetMap.namesWithLang (userName,language );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "clear".toLowerCase ( ) ) && arr.length == 2 ) {
 
-                 userName = arr[ 1 ];
+                userName = arr[ 1 ];
                 greetMap.removeName ( userName );
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "clearall" ) && arr.length == 1 ) {
@@ -53,12 +54,12 @@ public class GreeterWIthDB {
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "count".toLowerCase ( ) ) && arr.length == 2 ) {
 
-                 userName = arr[ 1 ];
+                userName = arr[ 1 ];
                 greetMap.countName(userName);
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "counter".toLowerCase ( ) ) && arr.length == 1 ) {
 
-                System.out.println (  "\n"+greetMap.count ( ));
+                System.out.println (  "\nNumber of greeted users :\n" +"\n"+greetMap.count ( ));
 
             }else if ( arr[ 0 ].equalsIgnoreCase ( "help".toLowerCase ( ) ) && arr.length == 1 ) {
 

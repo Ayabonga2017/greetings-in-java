@@ -12,7 +12,6 @@ public class GreetWithHashMap implements Greet{
 
     public GreetWithHashMap(){
         System.out.println ("USING IN-MEMORY " );
-
     }
 
     @Override

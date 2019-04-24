@@ -42,6 +42,7 @@
                     </outputDirectory>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
     <dependencies>
