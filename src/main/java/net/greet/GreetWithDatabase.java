@@ -86,7 +86,7 @@ public class GreetWithDatabase implements Greet {
     }
     @Override
     public void namesWithLang ( String name , String language ) {
-        name = name.substring ( 0,1).toUpperCase () + name.substring ( 1 ).toLowerCase ();
+        name = name.substring ( 0,1).toLowerCase () + name.substring ( 1 ).toLowerCase ();
         name.equalsIgnoreCase ( name );
 
         try {
@@ -127,7 +127,6 @@ public class GreetWithDatabase implements Greet {
 
         }
     }
-
     @Override
     public void removeName ( String name ) {
 

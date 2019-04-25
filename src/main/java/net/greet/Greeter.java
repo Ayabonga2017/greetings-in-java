@@ -15,6 +15,7 @@ public class Greeter {
         String userName;
         String language;
 
+
         while ( true ) {
 
             Scanner input = new Scanner ( System.in );
@@ -39,7 +40,7 @@ public class Greeter {
                 System.out.println ( "\n" + Language.valueOf ( language.toLowerCase ( ) ).getValue ( ) + userName.toUpperCase ( ));
                 greetMap.namesWithLang (userName,language );
 
-            }else if ( arr[ 0 ].equalsIgnoreCase ( "clear".toLowerCase ( ) ) && arr.length == 2 ) {
+            } else if ( arr[ 0 ].equalsIgnoreCase ( "clear".toLowerCase ( ) ) && arr.length == 2 ) {
 
                 userName = arr[ 1 ];
                 greetMap.removeName ( userName );
