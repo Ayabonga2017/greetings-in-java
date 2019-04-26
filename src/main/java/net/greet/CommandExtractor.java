@@ -1,46 +1,59 @@
 package net.greet;
 
-
 public class CommandExtractor {
 
-    String user ;
+    String user;
     String language;
     String command;
-    String[] arr ;
+    String[] arr;
 
 
+    public CommandExtractor ( String command ) {
 
-    public CommandExtractor ( String command ){
+         this.arr = command.split ( " " );
+        this.command = arr[ 0 ];
+        this.user = arr[ 1 ];
 
-        String[] arr = command.split ( " " );
-        this.command =arr[0] ;
-        this.user = arr[1];
-        this.language =arr[2];
+        this.language ="xhosa";
+        if(arr.length == 3) {
+            this.language = arr[ 2 ];
+        }
 
     }
 
-    public String getCommand () {
+    public String getCommand ( ) {
 
-        if ( command != "greet" ) {
-            System.out.println ( "enter 'greet' to be able to greet a person" );
+        System.out.println (arr);
+        if ( arr.length == 2 && command.equalsIgnoreCase ( "greet" ) ) {
 
-        }else if ( arr.length == 2 && command.equalsIgnoreCase ( "greet" )) {
-            user = "Aya";
-                language = "xhosa";
-                System.out.println ( "\n" + Language.valueOf ( language).getValue ( ) + user);
+           String diff =language = "xhosa";
+            System.out.println ( "\n" + Language.valueOf ( diff ).getValue () + user );
 
-            }else if ( arr.length == 3 ) {
-                System.out.println ( "\n" + Language.valueOf ( language ).getValue ( ) + user);
+        } else if ( arr.length == 3 ) {
+            language = arr[ 2 ];
+            System.out.println ( "\n" + Language.valueOf ( language ).getValue () + user );
 
-            }
-        return "wrong command";
+        }
+        return command;
     }
 
-    public String getUser(){
+    public String getUser ( ) {
+        System.out.println ( user );
         return user;
     }
-    public String getLang(){
-        return Language.valueOf ( language.toLowerCase ( ) ).getValue ( );
+
+    public String getLang ( ) {
+
+        if ( this.language.isEmpty () ) {
+
+            language = "xhosa";
+            System.out.println ( Language.valueOf ( language.toLowerCase () ).getValue () );
+            return Language.valueOf ( "xhosa" ).getValue ();
+
+        } else {
+            System.out.println ( Language.valueOf ( language.toLowerCase () ).getValue () );
+        }
+        return Language.valueOf ( language.toLowerCase () ).getValue ();
     }
 
 }
