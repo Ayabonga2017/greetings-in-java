@@ -24,7 +24,6 @@ public class Greeter {
             String command = arr[0];
             boolean lengthOne = arr.length == 1;
 
-
             if ( arr.length == 2 && command.equalsIgnoreCase ( "greet" )) {
 
                 userName =arr[1];
