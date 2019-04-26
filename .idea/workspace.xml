@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/CommandExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/CommandExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CommandTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/CommandTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+            <state relative-caret-position="200">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#command#0;class#CommandTest#0" />
@@ -147,10 +144,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="1299" />
-    <option name="height" value="743" />
+    <option name="x" value="1366" />
+    <option name="y" value="-2" />
+    <option name="width" value="1366" />
+    <option name="height" value="770" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -324,12 +321,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CommandTest - 2019.04.26 at 16h 56m 03s.xml">
-      <configuration name="CommandTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CommandTest_commandWithFrench - 2019.04.26 at 16h 56m 58s.xml">
-      <configuration name="CommandTest.commandWithFrench" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CommandTest_commandWithFrench - 2019.04.26 at 16h 57m 11s.xml">
       <configuration name="CommandTest.commandWithFrench" configurationId="JUnit" />
     </history-entry>
@@ -354,6 +345,12 @@
     <history-entry file="CommandTest_commandWithDiff - 2019.04.26 at 17h 02m 17s.xml">
       <configuration name="CommandTest.commandWithDiff" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CommandTest_commandWithDiff - 2019.04.26 at 17h 02m 44s.xml">
+      <configuration name="CommandTest.commandWithDiff" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommandTest - 2019.04.26 at 17h 03m 21s.xml">
+      <configuration name="CommandTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -365,8 +362,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
+    <frame x="1366" y="-2" width="1366" height="770" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49348533" weight="0.2719697" />
       <window_info id="Image Layers" order="1" />
@@ -380,12 +376,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5863192" />
       <window_info anchor="bottom" id="Favorites" order="2" sideWeight="0.5042017" weight="0.26547232" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49166667" visible="true" weight="0.2882736" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49166667" weight="0.66614664" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49720672" weight="0.70670825" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32761312" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49481246" weight="0.39625585" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49481246" visible="true" weight="0.39625585" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5083333" side_tool="true" weight="0.30577224" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32899022" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49960095" weight="0.22932917" />
@@ -747,8 +743,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CommandTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        <state relative-caret-position="200">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#command#0;class#CommandTest#0" />

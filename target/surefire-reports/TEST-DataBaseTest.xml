@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DataBaseTest" time="0.368" tests="9" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="DataBaseTest" time="0.623" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="file.encoding.pkg" value="sun.io"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/coder/IdeaProjects/greet-in-java/target/test-classes:/home/coder/IdeaProjects/greet-in-java/target/classes:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.4.0/junit-jupiter-api-5.4.0.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.4.0/junit-platform-commons-1.4.0.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.4.0/junit-jupiter-engine-5.4.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.4.0/junit-platform-engine-1.4.0.jar:/root/.m2/repository/com/h2database/h2/1.4.197/h2-1.4.197.jar:"/>
+    <property name="java.class.path" value="/home/coder/IdeaProjects/greet-in-java/target/test-classes:/home/coder/IdeaProjects/greet-in-java/target/classes:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.4.0/junit-jupiter-api-5.4.0.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.4.0/junit-platform-commons-1.4.0.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.4.0/junit-jupiter-engine-5.4.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.4.0/junit-platform-engine-1.4.0.jar:/root/.m2/repository/com/h2database/h2/1.4.197/h2-1.4.197.jar:/root/.m2/repository/org/mockito/mockito-core/2.27.0/mockito-core-2.27.0.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.jar:/root/.m2/repository/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.jar:/root/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
@@ -16,8 +16,8 @@
     <property name="user.country" value="ZA"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
-    <property name="sun.java.command" value="/home/coder/IdeaProjects/greet-in-java/target/surefire/surefirebooter532637448508242094.jar /home/coder/IdeaProjects/greet-in-java/target/surefire 2019-04-26T14-29-03_549-jvmRun1 surefire3662113006545801439tmp surefire_03085299499312068117tmp"/>
-    <property name="surefire.test.class.path" value="/home/coder/IdeaProjects/greet-in-java/target/test-classes:/home/coder/IdeaProjects/greet-in-java/target/classes:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.4.0/junit-jupiter-api-5.4.0.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.4.0/junit-platform-commons-1.4.0.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.4.0/junit-jupiter-engine-5.4.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.4.0/junit-platform-engine-1.4.0.jar:/root/.m2/repository/com/h2database/h2/1.4.197/h2-1.4.197.jar:"/>
+    <property name="sun.java.command" value="/home/coder/IdeaProjects/greet-in-java/target/surefire/surefirebooter930976042260098985.jar /home/coder/IdeaProjects/greet-in-java/target/surefire 2019-04-26T17-10-17_819-jvmRun1 surefire7958588778406408549tmp surefire_08501247388982951845tmp"/>
+    <property name="surefire.test.class.path" value="/home/coder/IdeaProjects/greet-in-java/target/test-classes:/home/coder/IdeaProjects/greet-in-java/target/classes:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.4.0/junit-jupiter-api-5.4.0.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.4.0/junit-platform-commons-1.4.0.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.4.0/junit-jupiter-engine-5.4.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.4.0/junit-platform-engine-1.4.0.jar:/root/.m2/repository/com/h2database/h2/1.4.197/h2-1.4.197.jar:/root/.m2/repository/org/mockito/mockito-core/2.27.0/mockito-core-2.27.0.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.jar:/root/.m2/repository/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.jar:/root/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/root"/>
     <property name="user.language" value="en"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/coder/IdeaProjects/greet-in-java/target/surefire/surefirebooter532637448508242094.jar"/>
+    <property name="surefire.real.class.path" value="/home/coder/IdeaProjects/greet-in-java/target/surefire/surefirebooter930976042260098985.jar"/>
     <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="1.8.0_201-b09"/>
@@ -57,13 +57,13 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="greetFromDB" classname="DataBaseTest" time="0.334"/>
-  <testcase name="countNamesFromDB" classname="DataBaseTest" time="0.007"/>
-  <testcase name="clearName" classname="DataBaseTest" time="0.003"/>
-  <testcase name="clearNamesInserted" classname="DataBaseTest" time="0.003"/>
-  <testcase name="greetedNames" classname="DataBaseTest" time="0.002"/>
-  <testcase name="executeSQLStatement" classname="DataBaseTest" time="0.003"/>
+  <testcase name="greetFromDB" classname="DataBaseTest" time="0.557"/>
+  <testcase name="countNamesFromDB" classname="DataBaseTest" time="0.008"/>
+  <testcase name="clearName" classname="DataBaseTest" time="0.005"/>
+  <testcase name="clearNamesInserted" classname="DataBaseTest" time="0.007"/>
+  <testcase name="greetedNames" classname="DataBaseTest" time="0.004"/>
+  <testcase name="executeSQLStatement" classname="DataBaseTest" time="0.005"/>
   <testcase name="loadJdbcDriver" classname="DataBaseTest" time="0.002"/>
-  <testcase name="connectToDatabase" classname="DataBaseTest" time="0.002"/>
-  <testcase name="countFromDB" classname="DataBaseTest" time="0.002"/>
+  <testcase name="connectToDatabase" classname="DataBaseTest" time="0.004"/>
+  <testcase name="countFromDB" classname="DataBaseTest" time="0.006"/>
 </testsuite>
