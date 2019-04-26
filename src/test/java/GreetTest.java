@@ -21,7 +21,7 @@ public class GreetTest {
         greetMap.names ( userName );
         String language =Language.valueOf ( "french".toLowerCase () ).getValue ();
 
-        assertEquals (language + userName, "BONJOUR MINENHLE" );
+        assertEquals (language + userName, "bonjour MINENHLE" );
 
         System.out.println ( "\nShould greet AYA in English :" );
 
@@ -29,7 +29,7 @@ public class GreetTest {
         greetMap.names ( name );
         String languageType =Language.valueOf ( "english".toLowerCase () ).getValue ();
 
-        assertEquals ( languageType + name , "HEY AYA" );
+        assertEquals ( languageType + name , "hey AYA" );
 
     }
     @Test

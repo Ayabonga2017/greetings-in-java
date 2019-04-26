@@ -14,6 +14,6 @@ public enum Language {
     }
 
     public String getValue () {
-        return value.toUpperCase ( );
+        return value.toLowerCase ( );
     }
 }

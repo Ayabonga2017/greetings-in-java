@@ -100,7 +100,7 @@ public class DataBaseTest {
             ResultSet rs = ps.executeQuery ( );
 
             while ( rs.next ( ) ) {
-                assertEquals ( "OLÀ NTANDO" , Language.valueOf ( "portuguese" ).getValue ( ) + rs.getString ( "name" ) );
+                assertEquals ( "olà NTANDO" , Language.valueOf ( "portuguese" ).getValue ( ) + rs.getString ( "name" ) );
 
                 System.out.println ( "\n" + Language.valueOf ( "portuguese" ).getValue ( ) + " " + rs.getString ( "name" ) );
             }

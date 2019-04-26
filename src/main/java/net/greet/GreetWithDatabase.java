@@ -77,7 +77,7 @@ public class GreetWithDatabase implements Greet {
                 updateCounter.setInt ( 1 , ++ count );
                 updateCounter.setString ( 2 , name );
                 updateCounter.execute ( );
-                System.out.println ( "\n" + "Updated "+name.toUpperCase () +"'s counter" );
+                System.out.println ( "\n" + "Updated "+name+"'s counter" );
 
             }
         } catch ( SQLException e ) {
@@ -106,7 +106,7 @@ public class GreetWithDatabase implements Greet {
                 updateCounter.setInt ( 1 , ++ count );
                 updateCounter.setString ( 2 , name );
                 updateCounter.execute ( );
-                System.out.println ( "\n" + "Updated "+name.toUpperCase () +"'s counter" );
+                System.out.println ( "\n" + "Updated "+name +"'s counter" );
 
             }
 
