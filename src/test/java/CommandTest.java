@@ -1,5 +1,5 @@
-import net.greet.CommandExtracor;
 
+import net.greet.CommandExtractor;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,21 +11,10 @@ public class CommandTest {
 
         System.out.println ("\ngreet command test" );
 
-        CommandExtracor comm =new CommandExtracor ("greet","aya","english" );
-        assertEquals (comm.getCommand () ,"greet" );
+        CommandExtractor comm =new CommandExtractor ("greet");
 
-        assertEquals (comm.getLang () + comm.getUser () ,"hey aya" );
+
+        assertEquals (comm.getCommand () +comm.getLang ()+comm.getUser() ,"greet aya english" );
 
     }
-//    @Test
-//    public void commandToGreet(){
-//
-//        System.out.println ("\ngreet command test" );
-//
-//        CommandExtracor comm =new CommandExtracor ("greet","aya","english" );
-//
-//
-//        assertEquals (comm.getLang () + comm.getUserName () ,"hey aya" );
-//
-//    }
 }
