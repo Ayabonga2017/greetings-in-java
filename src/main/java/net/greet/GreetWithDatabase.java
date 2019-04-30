@@ -124,29 +124,32 @@ public class GreetWithDatabase implements Greet {
 
         while ( rs.next ( ) ) {
             System.out.println ( "\n" + rs.getString ( "name" ) );
-
+            rs.getString ( "name" );
         }
     }
     @Override
-    public void removeName ( String name ) {
+    public String removeName ( String name ) {
 
         try {
 
             // set the corresponding param
-                remove.setString ( 1 , name );
-                // execute the delete statement
-                remove.execute ( );
-                System.out.println ( "\n" + name + " was deleted from the Database" );
+            remove.setString ( 1 , name );
+            // execute the delete statement
+            remove.execute ( );
+            System.out.println ( "\n" + name + " was deleted from the Database" );
+            return "\n" + name + " was deleted from the Database" ;
 
         } catch ( SQLException e ) {
             System.out.println ( e.getMessage ( ) );
         }
+        return "\n" + name + " was deleted from the Database" ;
+
     }
     @Override
     public void clearNames () {
         try {
-          deleteAll.execute ( );
-          System.out.println ( "\n" + "deleted all users from the Database" );
+            deleteAll.execute ( );
+            System.out.println ( "\n" + "deleted all users from the Database" );
 
         } catch ( SQLException e ) {
             e.printStackTrace ( );
@@ -172,6 +175,7 @@ public class GreetWithDatabase implements Greet {
 
             if ( rs.next ( ) ) {
                 System.out.println ("\n"+ name+" was greeted " + rs.getInt ( "counter" ) + " time(s)" );
+                return rs.getInt ( "counter" );
             }else{
                 System.out.println ("\nuser is not on the database" );
             }

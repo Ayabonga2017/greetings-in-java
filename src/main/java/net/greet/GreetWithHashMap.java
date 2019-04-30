@@ -22,7 +22,7 @@ public class GreetWithHashMap implements Greet{
         nameList.put ( names , counter + 1 );
     }
     @Override
-    public void namesGreeted ( ) {
+    public void  namesGreeted ( ) {
 
         if (nameList.isEmpty ( ) == true) {
             System.out.println ( "\nno users have been greeted yet" );
@@ -31,13 +31,14 @@ public class GreetWithHashMap implements Greet{
         }
     }
     @Override
-    public void removeName ( String name ) {
+    public String removeName ( String name ) {
         if (nameList.containsKey ( name )) {
             nameList.remove ( name );
             System.out.println ( "\n" + name + " was removed from the list !\n" );
         } else {
             System.out.println ( "\nuser not found" );
         }
+        return name;
     }
     @Override
     public  void clearNames ( ) {
@@ -55,7 +56,7 @@ public class GreetWithHashMap implements Greet{
             System.out.println ( "\nNo users have been greeted yet" );
         } else {
             System.out.println ( "\nShould return the Counter:\n") ;
-           counter = nameList.size ( );
+            counter = nameList.size ( );
         }
         return counter;
     }
@@ -84,12 +85,12 @@ public class GreetWithHashMap implements Greet{
     public int countName ( String name ) {
 
         if (name.isEmpty ( ) == false) {
-        for ( Map.Entry entry : nameList.entrySet ( ) ) {
-            System.out.println ( "\n" + name + " was greeted " + entry.getValue ( ) + " time(s)\n" );
+            for ( Map.Entry entry : nameList.entrySet ( ) ) {
+                System.out.println ( "\n" + name + " was greeted " + entry.getValue ( ) + " time(s)\n" );
+            }
+        } else {
+            System.out.println ( "\nuser not found" );
         }
-    } else {
-        System.out.println ( "\nuser not found" );
-    }
         return 0;
     }
 }

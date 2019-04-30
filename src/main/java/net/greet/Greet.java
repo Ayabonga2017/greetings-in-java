@@ -6,7 +6,7 @@ interface Greet {
 
     void names( String name);
     void namesGreeted() throws SQLException ;
-    void removeName(String name);
+    String removeName(String name);
     void clearNames();
     int count() throws SQLException;
     void invalid();
@@ -16,4 +16,3 @@ interface Greet {
     void namesWithLang(String name, String language);
     int countName(String name);
 }
-
