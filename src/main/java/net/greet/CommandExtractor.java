@@ -22,7 +22,6 @@ public class CommandExtractor {
             this.user = arr[ 1 ];
             this.language = arr[ 2 ];
         }
-
     }
 
     public String getCommand( ) throws SQLException {

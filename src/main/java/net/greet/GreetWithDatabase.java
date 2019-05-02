@@ -56,7 +56,7 @@ public class GreetWithDatabase implements Greet {
     }
 
     @Override
-    public void namesWithDefault ( String name ) {
+    public String namesWithDefault ( String name ) {
         name = name.substring ( 0,1).toLowerCase () + name.substring ( 1 ).toLowerCase ();
         name.equalsIgnoreCase ( name );
 
@@ -83,9 +83,10 @@ public class GreetWithDatabase implements Greet {
         } catch ( SQLException e ) {
             e.printStackTrace ( );
         }
+        return name;
     }
     @Override
-    public void namesWithLang ( String name , String language ) {
+    public String namesWithLang ( String name , String language ) {
         name = name.substring ( 0,1).toLowerCase () + name.substring ( 1 ).toLowerCase ();
         name.equalsIgnoreCase ( name );
 
@@ -113,7 +114,7 @@ public class GreetWithDatabase implements Greet {
         } catch ( SQLException ex ) {
             ex.printStackTrace ( );
         }
-
+return name;
     }
     @Override
     public void namesGreeted () throws SQLException {
@@ -126,6 +127,7 @@ public class GreetWithDatabase implements Greet {
             System.out.println ( "\n" + rs.getString ( "name" ) );
             rs.getString ( "name" );
         }
+       // return rs.getString ( "name" );
     }
     @Override
     public String removeName ( String name ) {
@@ -146,14 +148,14 @@ public class GreetWithDatabase implements Greet {
 
     }
     @Override
-    public void clearNames () {
+    public String clearNames () {
         try {
             deleteAll.execute ( );
             System.out.println ( "\n" + "deleted all users from the Database" );
 
         } catch ( SQLException e ) {
             e.printStackTrace ( );
-        }
+        }return "deleted all users from the Database";
     }
     @Override
     public int count () throws SQLException {
@@ -186,8 +188,9 @@ public class GreetWithDatabase implements Greet {
         return 0;
     }
     @Override
-    public void invalid () {
+    public String invalid () {
         System.out.println ( "\nInvalid command." + "\ntype 'help' to get the list of valid commands." );
+        return "\nInvalid command." + "\ntype 'help' to get the list of valid commands.";
     }
     @Override
     public void help () {

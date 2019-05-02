@@ -7,12 +7,12 @@ interface Greet {
     void names( String name);
     void namesGreeted() throws SQLException ;
     String removeName(String name);
-    void clearNames();
+    String clearNames();
     int count() throws SQLException;
-    void invalid();
+    String invalid();
     void help();
     void exit();
-    void namesWithDefault(String name);
-    void namesWithLang(String name, String language);
+    String namesWithDefault( String name);
+    String namesWithLang( String name, String language);
     int countName(String name);
 }

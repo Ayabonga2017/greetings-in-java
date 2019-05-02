@@ -22,13 +22,15 @@ public class GreetWithHashMap implements Greet{
         nameList.put ( names , counter + 1 );
     }
     @Override
-    public void  namesGreeted ( ) {
+    public void namesGreeted ( ) {
 
         if (nameList.isEmpty ( ) == true) {
             System.out.println ( "\nno users have been greeted yet" );
         } else {
             System.out.println ( nameList );
         }
+       // return String.valueOf ( nameList );
+
     }
     @Override
     public String removeName ( String name ) {
@@ -41,7 +43,7 @@ public class GreetWithHashMap implements Greet{
         return name;
     }
     @Override
-    public  void clearNames ( ) {
+    public String clearNames ( ) {
 
         if (nameList.isEmpty ( ) == true) {
             System.out.println ( "\nlist is empty" );
@@ -49,6 +51,7 @@ public class GreetWithHashMap implements Greet{
             nameList.clear ( );
             System.out.println ( "\nDeleted all users !" );
         }
+        return String.valueOf ( nameList );
     }
     @Override
     public  int count ( ) {
@@ -61,8 +64,9 @@ public class GreetWithHashMap implements Greet{
         return counter;
     }
     @Override
-    public void invalid ( ) {
+    public String invalid ( ) {
         System.out.println ( "\nInvalid command." + "\ntype 'help' to get the list of valid commands." );
+        return "\nInvalid command." + "\ntype 'help' to get the list of valid commands.";
     }
     @Override
     public void help ( ) {
@@ -75,12 +79,13 @@ public class GreetWithHashMap implements Greet{
     @Override
     public void exit ( ) {
         System.out.println ( "\nGood-Bye\n" );
+
         System.exit ( 0 );
     }
     @Override
-    public void namesWithDefault ( String name ){ }
+    public String namesWithDefault ( String name ){ return  name ;}
     @Override
-    public void namesWithLang ( String name , String language ) { }
+    public String namesWithLang ( String name , String language ) { return  name;}
     @Override
     public int countName ( String name ) {
 

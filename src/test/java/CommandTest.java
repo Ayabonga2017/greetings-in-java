@@ -1,29 +1,19 @@
 import net.greet.CommandExtractor;
-import net.greet.GreetWithDatabase;
 import org.junit.jupiter.api.Test;
-
 import java.sql.SQLException;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import net.greet.GreetWithDatabase;
+import net.greet.GreetWithHashMap;
 
 public class CommandTest {
 
-    GreetWithDatabase greetMap = new GreetWithDatabase( );
+   GreetWithDatabase greetMap = new GreetWithDatabase( );
+   // GreetWithHashMap greetMap = new GreetWithHashMap( );
 
     @Test
-    public void command( ) {
+    public void commandWithLanguage( ) {
 
-        System.out.println( "\ngreet command test" );
-
-        CommandExtractor comm = new CommandExtractor( "greet aya english" );
-
-        assertEquals( comm.getLang( ) + comm.getUser( ), "hey aya" );
-
-    }
-    @Test
-    public void commandWithFrench( ) {
-
-        System.out.println( "\ngreet command test French" );
+        System.out.println( "\ngreet in French" );
 
         CommandExtractor comm = new CommandExtractor( "greet aya french" );
 
@@ -33,7 +23,7 @@ public class CommandTest {
     @Test
     public void commandWithDiff( ) {
 
-        System.out.println( "\ngreet command test diff" );
+        System.out.println( "\ngreet in default" );
 
         CommandExtractor comm = new CommandExtractor( "greet thabang" );
 
@@ -43,7 +33,8 @@ public class CommandTest {
     @Test
     public void countNme( ) {
 
-        System.out.println( "\ngreet command test diff" );
+        System.out.println( "\ncount name command" );
+
 
         CommandExtractor comm = new CommandExtractor( "count ntando" );
 
@@ -52,7 +43,7 @@ public class CommandTest {
     @Test
     public void countAll( ) throws SQLException {
 
-        System.out.println( "\ngreet command test diff" );
+        System.out.println( "\ncount all command" );
 
         CommandExtractor comm = new CommandExtractor( "counter" );
         comm.getCommand( );
@@ -66,15 +57,28 @@ public class CommandTest {
 
         CommandExtractor comm = new CommandExtractor( "greeted" );
         comm.getCommand( );
+
+       // assertEquals ( greetMap.namesGreeted (),);
     }
     @Test
     public void clearName( ) {
 
-        System.out.println( "\nShould remove user" );
+        System.out.println( "\nremove user command" );
 
         CommandExtractor comm = new CommandExtractor( "clear aya" );
 
         assertEquals( greetMap.removeName( comm.getUser() ),"\naya was deleted from the Database" );
 
     }
+    @Test
+    public void help( ) throws SQLException {
+
+        System.out.println( "\nhelp command" );
+
+        CommandExtractor comm = new CommandExtractor( "help" );
+        comm.getCommand ();
+       // assertEquals( greetMap.removeName( comm.getUser() ),"\naya was deleted from the Database" );
+
+    }
+
 }

@@ -11,7 +11,8 @@ public class GreetTest {
 
     @BeforeEach
     public  void cleanMap(){
-        greetMap.clearNames (); }
+        greetMap.clearNames ();
+         }
     @Test
     public void greetMe ( ){
 
@@ -20,7 +21,6 @@ public class GreetTest {
         String userName = "MINENHLE";
         greetMap.names ( userName );
         String language =Language.valueOf ( "french".toLowerCase () ).getValue ();
-
         assertEquals (language + userName, "bonjour MINENHLE" );
 
         System.out.println ( "\nShould greet AYA in English :" );
@@ -28,7 +28,6 @@ public class GreetTest {
         String name = "AYA";
         greetMap.names ( name );
         String languageType =Language.valueOf ( "english".toLowerCase () ).getValue ();
-
         assertEquals ( languageType + name , "hey AYA" );
 
     }
@@ -43,6 +42,7 @@ public class GreetTest {
         greetMap.names ( "Asa" );
         greetMap.names ( "Asa" );
 
+        System.out.println ( greetMap.count ( ));
         assertEquals (6,greetMap.count ( ));
     }
     @Test
@@ -67,7 +67,7 @@ public class GreetTest {
         greetMap.names ( "Ama" );
         greetMap.names ( "lllll" );
         greetMap.names ( "Asa" );
-        greetMap.namesGreeted();
+
         greetMap.removeName ("ASA");
         greetMap.namesGreeted();
         assertEquals ( 5,greetMap.count ());
