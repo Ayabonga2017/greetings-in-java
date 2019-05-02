@@ -21,29 +21,22 @@ public class CommandExtractor {
         if ( arr.length == 3 ) {
             this.user = arr[ 1 ];
             this.language = arr[ 2 ];
+
         }
     }
 
     public String getCommand( ) throws SQLException {
 
-        if ( arr.length == 2 && command.equalsIgnoreCase( "greet" ) ) {
-            this.user = arr[ 1 ];
-            greetMap.names( user );
-            String diff = language = "xhosa";
 
-            System.out.println( "\n" + Language.valueOf( diff ).getValue( ) + user );
-            greetMap.namesWithDefault( user );
+        if ( arr.length == 2 && command.equalsIgnoreCase( "greet" ) ) {
+
+            greetMap.namesWithDefault( getUser () );
         } else if ( arr.length == 3 ) {
 
-            this.user = arr[ 1 ];
-            language = arr[ 2 ];
+            greetMap.namesWithLang( getUser (), getLang () );
 
-            System.out.println( "\n" + Language.valueOf( language ).getValue( ) + user );
-            greetMap.namesWithLang( user, language );
         } else if ( arr.length == 2 && command.equalsIgnoreCase( "clear" ) ) {
-
-            this.user = arr[ 1 ];
-            greetMap.removeName( user );
+            greetMap.removeName(getUser ());
         } else if ( lengthOne && command.equalsIgnoreCase( "clearall" ) ) {
 
             greetMap.clearNames( );
@@ -55,8 +48,8 @@ public class CommandExtractor {
             this.user = arr[ 1 ];
             greetMap.countName( user );
         } else if ( lengthOne && command.equalsIgnoreCase( "counter" ) ) {
-
             System.out.println( "\nNumber of greeted users :\n" + "\n" + greetMap.count( ) );
+
         } else if ( lengthOne && command.equalsIgnoreCase( "help" ) ) {
 
             greetMap.help( );
@@ -76,11 +69,11 @@ public class CommandExtractor {
         if ( user == null ) {
 
             System.out.printf( "enter a user" );
+            return "enter user to greet";
         } else {
 
-            System.out.println( user );
+           return user;
         }
-        return user;
     }
 
     public String getLang() {
@@ -88,13 +81,12 @@ public class CommandExtractor {
         if ( this.language.isEmpty( ) ) {
 
             language = "xhosa";
-            System.out.println( Language.valueOf( language.toLowerCase( ) ).getValue( ) );
+//
             return Language.valueOf( "xhosa" ).getValue( );
         } else {
 
-            System.out.println( Language.valueOf( language.toLowerCase( ) ).getValue( ) );
+           return Language.valueOf( language.toLowerCase( ) ).getValue( ) ;
         }
-        return Language.valueOf( language.toLowerCase( ) ).getValue( );
     }
 
 }

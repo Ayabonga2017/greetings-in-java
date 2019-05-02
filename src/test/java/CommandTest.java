@@ -35,10 +35,9 @@ public class CommandTest {
 
         System.out.println( "\ncount name command" );
 
-
         CommandExtractor comm = new CommandExtractor( "count ntando" );
 
-        assertEquals( greetMap.countName( comm.getUser( ) ), 0 );
+        assertEquals( greetMap.countName( comm.getUser( ) ), 3 );
     }
     @Test
     public void countAll( ) throws SQLException {
@@ -47,7 +46,7 @@ public class CommandTest {
 
         CommandExtractor comm = new CommandExtractor( "counter" );
         comm.getCommand( );
-        assertEquals( greetMap.count( ), 0 );
+        assertEquals( greetMap.count( ), 2 );
 
     }
     @Test
