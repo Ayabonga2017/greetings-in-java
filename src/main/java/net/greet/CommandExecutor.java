@@ -11,8 +11,8 @@ public class CommandExecutor {
     public CommandExecutor ( String commands ) throws SQLException {
 
         CommandExtractor extractor = new CommandExtractor ( commands);
-        System.out.printf ( "arr: %s commands: %s", extractor.arr.length, commands );
-        System.out.println ( );
+//        System.out.printf ( "arr: %s commands: %s", extractor.arr.length, commands );
+
 
         if ( extractor.arr.length == 2 && extractor.command.equalsIgnoreCase ( "greet" ) ) {
 
