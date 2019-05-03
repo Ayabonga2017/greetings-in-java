@@ -58,7 +58,7 @@ public class DataBaseTest {
             Statement statement = conn.createStatement ();
             ResultSet rs = statement.executeQuery ( "select * from people" );
 while ( rs.next ( ) ){
-    System.out.println (rs );
+    System.out.println (rs.getString ( "name" ) );
 }
         } catch ( Exception e ) {
             fail ( e );

@@ -14,9 +14,10 @@ public class Greeter {
             Scanner input = new Scanner ( System.in );
             System.out.print ( "\nType in a command : ".toLowerCase ( ) );
             String name = input.nextLine ( );
-            CommandExecutor exercute = new CommandExecutor (name);
+
             CommandExtractor commands = new CommandExtractor ( name );
-            commands.getCommand ();
+            CommandExecutor exercute = new CommandExecutor (commands);
+            exercute.mainMethod ();
 
         }
     }

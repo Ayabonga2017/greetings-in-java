@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="" />
+    <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/CommandExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/GreetWithHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/GreetWithHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/Greeter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/Greeter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DataBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DataBaseTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greeter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+            <state relative-caret-position="278">
+              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandExtractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+            <state relative-caret-position="330">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="method#getUser#0;class#CommandExtractor#0" />
                 <element signature="method#getLang#0;class#CommandExtractor#0" />
@@ -47,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="33" column="38" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="38" />
+            <state relative-caret-position="242">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -56,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/CommandTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+            <state relative-caret-position="147">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#commandWithLanguage#0;class#CommandTest#0" />
@@ -67,50 +74,6 @@
                 <element signature="method#greeted#0;class#CommandTest#0" />
                 <element signature="method#clearName#0;class#CommandTest#0" />
                 <element signature="method#help#0;class#CommandTest#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/DataBaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#cleanUpTables#0;class#DataBaseTest#0" />
-                <element signature="method#loadJdbcDriver#0;class#DataBaseTest#0" />
-                <element signature="method#connectToDatabase#0;class#DataBaseTest#0" />
-                <element signature="method#executeSQLStatement#0;class#DataBaseTest#0" />
-                <element signature="method#greetFromDB#0;class#DataBaseTest#0" />
-                <element signature="method#clearNamesInserted#0;class#DataBaseTest#0" />
-                <element signature="method#clearName#0;class#DataBaseTest#0" />
-                <element signature="method#countFromDB#0;class#DataBaseTest#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
-              <folding>
-                <element signature="method#loadJdbcDriver#0;class#GreetWithDatabase#0" />
-                <element signature="initializer##0;class#GreetWithDatabase#0" />
-                <element signature="method#GreetWithDatabase#0;class#GreetWithDatabase#0" />
-                <element signature="method#namesWithDefault#0;class#GreetWithDatabase#0" />
-                <element signature="method#namesWithLang#0;class#GreetWithDatabase#0" />
-                <element signature="method#namesGreeted#0;class#GreetWithDatabase#0" />
-                <element signature="method#removeName#0;class#GreetWithDatabase#0" />
-                <element signature="method#clearNames#0;class#GreetWithDatabase#0" />
-                <element signature="method#count#0;class#GreetWithDatabase#0" />
-                <element signature="method#countName#0;class#GreetWithDatabase#0" />
-                <element signature="method#invalid#0;class#GreetWithDatabase#0" />
-                <element signature="method#help#0;class#GreetWithDatabase#0" />
-                <element signature="method#exit#0;class#GreetWithDatabase#0" />
               </folding>
             </state>
           </provider>
@@ -127,6 +90,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="coder &lt;nompetsheniayabonga@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -158,13 +126,13 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" />
         <option value="$PROJECT_DIR$/src/test/java/GreetTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/greet/GreetWithHashMap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/greet/Greeter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/greet/CommandExtractor.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/greet/CommandExecutor.java" />
-        <option value="$PROJECT_DIR$/src/test/java/CommandTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/greet/GreetWithHashMap.java" />
         <option value="$PROJECT_DIR$/src/test/java/DataBaseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/CommandTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/greet/CommandExecutor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/greet/CommandExtractor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/greet/Greeter.java" />
       </list>
     </option>
   </component>
@@ -203,10 +171,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1366" />
-    <option name="y" value="-2" />
-    <option name="width" value="1366" />
-    <option name="height" value="770" />
+    <option name="x" value="-45" />
+    <option name="y" value="27" />
+    <option name="width" value="1289" />
+    <option name="height" value="576" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -303,12 +271,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CommandTest">
-    <configuration name="CommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Greeter">
+    <configuration name="Greeter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.greet.Greeter" />
+      <module name="greet-in-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.greet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommandTest.clearName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CommandTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="clearName" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -318,16 +300,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CommandTest" />
       <option name="METHOD_NAME" value="commandWithLanguage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommandTest.countAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="greet-in-java" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CommandTest" />
-      <option name="METHOD_NAME" value="countAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -355,11 +327,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CommandTest" />
+        <item itemvalue="Application.Greeter" />
+        <item itemvalue="JUnit.CommandTest.clearName" />
         <item itemvalue="JUnit.CommandTest.greeted" />
-        <item itemvalue="JUnit.CommandTest.commandWithLanguage" />
         <item itemvalue="JUnit.CommandTest.countNme" />
-        <item itemvalue="JUnit.CommandTest.countAll" />
+        <item itemvalue="JUnit.CommandTest.commandWithLanguage" />
       </list>
     </recent_temporary>
   </component>
@@ -377,35 +349,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CommandTest_countAll - 2019.05.03 at 12h 25m 37s.xml">
-      <configuration name="CommandTest.countAll" configurationId="JUnit" />
+    <history-entry file="CommandTest - 2019.05.03 at 14h 46m 55s.xml">
+      <configuration name="CommandTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandTest_countAll - 2019.05.03 at 12h 25m 55s.xml">
-      <configuration name="CommandTest.countAll" configurationId="JUnit" />
+    <history-entry file="DataBaseTest - 2019.05.03 at 14h 47m 48s.xml">
+      <configuration name="DataBaseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandTest_greeted - 2019.05.03 at 12h 26m 08s.xml">
-      <configuration name="CommandTest.greeted" configurationId="JUnit" />
+    <history-entry file="DataBaseTest - 2019.05.03 at 14h 48m 30s.xml">
+      <configuration name="DataBaseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandTest_countNme - 2019.05.03 at 12h 26m 38s.xml">
-      <configuration name="CommandTest.countNme" configurationId="JUnit" />
+    <history-entry file="DataBaseTest - 2019.05.03 at 14h 50m 06s.xml">
+      <configuration name="DataBaseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandTest_countNme - 2019.05.03 at 12h 26m 47s.xml">
-      <configuration name="CommandTest.countNme" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CommandTest_commandWithLanguage - 2019.05.03 at 12h 27m 07s.xml">
+    <history-entry file="CommandTest_commandWithLanguage - 2019.05.03 at 15h 17m 53s.xml">
       <configuration name="CommandTest.commandWithLanguage" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandTest - 2019.05.03 at 12h 27m 17s.xml">
-      <configuration name="CommandTest" configurationId="JUnit" />
+    <history-entry file="CommandTest_commandWithLanguage - 2019.05.03 at 15h 28m 28s.xml">
+      <configuration name="CommandTest.commandWithLanguage" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandTest_greeted - 2019.05.03 at 12h 29m 44s.xml">
+    <history-entry file="CommandTest_countNme - 2019.05.03 at 15h 28m 47s.xml">
+      <configuration name="CommandTest.countNme" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CommandTest_greeted - 2019.05.03 at 15h 30m 03s.xml">
       <configuration name="CommandTest.greeted" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandTest - 2019.05.03 at 12h 30m 08s.xml">
-      <configuration name="CommandTest" configurationId="JUnit" />
+    <history-entry file="CommandTest_clearName - 2019.05.03 at 15h 31m 00s.xml">
+      <configuration name="CommandTest.clearName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandTest - 2019.05.03 at 12h 34m 57s.xml">
-      <configuration name="CommandTest" configurationId="JUnit" />
+    <history-entry file="CommandTest_clearName - 2019.05.03 at 15h 31m 44s.xml">
+      <configuration name="CommandTest.clearName" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -418,9 +390,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="-2" width="1366" height="770" extended-state="6" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49227798" visible="true" weight="0.25681818" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49227798" visible="true" weight="0.27055067" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -432,13 +405,13 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5863192" />
       <window_info anchor="bottom" id="Favorites" order="2" sideWeight="0.5042017" weight="0.26547232" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.48863637" visible="true" weight="0.7831513" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49720672" weight="0.14332248" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.48863637" visible="true" weight="0.3159609" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49242425" weight="0.6872964" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32736155" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49481246" weight="0.925117" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5113636" side_tool="true" visible="true" weight="0.7831513" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49481246" weight="0.6123778" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50757575" side_tool="true" weight="0.6879875" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.87363493" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49848485" weight="0.69578785" />
       <window_info anchor="bottom" id="Console" order="12" />
@@ -455,27 +428,27 @@
       <window_info anchor="right" id="Codota" order="9" weight="0.3242424" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49348533" visible="true" weight="0.25757575" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49227798" visible="true" weight="0.25681818" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="DB Browser" order="5" weight="0.071969695" />
-      <window_info id="Structure" order="6" sideWeight="0.50651467" side_tool="true" weight="0.2857143" />
-      <window_info id="Project Explorer" order="7" sideWeight="0.49460045" weight="0.06515151" />
-      <window_info id="Job Explorer" order="8" weight="0.3469697" />
+      <window_info id="Structure" order="6" sideWeight="0.507722" side_tool="true" weight="0.25681818" />
+      <window_info id="Project Explorer" order="7" sideWeight="0.46666667" weight="0.3840909" />
+      <window_info id="Job Explorer" order="8" sideWeight="0.4980695" weight="0.3469697" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5863192" />
       <window_info anchor="bottom" id="Favorites" order="2" sideWeight="0.5042017" weight="0.26547232" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4909091" weight="0.9126365" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49720672" weight="0.32247558" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.48863637" weight="0.6614665" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49720672" weight="0.14332248" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32736155" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49481246" weight="0.60530424" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5090909" side_tool="true" weight="0.8845554" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32899022" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49960095" weight="0.22932917" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49481246" weight="0.6131045" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5113636" side_tool="true" weight="0.7831513" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.87363493" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49848485" weight="0.69578785" />
       <window_info anchor="bottom" id="Console" order="12" />
       <window_info anchor="bottom" id="DB Execution Console" order="13" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32960895" />
@@ -680,13 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="78" column="32" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -716,51 +682,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithHashMap.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#names#0;class#GreetWithHashMap#0" />
-            <element signature="method#namesGreeted#0;class#GreetWithHashMap#0" />
-            <element signature="method#removeName#0;class#GreetWithHashMap#0" />
-            <element signature="method#clearNames#0;class#GreetWithHashMap#0" />
-            <element signature="method#count#0;class#GreetWithHashMap#0" />
-            <element signature="method#invalid#0;class#GreetWithHashMap#0" />
-            <element signature="method#help#0;class#GreetWithHashMap#0" />
-            <element signature="method#exit#0;class#GreetWithHashMap#0" />
-            <element signature="method#countName#0;class#GreetWithHashMap#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greeter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding>
-            <element signature="method#getUser#0;class#CommandExtractor#0" />
-            <element signature="method#getLang#0;class#CommandExtractor#0" />
-            <element signature="method#getCommand#0;class#CommandExtractor#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="33" column="38" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="38" />
+        <state relative-caret-position="439">
+          <caret line="80" column="37" lean-forward="true" selection-start-line="78" selection-start-column="12" selection-end-line="80" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -786,10 +711,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#names#0;class#GreetWithHashMap#0" />
+            <element signature="method#namesGreeted#0;class#GreetWithHashMap#0" />
+            <element signature="method#removeName#0;class#GreetWithHashMap#0" />
+            <element signature="method#clearNames#0;class#GreetWithHashMap#0" />
+            <element signature="method#count#0;class#GreetWithHashMap#0" />
+            <element signature="method#invalid#0;class#GreetWithHashMap#0" />
+            <element signature="method#help#0;class#GreetWithHashMap#0" />
+            <element signature="method#exit#0;class#GreetWithHashMap#0" />
+            <element signature="method#namesWithDefault#0;class#GreetWithHashMap#0" />
+            <element signature="method#namesWithLang#0;class#GreetWithHashMap#0" />
+            <element signature="method#countName#0;class#GreetWithHashMap#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/DataBaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#cleanUpTables#0;class#DataBaseTest#0" />
+            <element signature="method#loadJdbcDriver#0;class#DataBaseTest#0" />
+            <element signature="method#connectToDatabase#0;class#DataBaseTest#0" />
+            <element signature="method#executeSQLStatement#0;class#DataBaseTest#0" />
+            <element signature="method#greetFromDB#0;class#DataBaseTest#0" />
+            <element signature="method#countNamesFromDB#0;class#DataBaseTest#0" />
+            <element signature="method#clearNamesInserted#0;class#DataBaseTest#0" />
+            <element signature="method#clearName#0;class#DataBaseTest#0" />
+            <element signature="method#greetedNames#0;class#DataBaseTest#0" />
+            <element signature="method#countFromDB#0;class#DataBaseTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CommandTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+        <state relative-caret-position="147">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#commandWithLanguage#0;class#CommandTest#0" />
@@ -803,20 +769,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/DataBaseTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
+        <state relative-caret-position="242">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="method#getUser#0;class#CommandExtractor#0" />
+            <element signature="method#getLang#0;class#CommandExtractor#0" />
+            <element signature="method#getCommand#0;class#CommandExtractor#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greeter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#cleanUpTables#0;class#DataBaseTest#0" />
-            <element signature="method#loadJdbcDriver#0;class#DataBaseTest#0" />
-            <element signature="method#connectToDatabase#0;class#DataBaseTest#0" />
-            <element signature="method#executeSQLStatement#0;class#DataBaseTest#0" />
-            <element signature="method#greetFromDB#0;class#DataBaseTest#0" />
-            <element signature="method#clearNamesInserted#0;class#DataBaseTest#0" />
-            <element signature="method#clearName#0;class#DataBaseTest#0" />
-            <element signature="method#countFromDB#0;class#DataBaseTest#0" />
           </folding>
         </state>
       </provider>
