@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/CommandExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/CommandExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/CommandExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DataBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DataBaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/greet_java_test.trace.db" beforeDir="false" />
-    </list>
+    <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/DataBaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="147" column="32" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
+            <state relative-caret-position="80">
+              <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#cleanUpTables#0;class#DataBaseTest#0" />
@@ -210,9 +203,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1294" />
-    <option name="width" value="1289" />
-    <option name="height" value="576" />
+    <option name="x" value="1366" />
+    <option name="y" value="-2" />
+    <option name="width" value="1366" />
+    <option name="height" value="770" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -383,9 +377,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CommandTest_countAll - 2019.05.03 at 12h 24m 31s.xml">
-      <configuration name="CommandTest.countAll" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CommandTest_countAll - 2019.05.03 at 12h 25m 37s.xml">
       <configuration name="CommandTest.countAll" configurationId="JUnit" />
     </history-entry>
@@ -413,6 +404,9 @@
     <history-entry file="CommandTest - 2019.05.03 at 12h 30m 08s.xml">
       <configuration name="CommandTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CommandTest - 2019.05.03 at 12h 34m 57s.xml">
+      <configuration name="CommandTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -425,7 +419,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-2" width="1366" height="770" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49227798" visible="true" weight="0.25681818" />
       <window_info id="Image Layers" order="1" />
@@ -439,15 +432,15 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5863192" />
       <window_info anchor="bottom" id="Favorites" order="2" sideWeight="0.5042017" weight="0.26547232" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49002394" weight="0.95319813" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.48863637" visible="true" weight="0.7831513" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49720672" weight="0.14332248" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32736155" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49481246" visible="true" weight="0.5569423" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.509976" side_tool="true" weight="0.89087945" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49481246" weight="0.925117" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5113636" side_tool="true" visible="true" weight="0.7831513" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.87363493" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49960095" weight="0.046801873" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49848485" weight="0.69578785" />
       <window_info anchor="bottom" id="Console" order="12" />
       <window_info anchor="bottom" id="DB Execution Console" order="13" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32960895" />
@@ -812,8 +805,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/DataBaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="147" column="32" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
+        <state relative-caret-position="80">
+          <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#cleanUpTables#0;class#DataBaseTest#0" />
