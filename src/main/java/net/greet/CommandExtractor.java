@@ -1,6 +1,5 @@
 package net.greet;
 
-import java.sql.SQLException;
 
 public class CommandExtractor {
 
@@ -10,7 +9,7 @@ public class CommandExtractor {
     String[] arr;
     boolean lengthOne;
 
-    GreetWithDatabase greetMap = new GreetWithDatabase( );
+
 
     public CommandExtractor( String command ) {
 
@@ -25,44 +24,6 @@ public class CommandExtractor {
         }
     }
 
-    public String getCommand( ) throws SQLException {
-
-
-        if ( arr.length == 2 && command.equalsIgnoreCase( "greet" ) ) {
-
-            greetMap.namesWithDefault( getUser () );
-        } else if ( arr.length == 3 ) {
-
-            greetMap.namesWithLang( getUser (), getLang () );
-
-        } else if ( arr.length == 2 && command.equalsIgnoreCase( "clear" ) ) {
-            greetMap.removeName(getUser ());
-        } else if ( lengthOne && command.equalsIgnoreCase( "clearall" ) ) {
-
-            greetMap.clearNames( );
-        } else if ( lengthOne && command.equalsIgnoreCase( "greeted" ) ) {
-
-            greetMap.namesGreeted( );
-        } else if ( arr.length == 2 && command.equalsIgnoreCase( "count" ) ) {
-
-            this.user = arr[ 1 ];
-            greetMap.countName( user );
-        } else if ( lengthOne && command.equalsIgnoreCase( "counter" ) ) {
-            System.out.println( "\nNumber of greeted users :\n" + "\n" + greetMap.count( ) );
-
-        } else if ( lengthOne && command.equalsIgnoreCase( "help" ) ) {
-
-            greetMap.help( );
-        } else if ( lengthOne && command.equalsIgnoreCase( "exit" ) ) {
-
-            greetMap.exit( );
-        } else {
-
-            greetMap.invalid( );
-        }
-        return command;
-    }
-
     public String getUser() {
 
         this.user = arr[ 1 ];
@@ -75,7 +36,6 @@ public class CommandExtractor {
            return user;
         }
     }
-
     public String getLang() {
 
         if ( this.language.isEmpty( ) ) {
@@ -88,5 +48,10 @@ public class CommandExtractor {
            return Language.valueOf( language.toLowerCase( ) ).getValue( ) ;
         }
     }
+    public String getCommand(){
+
+        return command;
+    }
+
 
 }

@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import net.greet.GreetWithDatabase;
 import net.greet.GreetWithHashMap;
 
+
 public class CommandTest {
 
    GreetWithDatabase greetMap = new GreetWithDatabase( );
@@ -46,11 +47,11 @@ public class CommandTest {
 
         CommandExtractor comm = new CommandExtractor( "counter" );
         comm.getCommand( );
-        assertEquals( greetMap.count( ), 2 );
+        assertEquals( greetMap.count( ), 3 );
 
     }
     @Test
-    public void greeted( ) throws SQLException {
+    public void greeted( )  {
 
         System.out.println( "\nShould display names that have been greeted" );
 
@@ -70,13 +71,13 @@ public class CommandTest {
 
     }
     @Test
-    public void help( ) throws SQLException {
+    public void help( ) {
 
         System.out.println( "\nhelp command" );
 
         CommandExtractor comm = new CommandExtractor( "help" );
         comm.getCommand ();
-       // assertEquals( greetMap.removeName( comm.getUser() ),"\naya was deleted from the Database" );
+
 
     }
 

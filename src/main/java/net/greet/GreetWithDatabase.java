@@ -122,12 +122,10 @@ return name;
         PreparedStatement ps = conn.prepareStatement ( "select name from people " );
         ResultSet rs = ps.executeQuery ( );
 
-
         while ( rs.next ( ) ) {
             System.out.println ( "\n" + rs.getString ( "name" ) );
-            rs.getString ( "name" );
+            rs.getString ( "name"  );
         }
-       // return rs.getString ( "name" );
     }
     @Override
     public String removeName ( String name ) {
