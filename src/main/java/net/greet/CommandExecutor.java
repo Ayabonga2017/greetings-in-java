@@ -15,12 +15,13 @@ public class CommandExecutor {
 
 
         if ( extractor.arr.length == 2 && extractor.command.equalsIgnoreCase ( "greet" ) ) {
-
-            greetMap.namesWithDefault ( extractor.getUser ( ) );
+            System.out.println ("\n"+extractor.getLang () + extractor.getUser () );
+             greetMap.namesWithDefault ( extractor.getUser ( ) );
 
         } else if ( extractor.arr.length == 3 ) {
 
-            System.out.println ( greetMap.namesWithLang ( extractor.getUser ( ) , extractor.getLang ( ) ) );
+            System.out.println ("\n"+extractor.getLang () + extractor.getUser () );
+            greetMap.namesWithLang ( extractor.getUser ( ) , extractor.getLang ( ) ) ;
 
         } else if ( extractor.arr.length == 2 && extractor.command.equalsIgnoreCase ( "clear" ) ) {
 

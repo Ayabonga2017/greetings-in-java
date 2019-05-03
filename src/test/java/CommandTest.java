@@ -1,4 +1,5 @@
 import net.greet.CommandExtractor;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.sql.SQLException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,7 +37,7 @@ public class CommandTest {
 
         System.out.println( "\ncount name command" );
 
-        CommandExtractor comm = new CommandExtractor( "count ntando" );
+        CommandExtractor comm = new CommandExtractor( "count lunga" );
 
         assertEquals( greetMap.countName( comm.getUser( ) ), 3 );
     }
@@ -51,14 +52,12 @@ public class CommandTest {
 
     }
     @Test
-    public void greeted( )  {
+    public void greeted( ) throws SQLException {
 
         System.out.println( "\nShould display names that have been greeted" );
 
         CommandExtractor comm = new CommandExtractor( "greeted" );
         comm.getCommand( );
-
-       // assertEquals ( greetMap.namesGreeted (),);
     }
     @Test
     public void clearName( ) {

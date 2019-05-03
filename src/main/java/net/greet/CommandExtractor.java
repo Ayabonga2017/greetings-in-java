@@ -9,8 +9,6 @@ public class CommandExtractor {
     String[] arr;
     boolean lengthOne;
 
-
-
     public CommandExtractor( String command ) {
 
         this.arr = command.split( " " );
@@ -20,7 +18,6 @@ public class CommandExtractor {
         if ( arr.length == 3 ) {
             this.user = arr[ 1 ];
             this.language = arr[ 2 ];
-
         }
     }
 
@@ -41,7 +38,7 @@ public class CommandExtractor {
         if ( this.language.isEmpty( ) ) {
 
             language = "xhosa";
-//
+
             return Language.valueOf( "xhosa" ).getValue( );
         } else {
 

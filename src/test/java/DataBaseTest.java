@@ -57,7 +57,9 @@ public class DataBaseTest {
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
             Statement statement = conn.createStatement ();
             ResultSet rs = statement.executeQuery ( "select * from people" );
-
+while ( rs.next ( ) ){
+    System.out.println (rs );
+}
         } catch ( Exception e ) {
             fail ( e );
         }
@@ -189,20 +191,6 @@ public class DataBaseTest {
 
             Connection conn = DriverManager.getConnection ( DATABASE_URL , "sa" , "" );
             ResultSet rs;
-
-            //    final String INSERT_PEOPLE_SQL = "insert into test (name, counter) values (?, ?)";
-
-                // PreparedStatement are SQL statements that can be called
-                // over and over with different parameters
-//                PreparedStatement addNameWithLang = conn.prepareStatement ( INSERT_PEOPLE_SQL );
-//
-//                addNameWithLang.setString ( 1 , "THABANG" );
-//                addNameWithLang.setInt ( 2 , 1 );
-//                addNameWithLang.execute ( );
-//
-//                addNameWithLang.setString ( 1 , "AYABONGA" );
-//                addNameWithLang.setInt ( 2 , 1 );
-//                addNameWithLang.execute ( );
 
                 PreparedStatement ps = conn.prepareStatement ( "select * from people where name = ?" );
 
