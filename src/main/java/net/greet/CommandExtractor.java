@@ -3,18 +3,19 @@ package net.greet;
 
 public class CommandExtractor {
 
-    String user;
-    String language;
-    String command;
-    String[] arr;
+    private String user;
+    private String language;
+    private String command;
+    // String[] arr;
     boolean lengthOne;
 
     public CommandExtractor( String command ) {
 
-        this.arr = command.split( " " );
+        String[] arr = command.split( " " );
         this.command = arr[ 0 ];
         this.lengthOne = arr.length == 1;
         this.language = "xhosa";
+
         if ( arr.length == 3 ) {
             this.user = arr[ 1 ];
             this.language = arr[ 2 ];
@@ -47,9 +48,22 @@ public class CommandExtractor {
     public boolean hasName( ) {
       return !user.isEmpty();
     };
-    public boolean hasLanguage(){
-        return !getLang().equals( null );
+
+    public String getCommand( ) {
+        return command;
     }
+
+    public String getGreet(){
+        System.out.printf( getLang()+getUser() );
+        return getLang()+getUser();
+    }
+//    public String getLanguage( ) {
+//        return language;
+//    }
+//
+//    public boolean hasLanguage(){
+//        return !getLang().equals( null );
+//    }
 
 
 }

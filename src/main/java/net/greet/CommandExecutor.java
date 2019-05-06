@@ -3,55 +3,46 @@ import java.sql.SQLException;
 
 public class CommandExecutor {
 
-     GreetWithDatabase greetMap = new GreetWithDatabase ( );
+     Greet greeter;
   //  GreetWithHashMap greetMap = new GreetWithHashMap ( );
-    CommandExtractor extractor;
+//    CommandExtractor extractor;
 
-    public CommandExecutor ( CommandExtractor extractor ) {
-
-        this.extractor = extractor;
+    public CommandExecutor ( Greet greet ) {
+        this.greeter = greet;
     }
 
+    public String execute ( CommandExtractor extractor ) throws SQLException {
 
+        if ( "greet".equalsIgnoreCase( extractor.getCommand( ) ) ) {
 
-    public void mainMethod ( ) throws SQLException {
+            greeter.names( extractor.getUser( ) );
+            return extractor.getGreet();
 
-        if ( extractor.arr.length == 2 && extractor.command.equalsIgnoreCase ( "greet" ) ) {
+        } else if ( "clear".equalsIgnoreCase( extractor.getCommand( ) ) ) {
+            greeter.removeName( extractor.getUser( ) );
+        } else if ( "clearall".equalsIgnoreCase( extractor.getCommand( ) ) ) {
+            return greeter.clearNames( );
+        } else if ( "greeted".equalsIgnoreCase( extractor.getCommand( ) ) ) {
 
-            System.out.println ( "\n" + extractor.hasLanguage()+extractor.hasName() );
-            greetMap.namesWithDefault ( extractor.getUser ( ) );
+            greeter.namesGreeted( );
+        } else if ( "count".equalsIgnoreCase( extractor.getCommand( ) ) ) {
 
-        } else if ( extractor.arr.length == 3 ) {
+            greeter.countName( extractor.getUser( ) );
 
-            System.out.println ( "\n" + extractor.hasLanguage() + extractor.hasName() );
-            greetMap.namesWithLang ( extractor.getUser(), extractor.getLang() );
+        } else if ( "counter".equalsIgnoreCase( extractor.getCommand( ) ) ) {
 
-        } else if ( extractor.arr.length == 2 && extractor.command.equalsIgnoreCase ( "clear" ) ) {
+            System.out.println( "\nNumber of greeted users :\n" + "\n" + greeter.count( ) );
 
-            greetMap.removeName ( extractor.getUser() );
-        } else if ( extractor.lengthOne && extractor.command.equalsIgnoreCase ( "clearall" ) ) {
+        } else if ( "help".equalsIgnoreCase( extractor.getCommand( ) ) ) {
 
-            greetMap.clearNames ( );
-        } else if ( extractor.lengthOne && extractor.command.equalsIgnoreCase ( "greeted" ) ) {
+            greeter.help( );
+        } else if ( "exit".equalsIgnoreCase( extractor.getCommand( ) ) ) {
 
-            greetMap.namesGreeted ( );
-        } else if ( extractor.arr.length == 2 && extractor.command.equalsIgnoreCase ( "count" ) ) {
-
-            greetMap.countName ( extractor.getUser() );
-        } else if ( extractor.lengthOne && extractor.command.equalsIgnoreCase ( "counter" ) ) {
-            System.out.println ( "\nNumber of greeted users :\n" + "\n" + greetMap.count ( ) );
-
-        } else if ( extractor.lengthOne && extractor.command.equalsIgnoreCase ( "help" ) ) {
-
-            greetMap.help ( );
-        } else if ( extractor.lengthOne && extractor.command.equalsIgnoreCase ( "exit" ) ) {
-
-            greetMap.exit ( );
+            greeter.exit( );
         } else {
 
-            greetMap.invalid ( );
+            greeter.invalid( );
         }
     }
-
 }
 

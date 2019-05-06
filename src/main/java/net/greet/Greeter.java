@@ -9,15 +9,17 @@ public class Greeter {
 
         System.out.println ( "-----------------------------GREETINGS APP -----------------------------\n " );
 
+        Greet greet = new GreetWithDatabase();
+        CommandExecutor executor = new CommandExecutor (greet);
+
         while ( true ) {
 
             Scanner input = new Scanner ( System.in );
             System.out.print ( "\nType in a command : ".toLowerCase ( ) );
             String name = input.nextLine ( );
 
-            CommandExtractor commands = new CommandExtractor ( name );
-            CommandExecutor execute = new CommandExecutor (commands);
-            execute.mainMethod ();
+            CommandExtractor extractor = new CommandExtractor ( name );
+            executor.execute (extractor);
 
         }
     }

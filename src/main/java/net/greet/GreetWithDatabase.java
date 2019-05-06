@@ -55,67 +55,67 @@ public class GreetWithDatabase implements Greet {
         }
     }
 
-    @Override
-    public String namesWithDefault ( String name ) {
-        name = name.substring ( 0,1).toLowerCase () + name.substring ( 1 ).toLowerCase ();
-        name.equalsIgnoreCase ( name );
-
-        try {
-
-            findCount.setString ( 1 , name );
-            ResultSet rs = findCount.executeQuery ( );
-
-            if ( ! rs.next ( ) ) {
-                // name doesn't ---- insert
-                insertDB.setString ( 1 , name );
-                insertDB.setInt ( 2 , 1 );
-                insertDB.execute ( );
-
-            } else {
-                //if already exists ---- update counter
-                int count = rs.getInt ( "counter" );
-                updateCounter.setInt ( 1 , ++ count );
-                updateCounter.setString ( 2 , name );
-                updateCounter.execute ( );
-                System.out.println ( "\n" + "Updated "+name+"'s counter" );
-
-            }
-        } catch ( SQLException e ) {
-            e.printStackTrace ( );
-        }
-        return name;
-    }
-    @Override
-    public String namesWithLang ( String name , String language ) {
-        name = name.substring ( 0,1).toLowerCase () + name.substring ( 1 ).toLowerCase ();
-        name.equalsIgnoreCase ( name );
-
-        try {
-
-            findCount.setString ( 1 , name );
-            ResultSet rs = findCount.executeQuery ( );
-
-            if ( ! rs.next ( ) ) {
-                // name doesn't ---- insert
-                insertDB.setString ( 1 , name );
-                insertDB.setInt ( 2 , 1 );
-                insertDB.execute ( );
-
-            } else {
-                //if already exists ---- update counter
-                int count = rs.getInt ( "counter" );
-                updateCounter.setInt ( 1 , ++ count );
-                updateCounter.setString ( 2 , name );
-                updateCounter.execute ( );
-                System.out.println ( "\n" + "Updated "+name +"'s counter" );
-
-            }
-
-        } catch ( SQLException ex ) {
-            ex.printStackTrace ( );
-        }
-return name;
-    }
+//    @Override
+//    public String namesWithDefault ( String name ) {
+//        name = name.substring ( 0,1).toLowerCase () + name.substring ( 1 ).toLowerCase ();
+//        name.equalsIgnoreCase ( name );
+//
+//        try {
+//
+//            findCount.setString ( 1 , name );
+//            ResultSet rs = findCount.executeQuery ( );
+//
+//            if ( ! rs.next ( ) ) {
+//                // name doesn't ---- insert
+//                insertDB.setString ( 1 , name );
+//                insertDB.setInt ( 2 , 1 );
+//                insertDB.execute ( );
+//
+//            } else {
+//                //if already exists ---- update counter
+//                int count = rs.getInt ( "counter" );
+//                updateCounter.setInt ( 1 , ++ count );
+//                updateCounter.setString ( 2 , name );
+//                updateCounter.execute ( );
+//                System.out.println ( "\n" + "Updated "+name+"'s counter" );
+//
+//            }
+//        } catch ( SQLException e ) {
+//            e.printStackTrace ( );
+//        }
+//        return name;
+//    }
+//  //  @Override
+//    /* public String namesWithLang ( String name , String language ) { */
+//        name = name.substring ( 0,1).toLowerCase () + name.substring ( 1 ).toLowerCase ();
+//        name.equalsIgnoreCase ( name );
+//
+//        try {
+//
+//            findCount.setString ( 1 , name );
+//            ResultSet rs = findCount.executeQuery ( );
+//
+//            if ( ! rs.next ( ) ) {
+//                // name doesn't ---- insert
+//                insertDB.setString ( 1 , name );
+//                insertDB.setInt ( 2 , 1 );
+//                insertDB.execute ( );
+//
+//            } else {
+//                //if already exists ---- update counter
+//                int count = rs.getInt ( "counter" );
+//                updateCounter.setInt ( 1 , ++ count );
+//                updateCounter.setString ( 2 , name );
+//                updateCounter.execute ( );
+//                System.out.println ( "\n" + "Updated "+name +"'s counter" );
+//
+//            }
+//
+//        } catch ( SQLException ex ) {
+//            ex.printStackTrace ( );
+//        }
+//return name;
+//    }
     @Override
     public void namesGreeted () throws SQLException {
 
@@ -149,11 +149,12 @@ return name;
     public String clearNames () {
         try {
             deleteAll.execute ( );
-            System.out.println ( "\n" + "deleted all users from the Database" );
+            return ( "Deleted all users from the Database" );
 
         } catch ( SQLException e ) {
             e.printStackTrace ( );
-        }return "deleted all users from the Database";
+        }
+
     }
     @Override
     public int count () throws SQLException {
@@ -204,7 +205,33 @@ return name;
         System.exit ( 0 );
     }
     @Override
-    public void names ( String name ) {
+    public String names ( String name ) {
+        name = name.substring ( 0,1).toLowerCase () + name.substring ( 1 ).toLowerCase ();
+        name.equalsIgnoreCase ( name );
 
+        try {
+
+            findCount.setString ( 1 , name );
+            ResultSet rs = findCount.executeQuery ( );
+
+            if ( ! rs.next ( ) ) {
+                // name doesn't ---- insert
+                insertDB.setString ( 1 , name );
+                insertDB.setInt ( 2 , 1 );
+                insertDB.execute ( );
+
+            } else {
+                //if already exists ---- update counter
+                int count = rs.getInt ( "counter" );
+                updateCounter.setInt ( 1 , ++ count );
+                updateCounter.setString ( 2 , name );
+                updateCounter.execute ( );
+                System.out.println ( "\n" + "Updated "+name+"'s counter" );
+
+            }
+        } catch ( SQLException e ) {
+            e.printStackTrace ( );
+        }
+        return name;
     }
 }

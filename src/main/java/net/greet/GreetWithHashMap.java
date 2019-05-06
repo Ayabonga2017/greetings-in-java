@@ -15,11 +15,12 @@ public class GreetWithHashMap implements Greet{
     }
 
     @Override
-    public void names ( String names ) {
+    public String names ( String names ) {
         names = names.substring ( 0 , 1 ).toUpperCase ( ) + names.substring ( 1 ).toUpperCase ( );
         if (name != "") name = names;
         Integer counter = nameList.containsKey ( names ) ?nameList.get ( names ) : 0;
         nameList.put ( names , counter + 1 );
+        return  names;
     }
     @Override
     public void namesGreeted ( ) {
@@ -82,18 +83,18 @@ public class GreetWithHashMap implements Greet{
 
         System.exit ( 0 );
     }
-    @Override
-    public String namesWithDefault ( String names ){   names = names.substring ( 0 , 1 ).toUpperCase ( ) + names.substring ( 1 ).toUpperCase ( );
-        if (name != "") name = names;
-        Integer counter = nameList.containsKey ( names ) ?nameList.get ( names ) : 0;
-        nameList.put ( names , counter + 1 );
-    return  name;}
-    @Override
-    public String namesWithLang ( String names , String language ) {   names = names.substring ( 0 , 1 ).toUpperCase ( ) + names.substring ( 1 ).toUpperCase ( );
-        if (name != "") name = names;
-        Integer counter = nameList.containsKey ( names ) ?nameList.get ( names ) : 0;
-        nameList.put ( names , counter + 1 );
-    return  names;}
+//    @Override
+//    public String namesWithDefault ( String names ){   names = names.substring ( 0 , 1 ).toUpperCase ( ) + names.substring ( 1 ).toUpperCase ( );
+//        if (name != "") name = names;
+//        Integer counter = nameList.containsKey ( names ) ?nameList.get ( names ) : 0;
+//        nameList.put ( names , counter + 1 );
+//    return  name;}
+//    @Override
+//    public String namesWithLang ( String names , String language ) {   names = names.substring ( 0 , 1 ).toUpperCase ( ) + names.substring ( 1 ).toUpperCase ( );
+//        if (name != "") name = names;
+//        Integer counter = nameList.containsKey ( names ) ?nameList.get ( names ) : 0;
+//        nameList.put ( names , counter + 1 );
+//    return  names;}
     @Override
     public int countName ( String name ) {
 

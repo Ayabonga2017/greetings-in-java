@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 interface Greet {
 
-    void names( String name);
+    String names( String name);
     void namesGreeted() throws SQLException ;
     String removeName(String name);
     String clearNames();
@@ -12,7 +12,7 @@ interface Greet {
     String invalid();
     void help();
     void exit();
-    String namesWithDefault( String name);
-    String namesWithLang( String name, String language);
+  //  String namesWithDefault( String name);
+ //   String namesWithLang( String name, String language);
     int countName(String name);
 }
