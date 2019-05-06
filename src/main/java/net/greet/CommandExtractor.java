@@ -19,20 +19,18 @@ public class CommandExtractor {
             this.user = arr[ 1 ];
             this.language = arr[ 2 ];
         }
+
+        if ( arr.length >= 2 ) {
+            this.user = arr[ 1 ];
+        } else {
+            this.user = "";
+        }
     }
 
     public String getUser() {
-
-        this.user = arr[ 1 ];
-        if ( user == null ) {
-
-            System.out.printf( "enter a user" );
-            return "enter user to greet";
-        } else {
-
            return user;
         }
-    }
+
     public String getLang() {
 
         if ( this.language.isEmpty( ) ) {
@@ -45,9 +43,12 @@ public class CommandExtractor {
            return Language.valueOf( language.toLowerCase( ) ).getValue( ) ;
         }
     }
-    public String getCommand(){
 
-        return command;
+    public boolean hasName( ) {
+      return !user.isEmpty();
+    };
+    public boolean hasLanguage(){
+        return !getLang().equals( null );
     }
 
 

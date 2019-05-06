@@ -3168,3 +3168,20 @@ delete from people where name in ('THABANG','AYABONGA','UNALO','YEGAN','NTANDO')
 2019-05-06 11:41:48 jdbc[32]: exception
 org.h2.jdbc.JdbcSQLException: Table "PEOPLE" not found; SQL statement:
 SELECT COUNT(*) AS rowcount FROM people [42102-197]
+2019-05-06 14:22:40 jdbc[4]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-197]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:197)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:137)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at net.greet.GreetWithDatabase.<init>(GreetWithDatabase.java:22)
+	at net.greet.CommandExecutor.<init>(CommandExecutor.java:7)
+	at net.greet.Greeter.main(Greeter.java:19)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 12 more

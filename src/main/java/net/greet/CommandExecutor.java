@@ -1,5 +1,4 @@
 package net.greet;
-
 import java.sql.SQLException;
 
 public class CommandExecutor {
@@ -8,26 +7,28 @@ public class CommandExecutor {
   //  GreetWithHashMap greetMap = new GreetWithHashMap ( );
     CommandExtractor extractor;
 
-    public CommandExecutor ( CommandExtractor extractor ) throws SQLException {
+    public CommandExecutor ( CommandExtractor extractor ) {
 
         this.extractor = extractor;
     }
+
+
 
     public void mainMethod ( ) throws SQLException {
 
         if ( extractor.arr.length == 2 && extractor.command.equalsIgnoreCase ( "greet" ) ) {
 
-            System.out.println ( "\n" + extractor.getLang ( ) + extractor.getUser ( ) );
+            System.out.println ( "\n" + extractor.hasLanguage()+extractor.hasName() );
             greetMap.namesWithDefault ( extractor.getUser ( ) );
 
         } else if ( extractor.arr.length == 3 ) {
 
-            System.out.println ( "\n" + extractor.getLang ( ) + extractor.getUser ( ) );
-            greetMap.namesWithLang ( extractor.getUser ( ), extractor.getLang ( ) );
+            System.out.println ( "\n" + extractor.hasLanguage() + extractor.hasName() );
+            greetMap.namesWithLang ( extractor.getUser(), extractor.getLang() );
 
         } else if ( extractor.arr.length == 2 && extractor.command.equalsIgnoreCase ( "clear" ) ) {
 
-            greetMap.removeName ( extractor.getUser ( ) );
+            greetMap.removeName ( extractor.getUser() );
         } else if ( extractor.lengthOne && extractor.command.equalsIgnoreCase ( "clearall" ) ) {
 
             greetMap.clearNames ( );
@@ -36,7 +37,7 @@ public class CommandExecutor {
             greetMap.namesGreeted ( );
         } else if ( extractor.arr.length == 2 && extractor.command.equalsIgnoreCase ( "count" ) ) {
 
-            greetMap.countName ( extractor.getUser ( ) );
+            greetMap.countName ( extractor.getUser() );
         } else if ( extractor.lengthOne && extractor.command.equalsIgnoreCase ( "counter" ) ) {
             System.out.println ( "\nNumber of greeted users :\n" + "\n" + greetMap.count ( ) );
 
