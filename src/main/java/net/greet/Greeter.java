@@ -16,8 +16,8 @@ public class Greeter {
             String name = input.nextLine ( );
 
             CommandExtractor commands = new CommandExtractor ( name );
-            CommandExecutor exercute = new CommandExecutor (commands);
-            exercute.mainMethod ();
+            CommandExecutor execute = new CommandExecutor (commands);
+            execute.mainMethod ();
 
         }
     }
