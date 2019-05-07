@@ -1,8 +1,8 @@
 import net.greet.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.sql.SQLException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.*;
 
 public class CommandTest {
 
@@ -10,78 +10,60 @@ public class CommandTest {
    // GreetWithHashMap greet = new GreetWithHashMap( );
    CommandExecutor executor =new CommandExecutor ( greet );
 
-   // Greet mocked = mock ( Greet.class, "");
-
     @Test
+    @DisplayName ( "greet with language command" )
     public void commandWithLanguage( ) throws SQLException {
-
-        System.out.println( "\ngreet in French" );
 
         CommandExtractor comm = new CommandExtractor( "greet aya french" );
         assertEquals( executor.execute (comm), "\nbonjour aya" );
     }
+
     @Test
+    @DisplayName ( "greet with default command" )
     public void commandWithDiff( ) throws SQLException {
 
-        System.out.println( "\ngreet in default" );
-
         CommandExtractor comm = new CommandExtractor( "greet thabang" );
-
         assertEquals( executor.execute (comm), "\nmholo thabang" );
-
     }
-    @Test
-    public void countNme( ) throws SQLException {
 
-        System.out.println( "\ncount name command" );
+    @Test
+    @DisplayName ( "count name command" )
+    public void countNme( ) throws SQLException {
 
         CommandExtractor comm = new CommandExtractor( "count yegan" );
         assertEquals( executor.execute (comm), "0" );
     }
-    @Test
-    public void countAll( ) throws SQLException {
 
-        System.out.println( "\ncount all command" );
+    @Test
+    @DisplayName ( "counter command" )
+    public void countAll( ) throws SQLException {
 
         CommandExtractor comm = new CommandExtractor( "counter" );
         assertEquals( executor.execute (comm), "4" );
-
     }
-    @Test
-    public void greeted( ) throws SQLException {
 
-        System.out.println( "\nShould display names that have been greeted" );
+    @Test
+    @DisplayName ( "greeted command" )
+    public void greeted( ) throws SQLException {
 
         CommandExtractor comm = new CommandExtractor( "greeted" );
         assertEquals( executor.execute (comm),"greeted names" );
-
     }
-    @Test
-    public void clearName( ) throws SQLException {
 
-        System.out.println( "\nremove user command" );
+    @Test
+    @DisplayName ( "clear name command" )
+    public void clearName( ) throws SQLException {
 
         CommandExtractor comm = new CommandExtractor( "clear aya" );
         assertEquals( executor.execute (comm),"\naya was removed successfully!" );
-
     }
-    @Test
-    public void help( ) throws SQLException {
 
-        System.out.println( "\nhelp command" );
+    @Test
+    @DisplayName ( "\nhelp command" )
+    public void help( ) throws SQLException {
 
         CommandExtractor comm = new CommandExtractor( "help" );
        assertEquals( executor.execute (comm),"" );
-
     }
-//    @Test
-//    public void exit( ) throws SQLException {
-//
-//        System.out.println( "\nexit command" );
-//
-//        CommandExtractor comm = new CommandExtractor( "exit" );
-//        assertEquals( executor.execute (comm),"Good-Bye" );
-//
-//    }
 
 }
