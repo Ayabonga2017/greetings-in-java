@@ -35,7 +35,7 @@ public class CommandTest {
 
         System.out.println( "\ncount name command" );
 
-        CommandExtractor comm = new CommandExtractor( "count asa" );
+        CommandExtractor comm = new CommandExtractor( "count ayanda" );
         assertEquals( executor.execute (comm), "1" );
     }
     @Test

@@ -11,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DBandHashMapTest {
 
-   GreetWithHashMap greetMap = new GreetWithHashMap ();
-  //  GreetWithDatabase greetMap = new GreetWithDatabase ();
+  // GreetWithHashMap greetMap = new GreetWithHashMap ();
+    GreetWithDatabase greetMap = new GreetWithDatabase ();
 
     @BeforeEach
     public  void cleanMap(){
