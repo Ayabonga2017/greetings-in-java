@@ -35,8 +35,8 @@ public class CommandTest {
 
         System.out.println( "\ncount name command" );
 
-        CommandExtractor comm = new CommandExtractor( "count ayanda" );
-        assertEquals( executor.execute (comm), "1" );
+        CommandExtractor comm = new CommandExtractor( "count yegan" );
+        assertEquals( executor.execute (comm), "0" );
     }
     @Test
     public void countAll( ) throws SQLException {
@@ -44,7 +44,7 @@ public class CommandTest {
         System.out.println( "\ncount all command" );
 
         CommandExtractor comm = new CommandExtractor( "counter" );
-        assertEquals( executor.execute (comm), "6" );
+        assertEquals( executor.execute (comm), "4" );
 
     }
     @Test

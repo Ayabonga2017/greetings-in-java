@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1__Create_people.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/greet/Greet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/greet/GreetWithDatabase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/greet/GreetWithHashMap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/greet/Greeter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/greet/Language.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/greet_java_test.trace.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CommandTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/CommandTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="68">
+              <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -358,9 +353,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GreetTest - 2019.05.07 at 15h 51m 08s.xml">
-      <configuration name="GreetTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GreetTest - 2019.05.07 at 15h 52m 58s.xml">
       <configuration name="GreetTest" configurationId="JUnit" />
     </history-entry>
@@ -388,6 +380,9 @@
     <history-entry file="DBandHashMapTest - 2019.05.07 at 15h 59m 59s.xml">
       <configuration name="DBandHashMapTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CommandTest_countAll - 2019.05.07 at 16h 51m 19s.xml">
+      <configuration name="CommandTest.countAll" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -414,12 +409,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5863192" />
       <window_info anchor="bottom" id="Favorites" order="2" sideWeight="0.5042017" weight="0.26547232" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.48863637" weight="0.78159124" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.48863637" weight="0.7800312" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49242425" weight="0.3533026" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32736155" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49481246" visible="true" weight="0.32137287" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49481246" visible="true" weight="0.19656786" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50757575" side_tool="true" weight="0.6879875" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.87363493" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49848485" weight="0.47772658" />
@@ -723,8 +718,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CommandTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="68">
+          <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
