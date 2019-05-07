@@ -21,8 +21,6 @@ public class DBandHashMapTest {
     @Test
     public void greetMe ( ){
 
-        System.out.println ( "\nShould greet Minentle in French :" );
-
         String userName = "MINENHLE";
         greetMap.names ( userName );
 
@@ -57,7 +55,7 @@ public class DBandHashMapTest {
         assertEquals (  greetMap.namesGreeted(),"greeted names" );
     }
     @Test
-    public  void greetRemoveUserName() throws SQLException {
+    public  void greetRemoveUserName() {
         System.out.println ( "\nShould remove a name from the list:\n" );
         greetMap.names ( "min" );
         greetMap.names ( "ainen" );
@@ -80,7 +78,6 @@ public class DBandHashMapTest {
 
         assertEquals ( greetMap.clearNames (),"deleted all users" );
     }
-
     @Test
     public  void countName(){
         System.out.println ( "\nShould count for a specific user\n" );
