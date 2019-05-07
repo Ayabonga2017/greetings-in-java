@@ -62,7 +62,7 @@ public class GreetWithDatabase implements Greet {
 
         while ( rs.next ( ) ) {
             System.out.println ( "\n" + rs.getString ( "name" ) );
-              rs.getString ( "name"  );
+             rs.getString ( "name" );
         }
         return "greeted names";
     }
@@ -75,13 +75,13 @@ public class GreetWithDatabase implements Greet {
             remove.setString ( 1 , name );
             // execute the delete statement
             remove.execute ( );
-            System.out.println ( "\n" + name + " was deleted from the Database" );
-            return "\n" + name + " was deleted from the Database" ;
+            System.out.println ( "\n" + name + " was removed successfully!" );
+            return "\n" + name + " was removed successfully!" ;
 
         } catch ( SQLException e ) {
             System.out.println ( e.getMessage ( ) );
         }
-        return "\n" + name + " was deleted from the Database" ;
+        return "\n" + name + " was removed successfully!" ;
 
     }
     @Override

@@ -3,64 +3,66 @@ package net.greet;
 import java.util.HashMap;
 import java.util.Map;
 
-public class GreetWithHashMap implements Greet{
+public class GreetWithHashMap implements Greet {
 
     int counter = 0;
     String name;
+    public int countName;
 
     static Map < String,Integer > nameList = new HashMap <> ( );
 
-    public GreetWithHashMap(){
-        System.out.println ("USING IN-MEMORY " );
+    public GreetWithHashMap ( ) {
+        System.out.println ( "USING IN-MEMORY " );
     }
 
     @Override
     public String names ( String names ) {
-        names = names.substring ( 0 , 1 ).toUpperCase ( ) + names.substring ( 1 ).toUpperCase ( );
-        if (name != "") name = names;
+        names = names.substring ( 0, 1 ).toLowerCase ( ) + names.substring ( 1 ).toLowerCase ( );
+        if ( name != "" ) name = names;
         Integer counter = nameList.containsKey ( names ) ?nameList.get ( names ) : 0;
-        nameList.put ( names , counter + 1 );
-        return  names;
+        nameList.put ( names, counter + 1 );
+        return names;
     }
     @Override
     public String namesGreeted ( ) {
 
-        if (nameList.isEmpty ( ) == true) {
+        if ( nameList.isEmpty ( ) == true ) {
             System.out.println ( "\nno users have been greeted yet" );
+            return "\nno users have been greeted yet";
         } else {
             System.out.println ( nameList );
+            return "greeted names";
         }
-       // return String.valueOf ( nameList );
-
-        return null;
     }
     @Override
     public String removeName ( String name ) {
-        if (nameList.containsKey ( name )) {
+        if ( nameList.containsKey ( name ) ) {
             nameList.remove ( name );
-            System.out.println ( "\n" + name + " was removed from the list !\n" );
+            return "\n" + name + " was removed successfully!";
         } else {
             System.out.println ( "\nuser not found" );
+            return "\nuser not found";
         }
-        return name;
     }
     @Override
     public String clearNames ( ) {
 
-        if (nameList.isEmpty ( ) == true) {
+        if ( nameList.isEmpty ( ) == true ) {
             System.out.println ( "\nlist is empty" );
-        } else if (nameList.isEmpty ( ) == false) {
+            return "list is empty";
+        } else{
             nameList.clear ( );
             System.out.println ( "\nDeleted all users !" );
+            return "deleted all users";
+
         }
-        return String.valueOf ( nameList );
     }
     @Override
-    public  int count ( ) {
-        if (nameList.size ( ) == 0) {
+    public int count ( ) {
+        if ( nameList.size ( ) == 0 ) {
             System.out.println ( "\nNo users have been greeted yet" );
         } else {
-            System.out.println ( "\nShould return the Counter:\n") ;
+            System.out.println ( "\nShould return the Counter:\n" );
             counter = nameList.size ( );
         }
         return counter;
@@ -89,13 +91,10 @@ public class GreetWithHashMap implements Greet{
     @Override
     public int countName ( String name ) {
 
-        if (name.isEmpty ( ) == false) {
-            for ( Map.Entry entry : nameList.entrySet ( ) ) {
-                System.out.println ( "\n" + name + " was greeted " + entry.getValue ( ) + " time(s)\n" );
-            }
-        } else {
-            System.out.println ( "\nuser not found" );
+        for ( Map.Entry entry : nameList.entrySet ( ) ) {
+            this.countName = ( int ) entry.getValue ( );
         }
-        return 0;
+        System.out.println ( "\n" + name + " was greeted " + countName+ " time(s)\n" );
+        return countName;
     }
 }

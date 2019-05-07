@@ -2,7 +2,7 @@ package net.greet;
 
 import java.sql.SQLException;
 
-interface Greet {
+public interface Greet {
 
     String names( String name);
     String namesGreeted() throws SQLException ;

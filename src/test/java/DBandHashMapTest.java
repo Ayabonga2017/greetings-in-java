@@ -1,13 +1,18 @@
 
+import net.greet.GreetWithDatabase;
 import net.greet.GreetWithHashMap;
 import net.greet.Language;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.sql.SQLException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class GreetTest {
+public class DBandHashMapTest {
 
-    GreetWithHashMap greetMap = new GreetWithHashMap ();
+   GreetWithHashMap greetMap = new GreetWithHashMap ();
+  //  GreetWithDatabase greetMap = new GreetWithDatabase ();
 
     @BeforeEach
     public  void cleanMap(){
@@ -20,19 +25,13 @@ public class GreetTest {
 
         String userName = "MINENHLE";
         greetMap.names ( userName );
+
         String language =Language.valueOf ( "french".toLowerCase () ).getValue ();
         assertEquals (language + userName, "bonjour MINENHLE" );
 
-        System.out.println ( "\nShould greet AYA in English :" );
-
-        String name = "AYA";
-        greetMap.names ( name );
-        String languageType =Language.valueOf ( "english".toLowerCase () ).getValue ();
-        assertEquals ( languageType + name , "hey AYA" );
-
     }
     @Test
-    public  void greetCounter(){
+    public  void greetCounter() throws SQLException {
 
         greetMap.names ( "Min" );
         greetMap.names ( "Minen" );
@@ -42,11 +41,10 @@ public class GreetTest {
         greetMap.names ( "Asa" );
         greetMap.names ( "Asa" );
 
-        System.out.println ( greetMap.count ( ));
         assertEquals (6,greetMap.count ( ));
     }
     @Test
-    public  void greetedNames(){
+    public  void greetedNames() throws SQLException {
 
         greetMap.names ( "Min" );
         greetMap.names ( "Min" );
@@ -55,35 +53,45 @@ public class GreetTest {
         greetMap.names ( "Ama" );
         greetMap.names ( "lllll" );
         greetMap.names ( "Asa" );
-        System.out.println ( "\nShould return the list of names on the map :\n" );
-        greetMap.namesGreeted();
+
+        assertEquals (  greetMap.namesGreeted(),"greeted names" );
     }
     @Test
-    public  void greetRemoveUserName(){
-        System.out.println ( "\nShould remove a name  and decrement the counter:\n" );
-        greetMap.names ( "Min" );
-        greetMap.names ( "Minen" );
-        greetMap.names ( "Ayanda" );
-        greetMap.names ( "Ama" );
+    public  void greetRemoveUserName() throws SQLException {
+        System.out.println ( "\nShould remove a name from the list:\n" );
+        greetMap.names ( "min" );
+        greetMap.names ( "ainen" );
+        greetMap.names ( "ayanda" );
+        greetMap.names ( "ama" );
         greetMap.names ( "lllll" );
-        greetMap.names ( "Asa" );
+        greetMap.names ( "asa" );
 
-        greetMap.removeName ("ASA");
-        greetMap.namesGreeted();
-        assertEquals ( 5,greetMap.count ());
+        assertEquals ( greetMap.removeName ("asa"),"\nasa was removed successfully!");
     }
     @Test
     public  void greetClear(){
-        System.out.println ( "\nList should be empty and counter be 0:\n" );
+        System.out.println ( "\nShould clear all greeted names\n" );
         greetMap.names ( "Min" );
         greetMap.names ( "Minen" );
         greetMap.names ( "Ayanda" );
         greetMap.names ( "Ama" );
         greetMap.names ( "lllll" );
         greetMap.names ( "Asa" );
-        greetMap.clearNames ();
 
-        assertEquals ( 0,greetMap.count () );
+        assertEquals ( greetMap.clearNames (),"deleted all users" );
+    }
+
+    @Test
+    public  void countName(){
+        System.out.println ( "\nShould count for a specific user\n" );
+        greetMap.names ( "Min" );
+        greetMap.names ( "asa" );
+        greetMap.names ( "Ayanda" );
+        greetMap.names ( "Ama" );
+        greetMap.names ( "lllll" );
+
+
+        assertEquals ( greetMap.countName ( "asa" ),1 );
     }
 
 }

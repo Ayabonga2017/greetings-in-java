@@ -1,11 +1,8 @@
-import net.greet.CommandExecutor;
-import net.greet.CommandExtractor;
+import net.greet.*;
 import org.junit.jupiter.api.Test;
 import java.sql.SQLException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import net.greet.GreetWithDatabase;
-import net.greet.GreetWithHashMap;
-//import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.*;
 
 public class CommandTest {
 
@@ -13,7 +10,7 @@ public class CommandTest {
    // GreetWithHashMap greet = new GreetWithHashMap( );
    CommandExecutor executor =new CommandExecutor ( greet );
 
-   // CommandExecutor mocked = mock ( CommandExecutor.class, "");
+   // Greet mocked = mock ( Greet.class, "");
 
     @Test
     public void commandWithLanguage( ) throws SQLException {
@@ -29,6 +26,7 @@ public class CommandTest {
         System.out.println( "\ngreet in default" );
 
         CommandExtractor comm = new CommandExtractor( "greet thabang" );
+
         assertEquals( executor.execute (comm), "\nmholo thabang" );
 
     }
@@ -37,8 +35,8 @@ public class CommandTest {
 
         System.out.println( "\ncount name command" );
 
-        CommandExtractor comm = new CommandExtractor( "count lunga" );
-        assertEquals( executor.execute (comm), "3" );
+        CommandExtractor comm = new CommandExtractor( "count asa" );
+        assertEquals( executor.execute (comm), "1" );
     }
     @Test
     public void countAll( ) throws SQLException {
@@ -46,7 +44,7 @@ public class CommandTest {
         System.out.println( "\ncount all command" );
 
         CommandExtractor comm = new CommandExtractor( "counter" );
-        assertEquals( executor.execute (comm), "4" );
+        assertEquals( executor.execute (comm), "6" );
 
     }
     @Test
@@ -64,7 +62,8 @@ public class CommandTest {
         System.out.println( "\nremove user command" );
 
         CommandExtractor comm = new CommandExtractor( "clear aya" );
-        assertEquals( executor.execute (comm),"\naya was deleted from the Database" );
+        assertEquals( executor.execute (comm),"\naya was removed successfully!" );
+
     }
     @Test
     public void help( ) throws SQLException {

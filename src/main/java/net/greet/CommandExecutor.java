@@ -14,6 +14,7 @@ public class CommandExecutor {
         if ( "greet".equalsIgnoreCase( extractor.getCommand( ) ) ) {
 
             greeter.names( extractor.getUser( ) );
+            System.out.printf (extractor.getGreet() );
             return extractor.getGreet();
 
         } else if ( "clear".equalsIgnoreCase( extractor.getCommand( ) ) ) {

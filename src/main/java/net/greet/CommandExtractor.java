@@ -6,14 +6,11 @@ public class CommandExtractor {
     private String user;
     private String language;
     private String command;
-    // String[] arr;
-    boolean lengthOne;
 
     public CommandExtractor( String command ) {
 
         String[] arr = command.split( " " );
         this.command = arr[ 0 ];
-        this.lengthOne = arr.length == 1;
         this.language = "xhosa";
 
         if ( arr.length == 3 ) {
@@ -44,25 +41,14 @@ public class CommandExtractor {
            return Language.valueOf( language.toLowerCase( ) ).getValue( ) ;
         }
     }
-    public boolean hasName( ) {
-      return !user.isEmpty();
-    };
 
     public String getCommand( ) {
         return command;
     }
 
     public String getGreet(){
-        System.out.printf( getLang()+getUser() );
+
         return "\n"+getLang()+getUser();
     }
-//    public String getLanguage( ) {
-//        return language;
-//    }
-//
-//    public boolean hasLanguage(){
-//        return !getLang().equals( null );
-//    }
-
 
 }
