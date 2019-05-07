@@ -9,8 +9,9 @@ import net.greet.GreetWithHashMap;
 
 public class CommandTest {
 
-   GreetWithDatabase greetMap = new GreetWithDatabase( );
-   // GreetWithHashMap greetMap = new GreetWithHashMap( );
+   GreetWithDatabase greet = new GreetWithDatabase( );
+   // GreetWithHashMap greet = new GreetWithHashMap( );
+   CommandExecutor executor =new CommandExecutor ( greet );
 
    // CommandExecutor mocked = mock ( CommandExecutor.class, "");
 
@@ -20,19 +21,15 @@ public class CommandTest {
         System.out.println( "\ngreet in French" );
 
         CommandExtractor comm = new CommandExtractor( "greet aya french" );
-        CommandExecutor execute =new CommandExecutor ( comm );
-        execute.mainMethod ();
-
-        assertEquals( comm.getLang( ) + comm.getUser( ), "bonjour aya" );
+        assertEquals( executor.execute (comm), "\nbonjour aya" );
     }
     @Test
-    public void commandWithDiff( ) {
+    public void commandWithDiff( ) throws SQLException {
 
         System.out.println( "\ngreet in default" );
 
         CommandExtractor comm = new CommandExtractor( "greet thabang" );
-
-        assertEquals( comm.getLang( ) + comm.getUser( ), "mholo thabang" );
+        assertEquals( executor.execute (comm), "\nmholo thabang" );
 
     }
     @Test
@@ -41,10 +38,7 @@ public class CommandTest {
         System.out.println( "\ncount name command" );
 
         CommandExtractor comm = new CommandExtractor( "count lunga" );
-        CommandExecutor execute =new CommandExecutor ( comm );
-        execute.mainMethod ();
-
-        assertEquals( greetMap.countName( comm.getUser( ) ), 3 );
+        assertEquals( executor.execute (comm), "3" );
     }
     @Test
     public void countAll( ) throws SQLException {
@@ -52,10 +46,7 @@ public class CommandTest {
         System.out.println( "\ncount all command" );
 
         CommandExtractor comm = new CommandExtractor( "counter" );
-        CommandExecutor execute =new CommandExecutor ( comm );
-        execute.mainMethod ();
-
-        assertEquals( greetMap.count( ), 3 );
+        assertEquals( executor.execute (comm), "4" );
 
     }
     @Test
@@ -64,8 +55,7 @@ public class CommandTest {
         System.out.println( "\nShould display names that have been greeted" );
 
         CommandExtractor comm = new CommandExtractor( "greeted" );
-        CommandExecutor execute =new CommandExecutor ( comm );
-        execute.mainMethod ();
+        assertEquals( executor.execute (comm),"greeted names" );
 
     }
     @Test
@@ -74,10 +64,7 @@ public class CommandTest {
         System.out.println( "\nremove user command" );
 
         CommandExtractor comm = new CommandExtractor( "clear aya" );
-        CommandExecutor execute =new CommandExecutor ( comm );
-        execute.mainMethod ();
-
-        assertEquals( greetMap.removeName( comm.getUser() ),"\naya was deleted from the Database" );
+        assertEquals( executor.execute (comm),"\naya was deleted from the Database" );
     }
     @Test
     public void help( ) throws SQLException {
@@ -85,11 +72,17 @@ public class CommandTest {
         System.out.println( "\nhelp command" );
 
         CommandExtractor comm = new CommandExtractor( "help" );
-        CommandExecutor execute =new CommandExecutor ( comm );
-        execute.mainMethod ();
-
-
+       assertEquals( executor.execute (comm),"" );
 
     }
+//    @Test
+//    public void exit( ) throws SQLException {
+//
+//        System.out.println( "\nexit command" );
+//
+//        CommandExtractor comm = new CommandExtractor( "exit" );
+//        assertEquals( executor.execute (comm),"Good-Bye" );
+//
+//    }
 
 }

@@ -44,7 +44,6 @@ public class CommandExtractor {
            return Language.valueOf( language.toLowerCase( ) ).getValue( ) ;
         }
     }
-
     public boolean hasName( ) {
       return !user.isEmpty();
     };
@@ -55,7 +54,7 @@ public class CommandExtractor {
 
     public String getGreet(){
         System.out.printf( getLang()+getUser() );
-        return getLang()+getUser();
+        return "\n"+getLang()+getUser();
     }
 //    public String getLanguage( ) {
 //        return language;

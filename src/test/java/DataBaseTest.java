@@ -145,7 +145,7 @@ while ( rs.next ( ) ){
 
             ResultSet rs = statement.executeQuery ( "select count(*) as countNames from people" );
             if ( rs.next ( ) ) {
-                assertEquals ( 8 , rs.getInt ( "countNames" ) );
+                assertEquals ( 9 , rs.getInt ( "countNames" ) );
 
                 System.out.println ( "Should return the counter for names inserted in the table:\n" + rs.getInt ( "countNames" ) );
             }
