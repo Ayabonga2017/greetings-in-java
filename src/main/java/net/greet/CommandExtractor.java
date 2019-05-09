@@ -29,7 +29,7 @@ public class CommandExtractor {
         }
 
     public String getLang() {
-           return Language.valueOf( language.toLowerCase( ) ).getValue( ) ;
+           return language;
         }
 
     public String getCommand( ) {
@@ -38,7 +38,7 @@ public class CommandExtractor {
 
     public String getGreet(){
 
-        return "\n"+getLang()+getUser();
+        return "\n"+ Language.valueOf( language.toLowerCase( ) ).getValue( )+getUser();
     }
 
 }

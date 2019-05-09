@@ -15,6 +15,9 @@ public class CommandTest {
     public void commandWithLanguage( ) throws SQLException {
 
         CommandExtractor comm = new CommandExtractor( "greet aya french" );
+        assertEquals ( "greet" ,  comm.getCommand ());
+        assertEquals ( "aya" ,  comm.getUser ());
+        assertEquals ( "french" ,  comm.getLang ());
         assertEquals( executor.execute (comm), "\nbonjour aya" );
     }
 
@@ -23,6 +26,9 @@ public class CommandTest {
     public void commandWithDiff( ) throws SQLException {
 
         CommandExtractor comm = new CommandExtractor( "greet thabang" );
+        assertEquals ( "greet" ,  comm.getCommand ());
+        assertEquals ( "thabang" ,  comm.getUser ());
+        assertEquals ( "xhosa" ,  comm.getLang ());
         assertEquals( executor.execute (comm), "\nmholo thabang" );
     }
 
@@ -31,6 +37,8 @@ public class CommandTest {
     public void countNme( ) throws SQLException {
 
         CommandExtractor comm = new CommandExtractor( "count yegan" );
+        assertEquals ( "count" ,  comm.getCommand ());
+        assertEquals ( "yegan" ,  comm.getUser ());
         assertEquals( executor.execute (comm), "0" );
     }
 
@@ -39,6 +47,7 @@ public class CommandTest {
     public void countAll( ) throws SQLException {
 
         CommandExtractor comm = new CommandExtractor( "counter" );
+        assertEquals ( "counter" ,  comm.getCommand ());
         assertEquals( executor.execute (comm), "4" );
     }
 
@@ -47,6 +56,7 @@ public class CommandTest {
     public void greeted( ) throws SQLException {
 
         CommandExtractor comm = new CommandExtractor( "greeted" );
+        assertEquals ( "greeted" ,  comm.getCommand ());
         assertEquals( executor.execute (comm),"greeted names" );
     }
 
@@ -55,6 +65,8 @@ public class CommandTest {
     public void clearName( ) throws SQLException {
 
         CommandExtractor comm = new CommandExtractor( "clear aya" );
+        assertEquals ( "clear" ,  comm.getCommand ());
+        assertEquals ( "aya" ,  comm.getUser ());
         assertEquals( executor.execute (comm),"\naya was removed successfully!" );
     }
 
@@ -63,6 +75,8 @@ public class CommandTest {
     public void help( ) throws SQLException {
 
         CommandExtractor comm = new CommandExtractor( "help" );
+        assertEquals ( "help" ,  comm.getCommand ());
+
        assertEquals( executor.execute (comm),"" );
     }
 
