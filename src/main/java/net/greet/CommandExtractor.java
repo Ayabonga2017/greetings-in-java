@@ -14,7 +14,6 @@ public class CommandExtractor {
         this.language = "xhosa";
 
         if ( arr.length == 3 ) {
-            this.user = arr[ 1 ];
             this.language = arr[ 2 ];
         }
 
@@ -30,17 +29,8 @@ public class CommandExtractor {
         }
 
     public String getLang() {
-
-        if ( this.language.isEmpty( ) ) {
-
-            language = "xhosa";
-
-            return Language.valueOf( "xhosa" ).getValue( );
-        } else {
-
            return Language.valueOf( language.toLowerCase( ) ).getValue( ) ;
         }
-    }
 
     public String getCommand( ) {
         return command;
