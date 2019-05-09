@@ -54,7 +54,7 @@ public class DBandHashMapTest {
     }
     @Test
     public  void greetRemoveUserName() {
-        System.out.println ( "\nShould remove a name from the list:\n" );
+
         greetMap.names ( "min" );
         greetMap.names ( "ainen" );
         greetMap.names ( "ayanda" );
@@ -66,7 +66,7 @@ public class DBandHashMapTest {
     }
     @Test
     public  void greetClear(){
-        System.out.println ( "\nShould clear all greeted names\n" );
+
         greetMap.names ( "Min" );
         greetMap.names ( "Minen" );
         greetMap.names ( "Ayanda" );
@@ -78,13 +78,12 @@ public class DBandHashMapTest {
     }
     @Test
     public  void countName(){
-        System.out.println ( "\nShould count for a specific user\n" );
+
         greetMap.names ( "Min" );
         greetMap.names ( "asa" );
         greetMap.names ( "Ayanda" );
         greetMap.names ( "Ama" );
         greetMap.names ( "lllll" );
-
 
         assertEquals ( greetMap.countName ( "asa" ),1 );
     }
