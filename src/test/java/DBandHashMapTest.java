@@ -50,7 +50,8 @@ public class DBandHashMapTest {
         greetMap.names ( "lllll" );
         greetMap.names ( "Asa" );
 
-        assertEquals (  greetMap.namesGreeted(),"greeted names" );
+        assertEquals (  greetMap.namesGreeted().toString(),"{min=2, ama=1, lllll=1, minen=1, ayanda=1, asa=1}" );
+
     }
     @Test
     public  void greetRemoveUserName() {
@@ -77,7 +78,7 @@ public class DBandHashMapTest {
         assertEquals ( greetMap.clearNames (),"deleted all users" );
     }
     @Test
-    public  void countName(){
+    public  void countName() throws SQLException {
 
         greetMap.names ( "Min" );
         greetMap.names ( "asa" );

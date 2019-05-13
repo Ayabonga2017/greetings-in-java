@@ -7,6 +7,7 @@ import java.util.Map;
 public class GreetWithDatabase implements Greet {
 
     final String DATABASE_URL = "jdbc:h2:./target/greet_java_test";
+    private int count;
 
     public void loadJdbcDriver () {
 
@@ -41,7 +42,7 @@ public class GreetWithDatabase implements Greet {
 
     final String DELETE_USERS_SQL ="delete from people";
     PreparedStatement deleteAll;
-
+    Map < String,Integer > dbMap = new HashMap <> ();
     public GreetWithDatabase () {
 
         try {
@@ -61,8 +62,6 @@ public class GreetWithDatabase implements Greet {
 
         PreparedStatement ps = conn.prepareStatement ( "select name , counter from people " );
         ResultSet rs = ps.executeQuery ( );
-
-         Map < String,Integer > dbMap = new HashMap <> ();
 
         while ( rs.next ( ) ) {
             dbMap.put ( rs.getString ( "name" ), rs.getInt ( 2 ));
@@ -104,24 +103,19 @@ public class GreetWithDatabase implements Greet {
         return rs.getInt ( "name_count" );
     }
     @Override
-    public int countName ( String name ) {
+    public int countName ( String name ) throws SQLException {
 
-        try {
-            findCount.setString ( 1 , name );
-            ResultSet rs = findCount.executeQuery ( );
-
+            findCount.setString(1, name);
+            ResultSet rs = findCount.executeQuery();
+            
             if ( rs.next ( ) ) {
-                return rs.getInt ( "counter" );
-            }else{
-                System.out.println (  "\nuser is not on the database");
-            }
-        } catch ( SQLException ex ) {
-            ex.printStackTrace ( );
+                count= rs.getInt ( "counter" );
         }
-        // if this name wasn't greeted yet
-        return 0;
+            return count;
+            // if this name wasn't greeted yet
     }
     public String names ( String name ) {
+
         name = name.substring ( 0,1).toLowerCase () + name.substring ( 1 ).toLowerCase ();
         name.equalsIgnoreCase ( name );
 

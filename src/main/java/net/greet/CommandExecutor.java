@@ -49,12 +49,14 @@ public class CommandExecutor {
             return greeted.toString();
 
         } else if ("count".equalsIgnoreCase(extractor.getCommand())) {
-
-            return "\n" + extractor.getUser() + " was greeted " + greeter.countName(extractor.getUser()) + " time(s)";
-
+                if (extractor.getUser().isEmpty()){
+                    return "enter user name";
+                }else {
+                    return "\n" + extractor.getUser() + " was greeted " + greeter.countName(extractor.getUser()) + " time(s)";
+                }
         } else if ("counter".equalsIgnoreCase(extractor.getCommand())) {
 
-            return "\nNumber of greeted users :\n" + "\n" + greeter.count();
+            return String.valueOf(greeter.count());
 
         } else if ("help".equalsIgnoreCase(extractor.getCommand())) {
 
@@ -73,7 +75,6 @@ public class CommandExecutor {
 
         } else {
 
-            System.out.println("\nInvalid command." + "\ntype 'help' to get the list of valid commands.");
             return "\nInvalid command." + "\ntype 'help' to get the list of valid commands.";
         }
     }

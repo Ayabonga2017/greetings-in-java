@@ -10,5 +10,5 @@ public interface Greet {
     String removeName(String name);
     String clearNames();
     int count() throws SQLException;
-    int countName(String name);
+    int countName(String name) throws SQLException;
 }
