@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/CommandExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DBandHashMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DBandHashMapTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="d5d74903-36d5-4891-abab-a6596cb1ad0c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,55 +18,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greeter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="93" column="13" lean-forward="true" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#loadJdbcDriver#0;class#GreetWithDatabase#0" />
-                <element signature="initializer##0;class#GreetWithDatabase#0" />
-                <element signature="method#removeName#0;class#GreetWithDatabase#0" />
-                <element signature="method#clearNames#0;class#GreetWithDatabase#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/DBandHashMapTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="808">
-              <caret line="91" column="1" lean-forward="true" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="841">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="241">
+              <caret line="36" column="56" lean-forward="true" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#188#189#0" expanded="true" />
                 <element signature="e#224#225#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandExtractor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+              <folding>
+                <element signature="e#602#603#0" expanded="true" />
+                <element signature="e#640#641#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -407,26 +373,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8767123" visible="true" weight="0.24660814" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.88273615" visible="true" weight="0.24660814" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Job Explorer" order="5" sideWeight="0.49142858" side_tool="true" weight="0.07182761" />
-      <window_info id="Project Explorer" order="6" sideWeight="0.12328767" side_tool="true" visible="true" weight="0.24660814" />
+      <window_info id="Project Explorer" order="6" sideWeight="0.117263846" side_tool="true" weight="0.24660814" />
       <window_info id="Structure" order="7" sideWeight="0.5099602" side_tool="true" weight="0.25151515" />
       <window_info id="DB Browser" order="8" sideWeight="0.50857145" weight="0.07182761" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5863192" />
       <window_info anchor="bottom" id="Favorites" order="2" sideWeight="0.5042017" weight="0.26547232" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49002394" visible="true" weight="0.048859935" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49002394" weight="0.19381107" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49242425" weight="0.3533026" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32736155" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49481246" weight="0.6644951" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49481246" visible="true" weight="0.3485342" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.509976" side_tool="true" weight="0.77198696" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.87363493" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49848485" weight="0.4771987" />
@@ -444,27 +409,27 @@
       <window_info anchor="right" id="Codota" order="9" weight="0.3242424" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49227798" visible="true" weight="0.2655068" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.88273615" visible="true" weight="0.24660814" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
-      <window_info id="DB Browser" order="5" weight="0.071969695" />
-      <window_info id="Structure" order="6" sideWeight="0.507722" side_tool="true" weight="0.25681818" />
-      <window_info id="Project Explorer" order="7" sideWeight="0.46666667" weight="0.3840909" />
-      <window_info id="Job Explorer" order="8" sideWeight="0.4980695" weight="0.3469697" />
+      <window_info id="Job Explorer" order="5" sideWeight="0.49142858" side_tool="true" weight="0.07182761" />
+      <window_info id="Project Explorer" order="6" sideWeight="0.117263846" side_tool="true" visible="true" weight="0.24660814" />
+      <window_info id="Structure" order="7" sideWeight="0.5099602" side_tool="true" weight="0.25151515" />
+      <window_info id="DB Browser" order="8" sideWeight="0.50857145" weight="0.07182761" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5863192" />
       <window_info anchor="bottom" id="Favorites" order="2" sideWeight="0.5042017" weight="0.26547232" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.48863637" weight="0.94930875" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49002394" weight="0.19381107" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49242425" weight="0.3533026" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32736155" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49481246" weight="0.58064514" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50757575" side_tool="true" weight="0.6879875" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49481246" weight="0.3485342" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.509976" side_tool="true" weight="0.77198696" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.87363493" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49848485" weight="0.47772658" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49848485" weight="0.4771987" />
       <window_info anchor="bottom" id="Console" order="12" />
       <window_info anchor="bottom" id="DB Execution Console" order="13" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32960895" />
@@ -475,7 +440,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven" order="8" weight="0.3237519" />
+      <window_info anchor="right" id="Maven" order="8" weight="0.32272726" />
       <window_info anchor="right" id="Codota" order="9" weight="0.3242424" />
     </layout-to-restore>
   </component>
@@ -677,27 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding>
-            <element signature="e#602#603#0" expanded="true" />
-            <element signature="e#640#641#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/DBandHashMapTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="808">
-          <caret line="91" column="1" lean-forward="true" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CommandTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -710,38 +654,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greeter.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/DBandHashMapTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="283">
+          <caret line="56" column="40" lean-forward="true" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#188#189#0" expanded="true" />
-            <element signature="e#224#225#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/GreetWithDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="93" column="13" lean-forward="true" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+        <state relative-caret-position="232">
+          <caret line="54" column="55" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#loadJdbcDriver#0;class#GreetWithDatabase#0" />
             <element signature="initializer##0;class#GreetWithDatabase#0" />
+            <element signature="method#namesGreeted#0;class#GreetWithDatabase#0" />
             <element signature="method#removeName#0;class#GreetWithDatabase#0" />
             <element signature="method#clearNames#0;class#GreetWithDatabase#0" />
+            <element signature="method#count#0;class#GreetWithDatabase#0" />
+            <element signature="method#countName#0;class#GreetWithDatabase#0" />
+            <element signature="method#names#0;class#GreetWithDatabase#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greeter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="16" column="54" lean-forward="true" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding>
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/CommandExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="36" column="56" lean-forward="true" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#224#225#0" expanded="true" />
           </folding>
         </state>
       </provider>
