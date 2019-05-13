@@ -1,6 +1,8 @@
 package net.greet;
 
 import java.sql.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class GreetWithDatabase implements Greet {
 
@@ -55,29 +57,26 @@ public class GreetWithDatabase implements Greet {
         }
     }
     @Override
-    public String namesGreeted () throws SQLException {
+    public Map < String,Integer > namesGreeted () throws SQLException {
 
-        PreparedStatement ps = conn.prepareStatement ( "select name from people " );
+        PreparedStatement ps = conn.prepareStatement ( "select name , counter from people " );
         ResultSet rs = ps.executeQuery ( );
 
+         Map < String,Integer > dbMap = new HashMap <> ();
+
         while ( rs.next ( ) ) {
-            System.out.println ( "\n" + rs.getString ( "name" ) );
-             rs.getString ( "name" );
+            dbMap.put ( rs.getString ( "name" ), rs.getInt ( 2 ));
         }
-        return "greeted names";
+        return dbMap;
     }
     @Override
     public String removeName ( String name ) {
 
         try {
-
             // set the corresponding param
             remove.setString ( 1 , name );
             // execute the delete statement
             remove.execute ( );
-            System.out.println ( "\n" + name + " was removed successfully!" );
-            return "\n" + name + " was removed successfully!" ;
-
         } catch ( SQLException e ) {
             System.out.println ( e.getMessage ( ) );
         }
@@ -114,7 +113,7 @@ public class GreetWithDatabase implements Greet {
             if ( rs.next ( ) ) {
                 return rs.getInt ( "counter" );
             }else{
-                System.out.println ("\nuser is not on the database" );
+                System.out.println (  "\nuser is not on the database");
             }
         } catch ( SQLException ex ) {
             ex.printStackTrace ( );
@@ -122,27 +121,6 @@ public class GreetWithDatabase implements Greet {
         // if this name wasn't greeted yet
         return 0;
     }
-    @Override
-    public String invalid () {
-        System.out.println ( "\nInvalid command." + "\ntype 'help' to get the list of valid commands." );
-        return "\nInvalid command." + "\ntype 'help' to get the list of valid commands.";
-    }
-    @Override
-    public String help () {
-        System.out.println ( "\nValid Commands are as follow :\n" + "\n- greet + name + language : will greet a person with a language of your choice." );
-        System.out.println ( "- greet + name : will greet a person with the default language.\n" + "- greeted : will display a list of greeted names. " );
-        System.out.println ( "- count + name : will display how many times a person has been greeted.\n" + "- counter : will display the number of greeted names. " );
-        System.out.println ( "- clear + name : will remove a persons name from the list and decrement the counter.\n" + "- clearall : will delete all the names on the list set the counter to 0." );
-        System.out.println ( "- exit : will exit the greeting application.\n" + "- help : will display all the possible commands to use when using this application." );
-    return "Valid-Commands";
-    }
-    @Override
-    public String exit () {
-        System.out.println ( "\nGood-Bye\n" );
-        System.exit ( 0 );
-        return  "Good-Bye";
-    }
-    @Override
     public String names ( String name ) {
         name = name.substring ( 0,1).toLowerCase () + name.substring ( 1 ).toLowerCase ();
         name.equalsIgnoreCase ( name );

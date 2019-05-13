@@ -913,3 +913,27 @@ org.h2.message.DbException: The connection was not closed by the application and
 Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	... 67 more
+2019-05-13 13:04:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: No data is available [2000-197]
+2019-05-13 13:14:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "namecounter" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at net.greet.GreetWithDatabase.namesGreeted(GreetWithDatabase.java:65)
+	at net.greet.CommandExecutor.execute(CommandExecutor.java:30)
+	at net.greet.Greeter.main(Greeter.java:22)
+2019-05-13 13:14:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "name1" not found [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3174)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3247)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:310)
+	at net.greet.GreetWithDatabase.namesGreeted(GreetWithDatabase.java:65)
+	at net.greet.CommandExecutor.execute(CommandExecutor.java:30)
+	at net.greet.Greeter.main(Greeter.java:22)

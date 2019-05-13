@@ -1,6 +1,8 @@
 package net.greet;
 
 import java.sql.SQLException;
+import java.util.Map;
+import java.util.Set;
 
 public class CommandExecutor {
 
@@ -12,46 +14,68 @@ public class CommandExecutor {
 
     public String execute (CommandExtractor extractor) throws SQLException {
 
-        if ( "greet".equalsIgnoreCase ( extractor.getCommand ( ) ) ) {
+        if ("greet".equalsIgnoreCase(extractor.getCommand())) {
 
-            greeter.names ( extractor.getUser ( ) );
+            greeter.names(extractor.getUser());
+            return extractor.getGreet();
 
-            System.out.println ( extractor.getGreet ( ) );
-            return extractor.getGreet ( );
+        } else if ("clear".equalsIgnoreCase(extractor.getCommand())) {
 
-        } else if ( "clear".equalsIgnoreCase ( extractor.getCommand ( ) ) ) {
+            return ( "\n" + extractor.getUser() + " was removed successfully!" );
 
-            return greeter.removeName ( extractor.getUser ( ) );
+        } else if ("clearall".equalsIgnoreCase(extractor.getCommand())) {
 
-        } else if ( "clearall".equalsIgnoreCase ( extractor.getCommand ( ) ) ) {
+            return greeter.clearNames();
 
-            return greeter.clearNames ( );
+        } else if ("greeted".equalsIgnoreCase(extractor.getCommand())) {
 
-        } else if ( "greeted".equalsIgnoreCase ( extractor.getCommand ( ) ) ) {
+            StringBuilder greeted = new StringBuilder("These users have been greeted: \n");
 
-            return greeter.namesGreeted ( );
+            Map < String,Integer > usersGreetedMap = greeter.namesGreeted();
+            Set < String > userNamesGreeted = usersGreetedMap.keySet();
 
-        } else if ( "count".equalsIgnoreCase ( extractor.getCommand ( ) ) ) {
+            for ( String username : userNamesGreeted ) {
+                // use your builder.append in here
+                greeted.append("\t");
+                greeted.append(username);
+                greeted.append(" ");
+                greeted.append("has been greeted ");
+                greeted.append(usersGreetedMap.get(username));
+                greeted.append(" time(s)");
+                greeted.append("\n");
 
-            System.out.println ( "\n" + extractor.getUser ( ) + " was greeted " + greeter.countName ( extractor.getUser ( ) ) + " time(s)" );
-            return String.valueOf ( greeter.countName ( extractor.getUser ( ) ) );
+            }
 
-        } else if ( "counter".equalsIgnoreCase ( extractor.getCommand ( ) ) ) {
+            return greeted.toString();
 
-            System.out.println ( "\nNumber of greeted users :\n" + "\n" + greeter.count ( ) );
-            return String.valueOf ( greeter.count ( ) );
+        } else if ("count".equalsIgnoreCase(extractor.getCommand())) {
 
-        } else if ( "help".equalsIgnoreCase ( extractor.getCommand ( ) ) ) {
+            return "\n" + extractor.getUser() + " was greeted " + greeter.countName(extractor.getUser()) + " time(s)";
 
-            greeter.help ( );
-        } else if ( "exit".equalsIgnoreCase ( extractor.getCommand ( ) ) ) {
+        } else if ("counter".equalsIgnoreCase(extractor.getCommand())) {
 
-            greeter.exit ( );
+            return "\nNumber of greeted users :\n" + "\n" + greeter.count();
+
+        } else if ("help".equalsIgnoreCase(extractor.getCommand())) {
+
+            StringBuilder help = new StringBuilder();
+
+            help.append("\nValid Commands are as follow :\n" + "\n- greet + name + language : will greet a person with a language of your choice.");
+            help.append("- greet + name : will greet a person with the default language.\n" + "- greeted : will display a list of greeted names. ");
+            help.append("- count + name : will display how many times a person has been greeted.\n" + "- counter : will display the number of greeted names. ");
+            help.append("- clear + name : will remove a persons name from the list and decrement the counter.\n" + "- clearall : will delete all the names on the list set the counter to 0.");
+            help.append("- exit : will exit the greeting application.\n" + "- help : will display all the possible commands to use when using this application.");
+            return String.valueOf(help);
+
+        } else if ("exit".equalsIgnoreCase(extractor.getCommand())) {
+
+            return "exit";
+
         } else {
 
-            return greeter.invalid ( );
+            System.out.println("\nInvalid command." + "\ntype 'help' to get the list of valid commands.");
+            return "\nInvalid command." + "\ntype 'help' to get the list of valid commands.";
         }
-        return "";
     }
 }
 

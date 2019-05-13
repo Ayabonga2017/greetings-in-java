@@ -19,8 +19,15 @@ public class Greeter {
             String name = input.nextLine ( );
 
             CommandExtractor extractor = new CommandExtractor ( name );
-            executor.execute (extractor);
 
+            String results =executor.execute (extractor);
+
+            if ( results.equalsIgnoreCase("exit")){
+                System.out.println("Good-bye");
+                break;
+            }else{
+                System.out.println ( executor.execute (extractor));
+            }
         }
     }
 }
